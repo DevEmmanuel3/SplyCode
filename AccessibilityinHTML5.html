@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accessibility in HTML5 | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Learn how to improve web accessibility using HTML5. Understand key HTML5 features and best practices to make your websites more accessible to people with disabilities, ensuring a better user experience for everyone.">
+    <meta name="keywords" content="Accessibility in HTML5, HTML5 accessibility features, Web accessibility HTML5, Making websites accessible, HTML5 accessibility best practices, WCAG HTML5 compliance, Accessible web design, HTML5 for disabled users, Improve web accessibility, Accessible web development, HTML5 for better UX, Accessibility features in HTML5, Web accessibility standards">
+    <meta name="author" content="Alhassan Emmanuel">
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+  
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+          <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+          </span>  
+        </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="HTML5StructuralElements.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="quiz.html"> Finish</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="htmlfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Html5 Full Course</h1> <br>
+                    <h1 class="mb-4">Accessibility in HTML5</h1>
+                    <div class="container1">
+                        
+                          <style>
+                           
+                        
+                            h2 {
+                              color: #333;
+                            }
+                        
+                            .code-container {
+                              background-color: #f4f4f4;
+                              padding: 20px;
+                              border-radius: 8px;
+                              margin: 20px 0;
+                              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                            }
+                        
+                            code {
+                              font-size: 18px;
+                              color: #333;
+                              font-weight: bold;
+                            }
+                        
+                            pre {
+                              white-space: pre-wrap;
+                              word-wrap: break-word;
+                            }
+                        
+                            .copy-btn {
+                              background-color: #4CAF50;
+                              color: white;
+                              padding: 10px;
+                              border: none;
+                              cursor: pointer;
+                              font-size: 16px;
+                              margin-top: 10px;
+                              border-radius: 5px;
+                            }
+                        
+                            .copy-btn:hover {
+                              background-color: #45a049;
+                            }
+                        
+                            .output {
+                              margin-top: 20px;
+                              padding: 20px;
+                              background-color: #e9f7e9;
+                              border-radius: 8px;
+                            }
+                          </style>
+                        </head>
+                        <body>
+                        
+                          <h1>Advanced HTML5 Techniques</h1>
+                        
+                          <section>
+
+
+
+
+                            <h2>1. Responsive Web Design</h2>
+                            <p><strong>Explanation:</strong> Responsive web design ensures that a web page looks great on all devices, from desktop computers to mobile phones. The key to responsive design is the use of the <code>&lt;meta name="viewport"&gt;</code> tag and media queries.</p>
+                        
+                            <div class="code-container">
+                              <pre><code>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                          &lt;title&gt;Responsive Design Example&lt;/title&gt;
+                          &lt;style&gt;
+                            body {
+                              font-family: Arial, sans-serif;
+                              margin: 0;
+                              padding: 0;
+                              background-color: #f4f4f4;
+                            }
+                            header {
+                              background-color: #333;
+                              color: white;
+                              padding: 10px 0;
+                              text-align: center;
+                            }
+                            main {
+                              padding: 20px;
+                            }
+                            .container {
+                              display: flex;
+                              justify-content: space-between;
+                            }
+                            .box {
+                              background-color: #ddd;
+                              padding: 20px;
+                              width: 30%;
+                            }
+                            /* Media Queries for Responsiveness */
+                            @media (max-width: 768px) {
+                              .container {
+                                flex-direction: column;
+                                align-items: center;
+                              }
+                              .box {
+                                width: 80%;
+                                margin-bottom: 20px;
+                              }
+                            }
+                          &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;header&gt;
+                            &lt;h1&gt;Responsive Design Example&lt;/h1&gt;
+                          &lt;/header&gt;
+                          &lt;main&gt;
+                            &lt;div class="container"&gt;
+                              &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                              &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                              &lt;div class="box"&gt;Box 3&lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/main&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                        
+                            <div class="output">
+                              <p>Output: On desktop screens, three boxes will be displayed in a row. On smaller screens, the boxes will stack vertically. <br>
+                            
+                            </p>
+                            </div>
+                          </section>
+                          <div id="christ"> </div>
+                          <section>
+                            <h2>2. CSS Flexbox and Grid Layouts</h2>
+                            <p><strong>Explanation:</strong> Flexbox and CSS Grid are powerful layout systems in CSS, allowing for more complex and flexible designs. Flexbox is a one-dimensional layout system, while Grid is a two-dimensional system.</p>
+                        
+                            <div class="code-container">
+                              <h3>Flexbox Example</h3>
+                              <pre><code>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                          &lt;title&gt;Flexbox Example&lt;/title&gt;
+                          &lt;style&gt;
+                            .container {
+                              display: flex;
+                              justify-content: space-around;
+                              margin: 20px;
+                            }
+                            .box {
+                              background-color: #4CAF50;
+                              color: white;
+                              padding: 20px;
+                              width: 100px;
+                              text-align: center;
+                            }
+                          &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;div class="container"&gt;
+                            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 3&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                        
+                            <div class="output">
+                              <p>Output: The boxes will be displayed horizontally, evenly spaced across the container.</p>
+                            </div>
+                        
+                            <div class="code-container">
+                              <h3>CSS Grid Example</h3>
+                              <pre><code>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                          &lt;title&gt;Grid Layout Example&lt;/title&gt;
+                          &lt;style&gt;
+                            .container {
+                              display: grid;
+                              grid-template-columns: repeat(3, 1fr);
+                              gap: 20px;
+                              margin: 20px;
+                            }
+                            .box {
+                              background-color: #ff5722;
+                              color: white;
+                              padding: 20px;
+                              text-align: center;
+                            }
+                          &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;div class="container"&gt;
+                            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 3&lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                        
+                            <div class="output">
+                              <p>Output: The boxes will be displayed in a 3-column grid layout.</p>
+                            </div>
+                          </section>
+                          <div id="christ"> </div>
+                          <section>
+                            <h2>3. SVG (Scalable Vector Graphics)</h2>
+                            <p><strong>Explanation:</strong> SVG is a vector image format that allows graphics to be scalable without losing quality. It is useful for icons and illustrations that need to remain crisp on any screen size.</p>
+                        
+                            <div class="code-container">
+                              <pre><code>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                          &lt;title&gt;SVG Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;h2&gt;SVG Circle Example&lt;/h2&gt;
+                          &lt;svg width="100" height="100"&gt;
+                            &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" /&gt;
+                          &lt;/svg&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                        
+                            <div class="output">
+                              <p>Output: A yellow circle with a black border is displayed.</p>
+                            </div>
+                          </section>
+                        
+                          <section>
+                            <h2>4. HTML5 Forms: Advanced Input Types</h2>
+                            <p><strong>Explanation:</strong> HTML5 introduced several new input types, including <code>search</code>, <code>tel</code>, <code>color</code>, and <code>datetime</code>, which help improve user experience and validation in forms.</p>
+                        
+                            <div class="code-container">
+                              <pre><code>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                          &lt;meta charset="UTF-8"&gt;
+                          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                          &lt;title&gt;Advanced Input Types&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                          &lt;form&gt;
+                            &lt;label for="search"&gt;Search:&lt;/label&gt;
+                            &lt;input type="search" id="search" placeholder="Enter search term"&gt;&lt;br&gt;&lt;br&gt;
+                        
+                            &lt;label for="phone"&gt;Phone Number:&lt;/label&gt;
+                            &lt;input type="tel" id="phone" placeholder="Enter phone number"&gt;&lt;br&gt;&lt;br&gt;
+                        
+                            &lt;label for="color"&gt;Favorite Color:&lt;/label&gt;
+                            &lt;input type="color" id="color"&gt;&lt;br&gt;&lt;br&gt;
+                        
+                            &lt;label for="datetime"&gt;Choose a Date and Time:&lt;/label&gt;
+                            &lt;input type="datetime-local" id="datetime"&gt;&lt;br&gt;&lt;br&gt;
+                        
+                            &lt;label for="file"&gt;Upload File:&lt;/label&gt;
+                            &lt;input type="file" id="file"&gt;&lt;br&gt;&lt;br&gt;
+                        
+                            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                          &lt;/form&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;</code></pre>
+                              <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                            </div>
+                        
+                            <div class="output">
+                              <p>Output: The form includes inputs for search, phone number, color picker, date/time, and file upload.</p>
+                            </div>
+                          </section>
+                        
+                          <script>
+                            // Function to copy code to clipboard
+                            function copyCode(button) {
+                              var codeBlock = button.previousElementSibling;
+                              var code = codeBlock.querySelector("code").textContent;
+                              navigator.clipboard.writeText(code).then(function() {
+                                alert("Code copied to clipboard!");
+                              }, function() {
+                                alert("Failed to copy code.");
+                              });
+                            }
+                          </script>
+                        
+                        </body>
+                        </html>
+                          
+                        
+                        
+                        
+                        
+                       
+                    </div>        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="HTML5StructuralElements.html">Go Back </a>   <br><br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="quiz.html"> Finish</a>
+    </div> 
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

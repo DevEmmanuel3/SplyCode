@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Objects and Prototypes in JavaScript| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore objects and prototypes in JavaScript, learn how to create objects, use prototypes, and understand inheritance in JavaScript. Master object-oriented programming with JavaScript for more efficient code.">
+    <meta name="keywords" content="Objects and Prototypes in JavaScript, JavaScript objects tutorial, JavaScript prototypes, Object-oriented programming in JavaScript, JavaScript inheritance, How to create objects in JavaScript, JavaScript prototype chain, Prototypes in JavaScript explained, JavaScript object properties and methods, JavaScript constructor functions, JavaScript prototype inheritance, Learn JavaScript objects and prototypes, JavaScript OOP concepts, JavaScript classes and objects">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    
+    
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+          
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-Javascript.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-javascript.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Objects and Prototypes in JavaScript</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                           
+                       
+                            <style>
+                                
+                                h1 {
+                                    text-align: center;
+                                }
+                                
+                                pre {
+                                    background-color: #2d2d2d;
+                                    color: #f4f4f4;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    overflow-x: auto;
+                                    font-size: 1.1rem;
+                                    text-align: left;
+                                }
+                                .output {
+                                    background-color: #e0e0e0;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    margin-top: 10px;
+                                    font-family: monospace;
+                                }
+                                .copy-btn {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    padding: 10px;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                .copy-btn:hover {
+                                    background-color: #45a049;
+                                }
+                            </style>
+                        
+                        
+                            <h1>Objects and Prototypes in JavaScript</h1>
+                        
+                            <!-- Creating Objects -->
+                            <div class="code-section">
+                                <h2>1. Creating Objects</h2>
+                                <p>There are multiple ways to create objects in JavaScript: object literals, constructors, and <code>Object.create()</code>.</p>
+                        
+                                <h3>1.1 Object Literals</h3>
+                                <pre id="code-literal">
+                        const person = {
+                            name: "Alice",
+                            age: 30,
+                            greet: function() {
+                                console.log("Hello, " + this.name);
+                            }
+                        };
+                        
+                        person.greet();  // Output: Hello, Alice
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-literal')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Hello, Alice
+                                </div>
+                            </div>
+                        
+                            <!-- Constructors -->
+                            <div class="code-section">
+                                <h3>1.2 Constructors</h3>
+                                <p>You can create objects using a constructor function.</p>
+                                <pre id="code-constructor">
+                        function Person(name, age) {
+                            this.name = name;
+                            this.age = age;
+                            this.greet = function() {
+                                console.log("Hello, " + this.name);
+                            };
+                        }
+                        
+                        const person1 = new Person("Bob", 25);
+                        person1.greet();  // Output: Hello, Bob
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-constructor')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Hello, Bob
+                                </div>
+                            </div>
+                        
+                            <!-- Object.create -->
+                            <div class="code-section">
+                                <h3>1.3 Object.create()</h3>
+                                <p>The <code>Object.create()</code> method creates a new object with the specified prototype object.</p>
+                                <pre id="code-create">
+                        const personPrototype = {
+                            greet: function() {
+                                console.log("Hello, " + this.name);
+                            }
+                        };
+                        
+                        const person2 = Object.create(personPrototype);
+                        person2.name = "Charlie";
+                        person2.greet();  // Output: Hello, Charlie
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-create')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Hello, Charlie
+                                </div>
+                            </div>
+                        
+                            <!-- Object Properties and Methods -->
+                            <div class="code-section">
+                                <h2>2. Object Properties and Methods</h2>
+                                <p>Objects can contain properties (key-value pairs) and methods (functions).</p>
+                        
+                                <h3>2.1 Object Properties</h3>
+                                <pre id="code-properties">
+                        const car = {
+                            make: "Toyota",
+                            model: "Corolla",
+                            year: 2020
+                        };
+                        
+                        console.log(car.make);  // Output: Toyota
+                        console.log(car["model"]);  // Output: Corolla
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-properties')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Toyota<br>Corolla
+                                </div>
+                        
+                                <h3>2.2 Object Methods</h3>
+                                <pre id="code-methods">
+                        const car = {
+                            make: "Toyota",
+                            model: "Corolla",
+                            year: 2020,
+                            getCarInfo: function() {
+                                return `${this.year} ${this.make} ${this.model}`;
+                            }
+                        };
+                        
+                        console.log(car.getCarInfo());  // Output: 2020 Toyota Corolla
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-methods')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>2020 Toyota Corolla
+                                </div>
+                            </div>
+                        
+                            <!-- The this Keyword -->
+                            <div class="code-section">
+                                <h2>3. The <code>this</code> Keyword</h2>
+                                <p>The <code>this</code> keyword refers to the object that the function is a method of.</p>
+                                <pre id="code-this">
+                        const person = {
+                            name: "David",
+                            greet: function() {
+                                console.log("Hello, " + this.name);
+                            }
+                        };
+                        
+                        person.greet();  // Output: Hello, David
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-this')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Hello, David
+                                </div>
+                            </div>
+                        
+                            <!-- Prototypes and Inheritance -->
+                            <div class="code-section">
+                                <h2>4. Prototypes and Inheritance</h2>
+                                <p>Prototypes allow objects to inherit properties and methods from other objects.</p>
+                                <pre id="code-prototype">
+                        function Animal(name) {
+                            this.name = name;
+                        }
+                        
+                        Animal.prototype.speak = function() {
+                            console.log(this.name + " makes a sound");
+                        };
+                        
+                        const dog = new Animal("Rex");
+                        dog.speak();  // Output: Rex makes a sound
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-prototype')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Rex makes a sound
+                                </div>
+                            </div>
+                        
+                            <!-- Prototype Chain -->
+                            <div class="code-section">
+                                <h2>5. Prototype Chain</h2>
+                                <p>JavaScript objects have a prototype, and that prototype can have its own prototype, forming a chain.</p>
+                                <pre id="code-prototype-chain">
+                        function Animal(name) {
+                            this.name = name;
+                        }
+                        
+                        Animal.prototype.speak = function() {
+                            console.log(this.name + " makes a sound");
+                        };
+                        
+                        function Dog(name, breed) {
+                            Animal.call(this, name);  // Call the Animal constructor
+                            this.breed = breed;
+                        }
+                        
+                        Dog.prototype = Object.create(Animal.prototype);  // Set Dog's prototype to be an instance of Animal
+                        Dog.prototype.constructor = Dog;
+                        
+                        Dog.prototype.bark = function() {
+                            console.log(this.name + " barks");
+                        };
+                        
+                        const dog = new Dog("Buddy", "Golden Retriever");
+                        dog.speak();  // Output: Buddy makes a sound
+                        dog.bark();   // Output: Buddy barks
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-prototype-chain')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Buddy makes a sound<br>Buddy barks
+                                </div>
+                            </div>
+                        
+                            <!-- Object-Oriented Programming -->
+                            <div class="code-section">
+                                <h2>6. Object-Oriented Programming (OOP) Principles</h2>
+                                <p>JavaScript supports Object-Oriented Programming (OOP) principles like encapsulation, inheritance, and polymorphism.</p>
+                        
+                                <h3>6.1 Encapsulation</h3>
+                                <pre id="code-encapsulation">
+                        function Person(name, age) {
+                            this.name = name;
+                            this.age = age;
+                        
+                            this.getDetails = function() {
+                                return `${this.name} is ${this.age} years old.`;
+                            };
+                        }
+                        
+                        const person = new Person("John", 25);
+                        console.log(person.getDetails());  // Output: John is 25 years old.
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-encapsulation')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>John is 25 years old.
+                                </div>
+                        
+                                <h3>6.2 Polymorphism</h3>
+                                <pre id="code-polymorphism">
+                        function Animal(name) {
+                            this.name = name;
+                        }
+                        
+                        Animal.prototype.speak = function() {
+                            console.log(this.name + " makes a sound");
+                        };
+                        
+                        function Dog(name) {
+                            Animal.call(this, name);
+                        }
+                        
+                        Dog.prototype = Object.create(Animal.prototype);
+                        Dog.prototype.speak = function() {
+                            console.log(this.name + " barks");
+                        };
+                        
+                        function Cat(name) {
+                            Animal.call(this, name);
+                        }
+                        
+                        Cat.prototype = Object.create(Animal.prototype);
+                        Cat.prototype.speak = function() {
+                            console.log(this.name + " meows");
+                        };
+                        
+                        const dog = new Dog("Rex");
+                        const cat = new Cat("Whiskers");
+                        
+                        dog.speak();  // Output: Rex barks
+                        cat.speak();  // Output: Whiskers meows
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-polymorphism')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Rex barks<br>Whiskers meows
+                                </div>
+                            </div>
+                        
+                            <script>
+                                // Function to copy code to clipboard
+                                function copyCode(id) {
+                                    var code = document.getElementById(id).innerText;
+                                    var textArea = document.createElement("textarea");
+                                    textArea.value = code;
+                                    document.body.appendChild(textArea);
+                                    textArea.select();
+                                    document.execCommand("copy");
+                                    document.body.removeChild(textArea);
+                                    alert("Code copied to clipboard!");
+                                }
+                            </script>
+                        
+                       
+                
+
+
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-Javascript.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-javascript.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

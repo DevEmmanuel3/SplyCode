@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Events in JavaScript| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to handle JavaScript events effectively. Explore event listeners, event types, and practical examples for mastering JavaScript events in web development.">
+    <meta name="keywords" content="JavaScript events tutorial, JavaScript event listeners, JavaScript event handling, Learn JavaScript events, DOM events in JavaScript, JavaScript event types, JavaScript event example, How to handle events in JavaScript, JavaScript event handling best practices">
+        <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+          <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+          </span>  
+        </div>
+        
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Working-with-the-DOM-(Document-Object-Model).html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Asynchronous-JavaScript.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Events in JavaScript</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                           
+                        
+                
+                      
+                          <style>
+                           
+                            h2 {
+                              color: #333;
+                            }
+                            
+                            .code-container pre {
+                              margin: 0;
+                              overflow-x: auto;
+                            }
+                            .copy-btn {
+                              padding: 5px 10px;
+                              background-color: #4CAF50;
+                              color: white;
+                              border: none;
+                              cursor: pointer;
+                              font-size: 14px;
+                              border-radius: 3px;
+                            }
+                            .copy-btn:hover {
+                              background-color: #45a049;
+                            }
+                            .output {
+                              background-color: #e0e0e0;
+                              padding: 5px;
+                              border-radius: 3px;
+                              margin-top: 10px;
+                              font-size: 14px;
+                            }
+                          </style>
+                        </head>
+                        <body>
+                        
+                          <h1>JavaScript Events Tutorial</h1>
+                        
+                          <!-- Event Loop and Event Queue Section -->
+                          <h2>1. Event Loop and Event Queue</h2>
+                          <p>The event loop and event queue work together to allow JavaScript to handle multiple tasks, ensuring asynchronous code runs after synchronous code.</p>
+                          
+                          <div class="code-container">
+                            <pre>
+                        console.log("Start");
+                        
+                        setTimeout(() => {
+                          console.log("Timeout");
+                        }, 0);
+                        
+                        console.log("End");
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> The "Start" and "End" logs appear first, as they are synchronous. The callback from <code>setTimeout</code> is placed in the event queue and processed after the synchronous code finishes.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Start<br>
+                            End<br>
+                            Timeout
+                          </div>
+                        
+                          <!-- Event Bubbling and Capturing Section -->
+                          <h2>2. Event Bubbling and Capturing</h2>
+                          <p>Event bubbling occurs when an event triggered on an element bubbles up through its ancestors. Capturing occurs when the event starts from the root and moves toward the target.</p>
+                          
+                          <div class="code-container">
+                            <pre>
+                        &lt;div id="parent"&gt;
+                          &lt;button id="child"&gt;Click Me&lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;script&gt;
+                        document.getElementById("parent").addEventListener("click", () =&gt; {
+                          alert("Parent clicked!");
+                        });
+                        
+                        document.getElementById("child").addEventListener("click", () =&gt; {
+                          alert("Button clicked!");
+                        });
+                        &lt;/script&gt;
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> Clicking the button triggers the <code>click</code> event for both the button (child) and the parent div. The event bubbles up from the button to the parent.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Button clicked! <br>
+                            Parent clicked!
+                          </div>
+                        
+                          <!-- Event Capturing Section -->
+                          <h2>3. Event Capturing</h2>
+                          <p>To enable capturing, you can pass <code>true</code> as the third argument in the <code>addEventListener</code> method.</p>
+                          
+                          <div class="code-container">
+                            <pre>
+                        &lt;div id="parent"&gt;
+                          &lt;button id="child"&gt;Click Me&lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;script&gt;
+                        document.getElementById("parent").addEventListener("click", () =&gt; {
+                          alert("Parent clicked!");
+                        }, true);  // Capturing phase
+                        
+                        document.getElementById("child").addEventListener("click", () =&gt; {
+                          alert("Button clicked!");
+                        });
+                        &lt;/script&gt;
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> In capturing mode, the parent event triggers before the child event, as the event is captured first before bubbling to the target.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Parent clicked! <br>
+                            Button clicked!
+                          </div>
+                        
+                          <!-- Event Delegation Section -->
+                          <h2>4. Event Delegation</h2>
+                          <p>Event delegation involves attaching a single event listener to a parent element, allowing it to manage events for multiple child elements.</p>
+                          
+                          <div class="code-container">
+                            <pre>
+                        &lt;ul id="parent"&gt;
+                          &lt;li&gt;Item 1&lt;/li&gt;
+                          &lt;li&gt;Item 2&lt;/li&gt;
+                          &lt;li&gt;Item 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                        
+                        &lt;script&gt;
+                        document.getElementById("parent").addEventListener("click", (event) =&gt; {
+                          if (event.target.tagName === "LI") {
+                            alert(`Item clicked: ${event.target.textContent}`);
+                          }
+                        });
+                        &lt;/script&gt;
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> The event listener is attached to the parent element, and the target is checked in the callback function. This way, even dynamically added <code>&lt;li&gt;</code> elements will be handled.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Item clicked: Item 1
+                          </div>
+                        
+                          <!-- Common Event Types Section -->
+                          <h2>5. Common Event Types</h2>
+                          <p>Here are some common event types:</p>
+                          <ul>
+                            <li><strong>click</strong>: Fired when an element is clicked.</li>
+                            <li><strong>keydown</strong>, <strong>keyup</strong>: Fired when a key is pressed or released.</li>
+                            <li><strong>mouseover</strong>, <strong>mouseout</strong>: Fired when the mouse enters or leaves an element.</li>
+                            <li><strong>submit</strong>: Fired when a form is submitted.</li>
+                            <li><strong>focus</strong>, <strong>blur</strong>: Fired when an element gains or loses focus.</li>
+                            <li><strong>change</strong>: Fired when the value of an input element changes.</li>
+                          </ul>
+                          
+                          <div class="code-container">
+                            <pre>
+                        &lt;input type="text" id="myInput" placeholder="Type something"&gt;
+                        &lt;script&gt;
+                        document.getElementById("myInput").addEventListener("keydown", (event) =&gt; {
+                          console.log(`Key pressed: ${event.key}`);
+                        });
+                        &lt;/script&gt;
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> The <code>keydown</code> event triggers when a key is pressed, and logs the key name in the console.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Key pressed: a
+                          </div>
+                        
+                          <!-- Adding and Removing Event Listeners -->
+                          <h2>6. Adding and Removing Event Listeners</h2>
+                          <p>You can add and remove event listeners to dynamically control the behavior of elements.</p>
+                          
+                          <div class="code-container">
+                            <pre>
+                        &lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+                        &lt;script&gt;
+                        function handleClick() {
+                          alert("Button clicked!");
+                        }
+                        
+                        const button = document.getElementById("myButton");
+                        button.addEventListener("click", handleClick);
+                        
+                        setTimeout(() =&gt; {
+                          button.removeEventListener("click", handleClick);
+                          console.log("Event listener removed!");
+                        }, 3000);
+                        &lt;/script&gt;
+                            </pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+                          </div>
+                          
+                          <p><strong>Explanation:</strong> The event listener is removed after 3 seconds, so clicks after that time will not trigger the alert.</p>
+                          
+                          <p><strong>Output:</strong></p>
+                          <div class="output">
+                            Button clicked! <br>
+                            Event listener removed!
+                          </div>
+                        
+                          <script>
+                            // Function to copy code to clipboard
+                            function copyCode(button) {
+                              const codeContainer = button.previousElementSibling;
+                              const code = codeContainer.textContent;
+                              const textarea = document.createElement('textarea');
+                              textarea.value = code;
+                              document.body.appendChild(textarea);
+                              textarea.select();
+                              document.execCommand('copy');
+                              document.body.removeChild(textarea);
+                              alert("Code copied to clipboard!");
+                            }
+                          </script>
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Working-with-the-DOM-(Document-Object-Model).html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Asynchronous-JavaScript.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

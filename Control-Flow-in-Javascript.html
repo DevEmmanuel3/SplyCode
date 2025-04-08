@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Control Flow in JavaScript | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Master control flow in JavaScript with our guide. Understand conditional statements (if, else, switch) and looping structures (for, while) to control the flow of your code. Perfect for improving your JavaScript programming skills.">
+    <meta name="keywords" content="Control flow in JavaScript, JavaScript if else statement, JavaScript loops (for, while), JavaScript switch case, Conditional statements in JavaScript, Loops in JavaScript, JavaScript control flow structures, Learn JavaScript control flow, JavaScript programming logic, JavaScript flow control examples, JavaScript for loop, while loop, switch, Programming with JavaScript conditionals">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    
+    
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Introduction-to-JavaScript.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-Javascript.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Control Flow in JavaScript</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    line-height: 1.6;
+                                    margin: 0;
+                                    padding: 0;
+                                    background-color: #f4f4f4;
+                                }
+                                
+                                h1 {
+                                    text-align: center;
+                                }
+                                
+                                pre {
+                                    background-color: #2d2d2d;
+                                    color: #f4f4f4;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    overflow-x: auto;
+                                    font-size: 1.1rem;
+                                    text-align: left;
+                                }
+                                .output {
+                                    background-color: #e0e0e0;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    margin-top: 10px;
+                                    font-family: monospace;
+                                }
+                                .copy-btn {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    padding: 10px;
+                                    border: none;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                .copy-btn:hover {
+                                    background-color: #45a049;
+                                }
+                            </style>
+                       
+                        
+                        
+                        
+                            <!-- Conditional Statements Section -->
+                           
+                                <h2>1. Conditional Statements</h2>
+                                <p>Conditional statements allow the program to make decisions based on whether a condition is true or false.</p>
+                        
+                                <!-- if Statement -->
+                                <h3>1.1 if Statement</h3>
+                                <p>The <code>if</code> statement tests a condition and executes the block of code if the condition is true.</p>
+                                <pre id="code-if">
+                        let age = 18;
+                        
+                        if (age >= 18) {
+                            console.log("You are an adult.");
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-if')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>You are an adult.
+                                </div>
+                            </div>
+                        
+                            <!-- else Statement -->
+                            <div class="code-section">
+                                <h3>1.2 else Statement</h3>
+                                <p>The <code>else</code> statement provides an alternative block of code that will execute when the condition is false.</p>
+                                <pre id="code-else">
+                        let age = 16;
+                        
+                        if (age >= 18) {
+                            console.log("You are an adult.");
+                        } else {
+                            console.log("You are a minor.");
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-else')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>You are a minor.
+                                </div>
+                            </div>
+                        
+                            <!-- else if Statement -->
+                            <div class="code-section">
+                                <h3>1.3 else if Statement</h3>
+                                <p>The <code>else if</code> statement allows for multiple conditions to be tested in sequence.</p>
+                                <pre id="code-elseif">
+                        let timeOfDay = 14;
+                        
+                        if (timeOfDay < 12) {
+                            console.log("Good morning!");
+                        } else if (timeOfDay < 18) {
+                            console.log("Good afternoon!");
+                        } else {
+                            console.log("Good evening!");
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-elseif')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Good afternoon!
+                                </div>
+                            </div>
+                        
+                            <!-- switch Statement -->
+                            <div class="code-section">
+                                <h3>1.4 switch Statement</h3>
+                                <p>The <code>switch</code> statement evaluates an expression and compares it against multiple possible values.</p>
+                                <pre id="code-switch">
+                        let day = 3;
+                        
+                        switch (day) {
+                            case 1:
+                                console.log("Monday");
+                                break;
+                            case 2:
+                                console.log("Tuesday");
+                                break;
+                            case 3:
+                                console.log("Wednesday");
+                                break;
+                            case 4:
+                                console.log("Thursday");
+                                break;
+                            case 5:
+                                console.log("Friday");
+                                break;
+                            default:
+                                console.log("Weekend");
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-switch')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>Wednesday
+                                </div>
+                            </div>
+                        
+                            <!-- Loops Section -->
+                            <div class="code-section">
+                                <h2>2. Loops</h2>
+                                <p>Loops are used to repeat a block of code multiple times as long as a condition is true.</p>
+                        
+                                <!-- for loop -->
+                                <h3>2.1 for Loop</h3>
+                                <p>The <code>for</code> loop allows you to repeat a block of code a certain number of times.</p>
+                                <pre id="code-for">
+                        for (let i = 1; i <= 5; i++) {
+                            console.log(i);
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-for')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>1<br>2<br>3<br>4<br>5
+                                </div>
+                            </div>
+                        
+                            <!-- while loop -->
+                            <div class="code-section">
+                                <h3>2.2 while Loop</h3>
+                                <p>The <code>while</code> loop executes a block of code as long as the specified condition is true.</p>
+                                <pre id="code-while">
+                        let i = 1;
+                        
+                        while (i <= 5) {
+                            console.log(i);
+                            i++;
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-while')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>1<br>2<br>3<br>4<br>5
+                                </div>
+                            </div>
+                        
+                            <!-- do...while loop -->
+                            <div class="code-section">
+                                <h3>2.3 do...while Loop</h3>
+                                <p>The <code>do...while</code> loop is similar to the <code>while</code> loop, but it guarantees at least one execution of the code block.</p>
+                                <pre id="code-dowhile">
+                        let i = 1;
+                        
+                        do {
+                            console.log(i);
+                            i++;
+                        } while (i <= 5);
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-dowhile')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>1<br>2<br>3<br>4<br>5
+                                </div>
+                            </div>
+                        
+                            <!-- Loop Control Statements Section -->
+                            <div class="code-section">
+                                <h2>3. Loop Control Statements</h2>
+                                <p>Loop control statements are used to modify the behavior of loops during execution.</p>
+                        
+                                <!-- break statement -->
+                                <h3>3.1 break Statement</h3>
+                                <p>The <code>break</code> statement exits a loop early, regardless of the loop's condition.</p>
+                                <pre id="code-break">
+                        for (let i = 1; i <= 10; i++) {
+                            if (i === 6) {
+                                break;
+                            }
+                            console.log(i);
+                        }
+                                </pre>
+                                <button class="copy-btn" onclick="copyCode('code-break')">Copy Code</button>
+                                <div class="output">
+                                    Output: <br>1<br>2<br>3<br>4<br>5
+                                </div>
+                            </div>
+                        
+                                <!-- continue statement -->
+                                <div class="code-section">
+                                    <h3>3.2 continue Statement</h3>
+                                    <p>The <code>continue</code> statement skips the current iteration of the loop and moves to the next iteration.</p>
+                                    <pre id="code-continue">
+                        for (let i = 1; i <= 5; i++) {
+                            if (i === 3) {
+                                continue;
+                            }
+                            console.log(i);
+                        }
+                                    </pre>
+                                    <button class="copy-btn" onclick="copyCode('code-continue')">Copy Code</button>
+                                    <div class="output">
+                                        Output: <br>1<br>2<br>4<br>5
+                                    </div>
+                                </div>
+                            
+                        
+                            <script>
+                                // Function to copy code to clipboard
+                                function copyCode(id) {
+                                    var code = document.getElementById(id).innerText;
+                                    var textArea = document.createElement("textarea");
+                                    textArea.value = code;
+                                    document.body.appendChild(textArea);
+                                    textArea.select();
+                                    document.execCommand("copy");
+                                    document.body.removeChild(textArea);
+                                    alert("Code copied to clipboard!");
+                                }
+                            </script>
+                        
+                     
+
+
+
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Introduction-to-JavaScript.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-Javascript.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

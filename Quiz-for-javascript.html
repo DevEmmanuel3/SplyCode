@@ -1,0 +1,599 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quiz for JavaScript| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Test your knowledge of JavaScript with this comprehensive quiz! Perfect for beginners and advanced learners. Challenge yourself with questions about variables, data types, operators, functions, and more. See how well you know JavaScript fundamentals and improve your skills.">
+    <meta name="keywords" content="JavaScript quiz, JavaScript quiz for beginners, Learn JavaScript with a quiz, JavaScript fundamentals quiz, JavaScript quiz questions and answers, Test your JavaScript knowledge, JavaScript trivia questions, Best JavaScript quizzes, JavaScript coding quiz, JavaScript exam questions">
+     <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="JavaScript-Framworks-and-Libraries-(Introduction).html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="congrat-for-javascript.html"> Finish</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Quiz</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                       
+                            <style>
+                                
+                                .quiz-container {
+                                    max-width: 600px;
+                                    margin: 0 auto;
+                                }
+                                h1 {
+                                    text-align: center;
+                                }
+                                .question {
+                                    margin: 10px 0;
+                                }
+                                .choices {
+                                    margin-left: 20px;
+                                }
+                                .choices input {
+                                    margin-right: 10px;
+                                }
+                                #submit-btn {
+                                    margin-top: 20px;
+                                    padding: 10px;
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                }
+                                #submit-btn:hover {
+                                    background-color: #45a049;
+                                }
+                                .result {
+                                    text-align: center;
+                                    font-size: 18px;
+                                    margin-top: 20px;
+                                }
+                                p{
+                                    font-weight: bold;
+                                }
+                            </style>
+                       
+                        
+                            <div  class="quiz-container">
+                                <h1>JavaScript Quiz</h1>
+                                <form id="quiz-form">
+                                    <!-- Questions 1 to 10 -->
+                                    <div class="question">
+                                        <p>1. What is the correct syntax to print "Hello World" in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q1" value="a"> console.print("Hello World");<br>
+                                            <input type="radio" name="q1" value="b"> print("Hello World");<br>
+                                            <input type="radio" name="q1" value="c"> console.log("Hello World");<br>
+                                            <input type="radio" name="q1" value="d"> log("Hello World");<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>2. Which of the following is NOT a JavaScript data type?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q2" value="a"> String<br>
+                                            <input type="radio" name="q2" value="b"> Boolean<br>
+                                            <input type="radio" name="q2" value="c"> Integer<br>
+                                            <input type="radio" name="q2" value="d"> Object<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>3. How do you create a function in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q3" value="a"> function:myFunction() {}<br>
+                                            <input type="radio" name="q3" value="b"> function myFunction() {}<br>
+                                            <input type="radio" name="q3" value="c"> def myFunction() {}<br>
+                                            <input type="radio" name="q3" value="d"> function = myFunction() {}<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>4. What will the following code output? <br> console.log(typeof NaN);</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q4" value="a"> "undefined"<br>
+                                            <input type="radio" name="q4" value="b"> "object"<br>
+                                            <input type="radio" name="q4" value="c"> "number"<br>
+                                            <input type="radio" name="q4" value="d"> "NaN"<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>5. Which of these methods is used to add elements to an array in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q5" value="a"> push()<br>
+                                            <input type="radio" name="q5" value="b"> append()<br>
+                                            <input type="radio" name="q5" value="c"> add()<br>
+                                            <input type="radio" name="q5" value="d"> insert()<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>6. What is the correct way to declare a constant in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q6" value="a"> const myVar;<br>
+                                            <input type="radio" name="q6" value="b"> let myVar;<br>
+                                            <input type="radio" name="q6" value="c"> var myVar;<br>
+                                            <input type="radio" name="q6" value="d"> constant myVar;<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>7. Which of the following is the correct way to write an if statement in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q7" value="a"> if x = 5<br>
+                                            <input type="radio" name="q7" value="b"> if (x == 5)<br>
+                                            <input type="radio" name="q7" value="c"> if (x = 5)<br>
+                                            <input type="radio" name="q7" value="d"> if x == 5<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>8. What will the following code output? <br> console.log(0 == '0');</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q8" value="a"> true<br>
+                                            <input type="radio" name="q8" value="b"> false<br>
+                                            <input type="radio" name="q8" value="c"> undefined<br>
+                                            <input type="radio" name="q8" value="d"> NaN<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>9. Which event is triggered when the user clicks on a button?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q9" value="a"> click<br>
+                                            <input type="radio" name="q9" value="b"> mouseover<br>
+                                            <input type="radio" name="q9" value="c"> submit<br>
+                                            <input type="radio" name="q9" value="d"> change<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>10. How do you declare an array in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q10" value="a"> var myArray = [];<br>
+                                            <input type="radio" name="q10" value="b"> var myArray = {}; <br>
+                                            <input type="radio" name="q10" value="c"> var myArray = () {};<br>
+                                            <input type="radio" name="q10" value="d"> var myArray = "";<br>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Questions 11 to 30 -->
+                                    <div class="question">
+                                        <p>11. Which method is used to remove the last element of an array?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q11" value="a"> pop()<br>
+                                            <input type="radio" name="q11" value="b"> shift()<br>
+                                            <input type="radio" name="q11" value="c"> unshift()<br>
+                                            <input type="radio" name="q11" value="d"> remove()<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>12. Which of these is the correct way to add an event listener in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q12" value="a"> element.addEventListener('click', function);<br>
+                                            <input type="radio" name="q12" value="b"> element.addEvent('click', function);<br>
+                                            <input type="radio" name="q12" value="c"> element.addListener('click', function);<br>
+                                            <input type="radio" name="q12" value="d"> element.onClick('click', function);<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>13. What is the correct syntax for a while loop in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q13" value="a"> while (i <= 10) {}<br>
+                                            <input type="radio" name="q13" value="b"> while i <= 10 {}<br>
+                                            <input type="radio" name="q13" value="c"> loop (i <= 10) {}<br>
+                                            <input type="radio" name="q13" value="d"> do while (i <= 10) {}<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>14. Which JavaScript function is used to parse a JSON string into a JavaScript object?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q14" value="a"> JSON.parse()<br>
+                                            <input type="radio" name="q14" value="b"> JSON.stringify()<br>
+                                            <input type="radio" name="q14" value="c"> parseJSON()<br>
+                                            <input type="radio" name="q14" value="d"> stringifyJSON()<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>15. What is the correct way to concatenate two arrays in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q15" value="a"> array1.concat(array2);<br>
+                                            <input type="radio" name="q15" value="b"> array1 + array2;<br>
+                                            <input type="radio" name="q15" value="c"> array1.append(array2);<br>
+                                            <input type="radio" name="q15" value="d"> array1.push(array2);<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>16. Which of these is the correct way to handle asynchronous JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q16" value="a"> Callbacks<br>
+                                            <input type="radio" name="q16" value="b"> Promises<br>
+                                            <input type="radio" name="q16" value="c"> async/await<br>
+                                            <input type="radio" name="q16" value="d"> All of the above<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>17. What does the `this` keyword refer to in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q17" value="a"> The global object<br>
+                                            <input type="radio" name="q17" value="b"> The current object<br>
+                                            <input type="radio" name="q17" value="c"> The function scope<br>
+                                            <input type="radio" name="q17" value="d"> All of the above<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>18. How do you define a class in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q18" value="a"> class MyClass {}<br>
+                                            <input type="radio" name="q18" value="b"> function MyClass() {}<br>
+                                            <input type="radio" name="q18" value="c"> var MyClass = {};<br>
+                                            <input type="radio" name="q18" value="d"> object MyClass {}<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>19. What is the default value of a JavaScript variable?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q19" value="a"> null<br>
+                                            <input type="radio" name="q19" value="b"> undefined<br>
+                                            <input type="radio" name="q19" value="c"> 0<br>
+                                            <input type="radio" name="q19" value="d"> false<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>20. Which method is used to change the content of an HTML element in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q20" value="a"> innerHTML<br>
+                                            <input type="radio" name="q20" value="b"> textContent<br>
+                                            <input type="radio" name="q20" value="c"> setContent<br>
+                                            <input type="radio" name="q20" value="d"> content<br>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="question">
+                                        <p>21. Which method is used to remove an element from the DOM?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q21" value="a"> removeChild()<br>
+                                            <input type="radio" name="q21" value="b"> deleteNode()<br>
+                                            <input type="radio" name="q21" value="c"> destroyNode()<br>
+                                            <input type="radio" name="q21" value="d"> removeElement()<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>22. Which operator is used to compare two values for equality without type conversion in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q22" value="a"> ==<br>
+                                            <input type="radio" name="q22" value="b"> ===<br>
+                                            <input type="radio" name="q22" value="c"> !=<br>
+                                            <input type="radio" name="q22" value="d"> !==<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>23. What will the following code output? <br> console.log(2 + '2');</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q23" value="a"> 4<br>
+                                            <input type="radio" name="q23" value="b"> 22<br>
+                                            <input type="radio" name="q23" value="c"> "4"<br>
+                                            <input type="radio" name="q23" value="d"> "22"<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>24. How can you check if an object is an array in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q24" value="a"> Array.isArray(object);<br>
+                                            <input type="radio" name="q24" value="b"> object.isArray();<br>
+                                            <input type="radio" name="q24" value="c"> object instanceof Array;<br>
+                                            <input type="radio" name="q24" value="d"> All of the above<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>25. How do you prevent a form from submitting in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q25" value="a"> event.preventDefault();<br>
+                                            <input type="radio" name="q25" value="b"> return false;<br>
+                                            <input type="radio" name="q25" value="c"> event.stopPropagation();<br>
+                                            <input type="radio" name="q25" value="d"> Both a and b<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>26. Which of the following is a false statement about JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q26" value="a"> JavaScript is a loosely-typed language.<br>
+                                            <input type="radio" name="q26" value="b"> Variables are always declared using 'var'.<br>
+                                            <input type="radio" name="q26" value="c"> JavaScript supports object-oriented programming.<br>
+                                            <input type="radio" name="q26" value="d"> JavaScript supports functional programming.<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>27. What is a promise in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q27" value="a"> A way to handle errors in code.<br>
+                                            <input type="radio" name="q27" value="b"> An object representing the eventual completion or failure of an asynchronous operation.<br>
+                                            <input type="radio" name="q27" value="c"> A way to store functions.<br>
+                                            <input type="radio" name="q27" value="d"> A function that always returns true.<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>28. What is the purpose of the `async` keyword in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q28" value="a"> To define a function that always returns a promise.<br>
+                                            <input type="radio" name="q28" value="b"> To make a function run asynchronously without blocking the execution of other code.<br>
+                                            <input type="radio" name="q28" value="c"> To define a function that runs synchronously.<br>
+                                            <input type="radio" name="q28" value="d"> None of the above<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>29. Which of the following is NOT a valid variable name in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q29" value="a"> _myVar<br>
+                                            <input type="radio" name="q29" value="b"> myVar<br>
+                                            <input type="radio" name="q29" value="c"> 2myVar<br>
+                                            <input type="radio" name="q29" value="d"> $myVar<br>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <p>30. What does the `setTimeout()` function do in JavaScript?</p>
+                                        <div class="choices">
+                                            <input type="radio" name="q30" value="a"> Executes a function after a specified delay.<br>
+                                            <input type="radio" name="q30" value="b"> Executes a function immediately.<br>
+                                            <input type="radio" name="q30" value="c"> Cancels a function.<br>
+                                            <input type="radio" name="q30" value="d"> Pauses the execution of the code.<br>
+                                        </div>
+                                    </div>
+                        
+                                    <button id="submit-btn" type="button" onclick="checkAnswers()">Submit Quiz</button>
+                                </form>
+                        
+                                <div id="result" class="result"></div>
+                            </div>
+                        
+                            <script>
+                                const answers = {
+                                    q1: 'c',
+                                    q2: 'c',
+                                    q3: 'b',
+                                    q4: 'c',
+                                    q5: 'a',
+                                    q6: 'a',
+                                    q7: 'b',
+                                    q8: 'a',
+                                    q9: 'a',
+                                    q10: 'a',
+                                    q11: 'a',
+                                    q12: 'a',
+                                    q13: 'a',
+                                    q14: 'a',
+                                    q15: 'a',
+                                    q16: 'd',
+                                    q17: 'd',
+                                    q18: 'a',
+                                    q19: 'b',
+                                    q20: 'a',
+                                    q21: 'a',
+                                    q22: 'b',
+                                    q23: 'd',
+                                    q24: 'd',
+                                    q25: 'd',
+                                    q26: 'b',
+                                    q27: 'b',
+                                    q28: 'b',
+                                    q29: 'c',
+                                    q30: 'a'
+                                };
+                        
+                                function checkAnswers() {
+                                    let score = 0;
+                                    const form = document.getElementById('quiz-form');
+                                    const resultDiv = document.getElementById('result');
+                        
+                                    for (let i = 1; i <= 30; i++) {
+                                        const question = form.querySelector(`input[name="q${i}"]:checked`);
+                                        if (question && question.value === answers[`q${i}`]) {
+                                            score++;
+                                        }
+                                    }
+                        
+                                    resultDiv.textContent = `You scored ${score} out of 30`;
+                                }
+                            </script>
+                        
+                      
+                           
+                        
+                
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="pratical-questions-for-javascript.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="congrat-for-javascript.html"> Finish</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

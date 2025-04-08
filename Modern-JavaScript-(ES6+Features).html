@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Modern JavaScript (ES6+ Features)| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn modern JavaScript (ES6+) features such as arrow functions, classes, promises, template literals, destructuring, async/await, and more to enhance your coding skills.">
+    <meta name="keywords" content="Modern JavaScript, ES6 features, ES6 JavaScript tutorial, arrow functions, promises, async/await, JavaScript classes, template literals, destructuring">
+    <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+          <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+          </span>  
+        </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-JavaScript-Concepts.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-JavaScript-Code.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Modern JavaScript (ES6+ Features)</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                       
+                          <style>
+                          
+                            .section {
+                              background-color: #fff;
+                              padding: 20px;
+                              margin: 10px 0;
+                              border-radius: 5px;
+                              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                            }
+                            h2 {
+                              color: #333;
+                            }
+                            pre {
+                              background-color: #282c34;
+                              color: #f1f1f1;
+                              padding: 10px;
+                              border-radius: 5px;
+                              overflow-x: auto;
+                              max-width: 100%;
+                            }
+                            .output {
+                              background-color: #e8f8e8;
+                              padding: 10px;
+                              border: 1px solid #d1e7d1;
+                              margin-top: 10px;
+                              border-radius: 5px;
+                            }
+                            button {
+                              background-color: #4CAF50;
+                              color: white;
+                              border: none;
+                              padding: 8px 16px;
+                              text-align: center;
+                              text-decoration: none;
+                              font-size: 14px;
+                              cursor: pointer;
+                              border-radius: 5px;
+                            }
+                            button:hover {
+                              background-color: #45a049;
+                            }
+                          </style>
+                        
+                        
+                          <h1>Modern JavaScript (ES6+ Features)</h1>
+                        
+                          <div class="section">
+                            <h2>1. Let and Const Declarations</h2>
+                            <p><strong>Let</strong> and <strong>Const</strong> are block-scoped variable declarations. They are preferred over <strong>var</strong>, which is function-scoped.</p>
+                            <pre id="code1">
+                        let x = 10;
+                        x = 20;  // Allowed
+                        
+                        const y = 30;
+                        y = 40;  // Error: Assignment to constant variable.
+                            </pre>
+                            <button onclick="copyCode('code1')">Copy Code</button>
+                            <div class="output">Output: x can be reassigned, but y cannot.</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>2. Arrow Functions</h2>
+                            <p>Arrow functions provide a shorter syntax for writing functions and also lexically bind the <strong>this</strong> keyword.</p>
+                            <pre id="code2">
+                        const sumArrow = (a, b) => a + b;
+                        
+                        console.log(sumArrow(2, 3));   // Output: 5
+                            </pre>
+                            <button onclick="copyCode('code2')">Copy Code</button>
+                            <div class="output">Output: 5</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>3. Template Literals</h2>
+                            <p>Template literals allow for string interpolation and multi-line strings, improving readability.</p>
+                            <pre id="code3">
+                        const name = 'Alice';
+                        const greeting = \`Hello, \${name}! Welcome to JavaScript.\`;
+                        console.log(greeting);  // Output: Hello, Alice! Welcome to JavaScript.
+                            </pre>
+                            <button onclick="copyCode('code3')">Copy Code</button>
+                            <div class="output">Output: Hello, Alice! Welcome to JavaScript.</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>4. Destructuring</h2>
+                            <p>Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.</p>
+                            <pre id="code4">
+                        const arr = [1, 2, 3];
+                        const [a, b] = arr;
+                        console.log(a, b);  // Output: 1 2
+                        
+                        const person = { name: 'Alice', age: 30 };
+                        const { name, age } = person;
+                        console.log(name, age);  // Output: Alice 30
+                            </pre>
+                            <button onclick="copyCode('code4')">Copy Code</button>
+                            <div class="output">Output: 1 2, Alice 30</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>5. Spread and Rest Operators</h2>
+                            <p><strong>Spread</strong> allows you to spread elements of an array or object. <strong>Rest</strong> allows you to collect multiple elements into a single array or object.</p>
+                            <pre id="code5">
+                        // Spread in Arrays
+                        const arr1 = [1, 2, 3];
+                        const arr2 = [...arr1, 4, 5];
+                        console.log(arr2);  // Output: [1, 2, 3, 4, 5]
+                        
+                        // Rest in Function Parameters
+                        function sum(...numbers) {
+                          return numbers.reduce((a, b) => a + b, 0);
+                        }
+                        console.log(sum(1, 2, 3, 4));  // Output: 10
+                            </pre>
+                            <button onclick="copyCode('code5')">Copy Code</button>
+                            <div class="output">Output: [1, 2, 3, 4, 5], 10</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>6. Classes and Inheritance</h2>
+                            <p>ES6 introduced <strong>classes</strong>, providing a more structured way to work with objects and inheritance.</p>
+                            <pre id="code6">
+                        class Person {
+                          constructor(name, age) {
+                            this.name = name;
+                            this.age = age;
+                          }
+                          greet() {
+                            console.log(\`Hello, my name is \${this.name}\`);
+                          }
+                        }
+                        
+                        class Student extends Person {
+                          constructor(name, age, grade) {
+                            super(name, age);
+                            this.grade = grade;
+                          }
+                          study() {
+                            console.log(\`\${this.name} is studying.\`);
+                          }
+                        }
+                        
+                        const student = new Student('Alice', 20, 'A');
+                        student.greet();  // Output: Hello, my name is Alice
+                        student.study();  // Output: Alice is studying.
+                            </pre>
+                            <button onclick="copyCode('code6')">Copy Code</button>
+                            <div class="output">Output: Hello, my name is Alice, Alice is studying.</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>7. Generators and Iterators</h2>
+                            <p>Generators are functions that can be paused and resumed, and they allow you to define an iterative process.</p>
+                            <pre id="code7">
+                        function* generatorExample() {
+                          yield 1;
+                          yield 2;
+                          yield 3;
+                        }
+                        
+                        const gen = generatorExample();
+                        console.log(gen.next().value);  // Output: 1
+                        console.log(gen.next().value);  // Output: 2
+                        console.log(gen.next().value);  // Output: 3
+                            </pre>
+                            <button onclick="copyCode('code7')">Copy Code</button>
+                            <div class="output">Output: 1, 2, 3</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>8. Modules (import/export)</h2>
+                            <p>ES6 modules allow you to split code into multiple files and import/export values between them.</p>
+                            <pre id="code8">
+                        // module.js
+                        export const greeting = 'Hello, World!';
+                        export function greet(name) {
+                          return \`\${greeting} My name is \${name}\`;
+                        }
+                        
+                        // app.js
+                        import { greeting, greet } from './module.js';
+                        console.log(greeting);  // Output: Hello, World!
+                        console.log(greet('Alice'));  // Output: Hello, World! My name is Alice
+                            </pre>
+                            <button onclick="copyCode('code8')">Copy Code</button>
+                            <div class="output">Output: Hello, World!, Hello, World! My name is Alice</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>9. Sets and Maps</h2>
+                            <p><strong>Set</strong>: A collection of unique values. <strong>Map</strong>: A collection of key-value pairs, where keys can be of any data type.</p>
+                            <pre id="code9">
+                        // Set
+                        const set = new Set([1, 2, 3, 3]);
+                        set.add(4);
+                        console.log(set);  // Output: Set { 1, 2, 3, 4 }
+                        
+                        // Map
+                        const map = new Map();
+                        map.set('name', 'Alice');
+                        map.set('age', 30);
+                        console.log(map.get('name'));  // Output: Alice
+                            </pre>
+                            <button onclick="copyCode('code9')">Copy Code</button>
+                            <div class="output">Output: Set { 1, 2, 3, 4 }, Alice</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>10. Symbols</h2>
+                            <p>Symbols are unique and immutable primitive values that can be used as object property keys.</p>
+                            <pre id="code10">
+                        const symbol = Symbol('id');
+                        const user = {
+                          [symbol]: 123,
+                        };
+                        console.log(user[symbol]);  // Output: 123
+                            </pre>
+                            <button onclick="copyCode('code10')">Copy Code</button>
+                            <div class="output">Output: 123</div>
+                          </div>
+                        
+                          <div class="section">
+                            <h2>11. Proxies</h2>
+                            <p>A Proxy allows you to define custom behavior for fundamental operations (e.g., property lookup, assignment, etc.).</p>
+                            <pre id="code11">
+                        const person = {
+                          name: 'Alice',
+                          age: 25,
+                        };
+                        
+                        const handler = {
+                          get: function (target, prop) {
+                            if (prop === 'age') {
+                              return 'Age is confidential';
+                            }
+                            return prop in target ? target[prop] : 'Property not found';
+                          },
+                        };
+                        
+                        const proxyPerson = new Proxy(person, handler);
+                        console.log(proxyPerson.name);  // Output: Alice
+                        console.log(proxyPerson.age);   // Output: Age is confidential
+                        console.log(proxyPerson.city);  // Output: Property not found
+                            </pre>
+                            <button onclick="copyCode('code11')">Copy Code</button>
+                            <div class="output">Output: Alice, Age is confidential, Property not found</div>
+                          </div>
+                        
+                          <script>
+                            function copyCode(codeId) {
+                              const code = document.getElementById(codeId).textContent;
+                              const textArea = document.createElement('textarea');
+                              textArea.value = code;
+                              document.body.appendChild(textArea);
+                              textArea.select();
+                              document.execCommand('copy');
+                              document.body.removeChild(textArea);
+                              alert("Code copied to clipboard!");
+                            }
+                          </script>
+                        
+                       
+                        
+                
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-JavaScript-Concepts.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-JavaScript-Code.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Object-Oriented Programming (OOP) in Python| Sply Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Object-Oriented Programming (OOP) in Python, covering key concepts like classes, objects, attributes, methods, encapsulation, inheritance, polymorphism, constructors, destructors, self keyword, advanced OOP topics including class methods, static methods, multiple inheritance, method overriding, super(), abstract classes, interfaces, data hiding, and property decorators." />
+    <meta name="keywords" content="Python OOP, Object-Oriented Programming in Python, classes, objects, attributes, methods, encapsulation, inheritance, polymorphism, constructors, destructors, self keyword, class methods, static methods, multiple inheritance, method overriding, super(), abstract classes, interfaces, data hiding, property decorators" />
+        
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-and-Modules-in-python.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="File-Handling-and-Input-Output-in-python.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Python-full-course.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Python Full Course</h1> <br>
+                    <h1 class="mb-4">Object-Oriented Programming (OOP) in Python</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                            <style>
+                               
+                                h1, h2, h3 {
+                                    color: #2c3e50;
+                                }
+                                pre {
+                                    background: #f4f4f4;
+                                    padding: 10px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 5px;
+                                    position: relative;
+                                }
+                                .copy-button {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    background: #3498db;
+                                    color: white;
+                                    border: none;
+                                    padding: 5px 10px;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                }
+                                .copy-button:hover {
+                                    background: #2980b9;
+                                }
+                                .output {
+                                    background: #e8f5e9;
+                                    padding: 10px;
+                                    border: 1px solid #c8e6c9;
+                                    border-radius: 5px;
+                                    margin-top: 10px;
+                                }
+                            </style>
+                       
+                        
+                        <h1>Object-Oriented Programming (OOP) Explained</h1>
+                        <p>Object-Oriented Programming (OOP) is a programming paradigm that organizes software design around <strong>objects</strong> and <strong>classes</strong>. It emphasizes <strong>encapsulation</strong>, <strong>inheritance</strong>, <strong>polymorphism</strong>, and <strong>abstraction</strong>. Below, we’ll break down the concepts and provide code examples in Python.</p>
+                        
+                        <h2>1. Basic OOP Concepts</h2>
+                        
+                        <h3>1.1 Classes and Objects</h3>
+                        <p>A <strong>class</strong> is a blueprint for creating objects. It defines the structure and behavior of objects. An <strong>object</strong> is an instance of a class.</p>
+                        <pre id="code1">
+                        class Dog:
+                            # Class attribute (shared by all instances)
+                            species = "Canis familiaris"
+                        
+                            # Instance attributes (unique to each instance)
+                            def __init__(self, name, age):
+                                self.name = name
+                                self.age = age
+                        
+                        # Creating objects (instances of the class)
+                        dog1 = Dog("Buddy", 5)
+                        dog2 = Dog("Max", 3)
+                        
+                        print(dog1.name)  # Output: Buddy
+                        print(dog2.age)   # Output: 3
+                        print(dog1.species)  # Output: Canis familiaris
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code1')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Buddy<br>
+                            3<br>
+                            Canis familiaris
+                        </div>
+                        
+                        <h3>1.2 Attributes and Methods</h3>
+                        <p><strong>Attributes</strong> are variables that belong to an object or class. <strong>Methods</strong> are functions that belong to an object or class.</p>
+                        <pre id="code2">
+                        class Dog:
+                            def __init__(self, name, age):
+                                self.name = name
+                                self.age = age
+                        
+                            # Method
+                            def bark(self):
+                                return f"{self.name} says woof!"
+                        
+                        dog1 = Dog("Buddy", 5)
+                        print(dog1.bark())  # Output: Buddy says woof!
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code2')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Buddy says woof!
+                        </div>
+                        
+                        <h3>1.3 Encapsulation</h3>
+                        <p>Encapsulation is the bundling of data (attributes) and methods that operate on the data into a single unit (class). It also restricts direct access to some of an object's components, which is achieved using <strong>private attributes</strong> (e.g., <code>_</code> or <code>__</code> prefix in Python).</p>
+                        <pre id="code3">
+                        class BankAccount:
+                            def __init__(self, balance):
+                                self.__balance = balance  # Private attribute
+                        
+                            def deposit(self, amount):
+                                self.__balance += amount
+                        
+                            def get_balance(self):
+                                return self.__balance
+                        
+                        account = BankAccount(1000)
+                        account.deposit(500)
+                        print(account.get_balance())  # Output: 1500
+                        # print(account.__balance)  # Error: AttributeError (private attribute)
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code3')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            1500
+                        </div>
+                        
+                        <h3>1.4 Inheritance</h3>
+                        <p>Inheritance allows a class (child) to inherit attributes and methods from another class (parent). It promotes code reuse.</p>
+                        <pre id="code4">
+                        # Parent class
+                        class Animal:
+                            def __init__(self, name):
+                                self.name = name
+                        
+                            def speak(self):
+                                return "Sound"
+                        
+                        # Child class
+                        class Dog(Animal):
+                            def speak(self):
+                                return f"{self.name} says woof!"
+                        
+                        dog = Dog("Buddy")
+                        print(dog.speak())  # Output: Buddy says woof!
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code4')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Buddy says woof!
+                        </div>
+                        
+                        <h3>1.5 Polymorphism</h3>
+                        <p>Polymorphism allows objects of different classes to be treated as objects of a common superclass. It can be achieved through <strong>method overriding</strong> or <strong>duck typing</strong>.</p>
+                        <pre id="code5">
+                        class Cat(Animal):
+                            def speak(self):
+                                return f"{self.name} says meow!"
+                        
+                        animals = [Dog("Buddy"), Cat("Whiskers")]
+                        for animal in animals:
+                            print(animal.speak())
+                        # Output:
+                        # Buddy says woof!
+                        # Whiskers says meow!
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code5')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Buddy says woof!<br>
+                            Whiskers says meow!
+                        </div>
+                        
+                        <h3>1.6 Constructors and Destructors</h3>
+                        <p>A <strong>constructor</strong> (<code>__init__</code>) initializes an object when it is created. A <strong>destructor</strong> (<code>__del__</code>) is called when an object is destroyed.</p>
+                        <pre id="code6">
+                        class Person:
+                            def __init__(self, name):
+                                self.name = name
+                                print(f"{self.name} created.")
+                        
+                            def __del__(self):
+                                print(f"{self.name} destroyed.")
+                        
+                        person = Person("Alice")
+                        # Output: Alice created.
+                        del person  # Output: Alice destroyed.
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code6')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Alice created.<br>
+                            Alice destroyed.
+                        </div>
+                        
+                        <h3>1.7 <code>self</code> Keyword</h3>
+                        <p><code>self</code> refers to the current instance of the class. It is used to access attributes and methods of the object.</p>
+                        <pre id="code7">
+                        class Car:
+                            def __init__(self, brand):
+                                self.brand = brand
+                        
+                            def display(self):
+                                print(f"This car is a {self.brand}.")
+                        
+                        car = Car("Toyota")
+                        car.display()  # Output: This car is a Toyota.
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code7')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            This car is a Toyota.
+                        </div>
+                        
+                        <h2>2. Advanced OOP Concepts</h2>
+                        
+                        <h3>2.1 Class Methods and Static Methods</h3>
+                        <p><strong>Class methods</strong> are bound to the class and not the instance. They use the <code>@classmethod</code> decorator and take <code>cls</code> as the first parameter. <strong>Static methods</strong> are utility methods that don't depend on the instance or class. They use the <code>@staticmethod</code> decorator.</p>
+                        <pre id="code8">
+                        class Math:
+                            @classmethod
+                            def add(cls, a, b):
+                                return a + b
+                        
+                            @staticmethod
+                            def multiply(a, b):
+                                return a * b
+                        
+                        print(Math.add(2, 3))        # Output: 5
+                        print(Math.multiply(2, 3))   # Output: 6
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code8')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            5<br>
+                            6
+                        </div>
+                        
+                        <h3>2.2 Inheritance (Single and Multiple)</h3>
+                        <p><strong>Single inheritance</strong>: A class inherits from one parent class. <strong>Multiple inheritance</strong>: A class inherits from multiple parent classes.</p>
+                        <pre id="code9">
+                        # Single inheritance
+                        class Bird(Animal):
+                            def speak(self):
+                                return f"{self.name} says chirp!"
+                        
+                        # Multiple inheritance
+                        class Bat(Animal, Bird):
+                            pass
+                        
+                        bat = Bat("Batty")
+                        print(bat.speak())  # Output: Batty says chirp!
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code9')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Batty says chirp!
+                        </div>
+                        
+                        <h3>2.3 Method Overriding and <code>super()</code></h3>
+                        <p><strong>Method overriding</strong> allows a child class to provide a specific implementation of a method already defined in the parent class. <code>super()</code> is used to call a method from the parent class.</p>
+                        <pre id="code10">
+                        class Animal:
+                            def speak(self):
+                                return "Sound"
+                        
+                        class Dog(Animal):
+                            def speak(self):
+                                return super().speak() + " but specifically woof!"
+                        
+                        dog = Dog()
+                        print(dog.speak())  # Output: Sound but specifically woof!
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code10')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Sound but specifically woof!
+                        </div>
+                        
+                        <h3>2.4 Abstract Classes and Interfaces</h3>
+                        <p><strong>Abstract classes</strong> cannot be instantiated and often contain one or more abstract methods (methods without implementation). <strong>Interfaces</strong> define a contract for classes (Python uses abstract classes for this purpose).</p>
+                        <pre id="code11">
+                        from abc import ABC, abstractmethod
+                        
+                        # Abstract class
+                        class Shape(ABC):
+                            @abstractmethod
+                            def area(self):
+                                pass
+                        
+                        class Circle(Shape):
+                            def __init__(self, radius):
+                                self.radius = radius
+                        
+                            def area(self):
+                                return 3.14 * self.radius ** 2
+                        
+                        circle = Circle(5)
+                        print(circle.area())  # Output: 78.5
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code11')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            78.5
+                        </div>
+                        
+                        <h3>2.5 Data Hiding</h3>
+                        <p>Data hiding restricts access to certain attributes or methods using private variables (<code>__</code> prefix).</p>
+                        <pre id="code12">
+                        class Secret:
+                            def __init__(self, secret):
+                                self.__secret = secret
+                        
+                            def reveal(self):
+                                return self.__secret
+                        
+                        s = Secret("Confidential")
+                        # print(s.__secret)  # Error: AttributeError
+                        print(s.reveal())  # Output: Confidential
+                        </pre>
+                        <button class="copy-button" onclick="copyCode('code12')">Copy Code</button>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            Confidential
+                        </div>
+                        
+                        <h3>2.6 Property Decorators</h3>
+                        <p>Property decorators (<code>@property</code>, <code>@&lt;attribute&gt;.setter</code>, <code>@&lt;attribute&gt;.deleter</code>) allow controlled access to attributes.</p>
+                        <pre id="code13">
+                        class Temperature:
+                            def __init__(self, celsius):
+                                self._celsius = celsius
+                        
+                            @property
+                            def celsius(self):
+                                return self._celsius
+                        
+                            @celsius.setter
+                            def celsius(self, value):
+                                if value < -273.15:
+                                    raise ValueError("Temperature below absolute zero is not possible.")
+                                self._celsius = value
+                        
+                        temp = Temperature(25)
+                        print(temp.celsius)  # Output: 25
+                        temp.celsius = 30
+                        print(temp.celsius)  # Output: 30
+                        </pre>
+                        <div class="output">
+                            <strong>Output:</strong><br>
+                            25<br>
+                            30
+                        </div>
+                        
+                        <script>
+                            function copyCode(elementId) {
+                                const codeElement = document.getElementById(elementId);
+                                const codeText = codeElement.innerText;
+                                navigator.clipboard.writeText(codeText).then(() => {
+                                    alert("Code copied to clipboard!");
+                                });
+                            }
+                        </script>
+                        
+                       
+                          
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-and-Modules-in-python.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="File-Handling-and-Input-Output-in-python.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Frameworks and Libraries (Introduction)| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore popular JavaScript frameworks and libraries like React, Angular, Vue.js, and Node.js. Understand their differences, features, and how to use them for building efficient web applications.">
+    <meta name="keywords" content="JavaScript frameworks, JavaScript libraries, React, Angular, Vue.js, Node.js, Express.js, D3.js, jQuery, JavaScript development, web development tools">
+        <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+   
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-JavaScript-Code.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="pratical-questions-for-javascript.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">JavaScript Frameworks and Libraries (Introduction)</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        <style>
+                              
+                            code {
+                                background-color: #f4f4f4;
+                                padding: 5px;
+                                border-radius: 5px;
+                                display: block;
+                                margin-top: 10px;
+                            }
+                            .button {
+                                background-color: #4CAF50;
+                                color: white;
+                                padding: 10px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+                            .button:hover {
+                                background-color: #45a049;
+                            }
+                            pre {
+                                background-color: #f4f4f4;
+                                padding: 15px;
+                                border-radius: 5px;
+                                overflow-x: auto;
+                            }
+                        </style>
+                    
+                    
+                        <h1>JavaScript Frameworks and Libraries (Introduction)</h1>
+                        
+                        <p>JavaScript frameworks and libraries are tools that help developers build complex and efficient applications. They provide reusable code, components, and functionality to simplify the development process. Among the most popular JavaScript frameworks and libraries are <strong>React</strong>, <strong>Angular</strong>, and <strong>Vue.js</strong>. Let’s go over an overview of these popular frameworks and take a deeper dive into one of them, <strong>React</strong>.</p>
+                    
+                        <h2>1. Overview of Popular Frameworks</h2>
+                    
+                        <h3>React</h3>
+                        <p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It allows developers to build single-page applications (SPAs) with reusable components. React uses a virtual DOM to optimize rendering, making applications faster. React is often used with libraries like <strong>Redux</strong> (for state management) and <strong>React Router</strong> (for routing).</p>
+                    
+                        <h3>Angular</h3>
+                        <p>Angular is a comprehensive framework developed and maintained by Google for building dynamic web applications. It follows the Model-View-Controller (MVC) architecture. Angular is opinionated, meaning it comes with a lot of built-in tools (like HTTP client, forms handling, and routing) to handle different aspects of the application. Angular is built with TypeScript, providing strong typing and modern JavaScript features.</p>
+                    
+                        <h3>Vue.js</h3>
+                        <p>Vue.js is a progressive JavaScript framework used for building UIs and single-page applications. It’s easy to integrate with other libraries or existing projects and can also be used for building complex SPAs. Vue has a simpler learning curve compared to Angular and React and is great for beginners. Vue uses a component-based architecture like React but also supports other paradigms.</p>
+                    
+                        <h2>2. Introduction to React (Deeper Dive)</h2>
+                        <p>Let’s take a deeper dive into <strong>React</strong>, one of the most popular JavaScript libraries for building user interfaces.</p>
+                    
+                        <h3>React Concepts:</h3>
+                        <ul>
+                            <li><strong>Component-based architecture:</strong> React is based on components, which are reusable UI building blocks. Components can be functional or class-based.</li>
+                            <li><strong>State management:</strong> React has built-in state management for components. State allows components to maintain information about their condition and react to user interactions.</li>
+                            <li><strong>Routing:</strong> React Router helps in navigating between different views or pages in a single-page application.</li>
+                            <li><strong>API calls:</strong> React uses lifecycle methods or hooks to make API calls to external services.</li>
+                        </ul>
+                    
+                        <h2>3. Component-Based Architecture</h2>
+                        <p>In React, the UI is divided into small, reusable components. Each component manages its own state and renders UI based on that state.</p>
+                    
+                        <h4>Example: Basic React Component</h4>
+                        <button class="button" onclick="copyCode('code1')">Copy Code</button>
+                        <pre id="code1">
+                    <code>
+                    import React from 'react';
+                    
+                    // A simple React functional component
+                    function Greeting() {
+                      return &lt;h1&gt;Hello, welcome to React!&lt;/h1&gt;;
+                    }
+                    
+                    export default Greeting;
+                    </code>
+                        </pre>
+                    
+                        <h2>4. State Management in React</h2>
+                        <p>State management refers to how we store and manage the state (data) in React components. When the state of a component changes, React re-renders that component to reflect the changes in the UI.</p>
+                    
+                        <h4>Example: Using State in a React Component</h4>
+                        <button class="button" onclick="copyCode('code2')">Copy Code</button>
+                        <pre id="code2">
+                    <code>
+                    import React, { useState } from 'react';
+                    
+                    function Counter() {
+                      // Declare state variable 'count' and a setter function 'setCount'
+                      const [count, setCount] = useState(0);
+                    
+                      return (
+                        <div>
+                          <h2>Count: {count}</h2>
+                          <button onClick={() => setCount(count + 1)}>Increment</button>
+                          <button onClick={() => setCount(count - 1)}>Decrement</button>
+                        </div>
+                      );
+                    }
+                    
+                    export default Counter;
+                    </code>
+                        </pre>
+                    
+                        <h2>5. Routing in React</h2>
+                        <p>React Router is used for navigating between different components or views in a React application. It helps you create single-page applications with multiple views.</p>
+                    
+                        <h4>Example: Basic Routing with React Router</h4>
+                        <button class="button" onclick="copyCode('code3')">Copy Code</button>
+                        <pre id="code3">
+                    <code>
+                    import React from 'react';
+                    import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+                    
+                    function Home() {
+                      return &lt;h2&gt;Home Page&lt;/h2&gt;;
+                    }
+                    
+                    function About() {
+                      return &lt;h2&gt;About Page&lt;/h2&gt;;
+                    }
+                    
+                    function App() {
+                      return (
+                        <Router>
+                          &lt;div&gt;
+                            &lt;nav&gt;
+                              &lt;Link to="/"&gt;Home&lt;/Link&gt;
+                              &lt;Link to="/about"&gt;About&lt;/Link&gt;
+                            &lt;/nav&gt;
+                            &lt;Switch&gt;
+                              &lt;Route exact path="/" component={Home} /&gt;
+                              &lt;Route path="/about" component={About} /&gt;
+                            &lt;/Switch&gt;
+                          &lt;/div&gt;
+                        </Router>
+                      );
+                    }
+                    
+                    export default App;
+                    </code>
+                        </pre>
+                    
+                        <h2>6. Making API Calls in React</h2>
+                        <p>React can make API calls to fetch data using lifecycle methods (for class components) or hooks (for functional components). One popular method is using <strong>useEffect</strong> in combination with <strong>fetch</strong> to get data from an API.</p>
+                    
+                        <h4>Example: Making an API Call with useEffect</h4>
+                        <button class="button" onclick="copyCode('code4')">Copy Code</button>
+                        <pre id="code4">
+                    <code>
+                    import React, { useState, useEffect } from 'react';
+                    
+                    function UserList() {
+                      const [users, setUsers] = useState([]);
+                      const [loading, setLoading] = useState(true);
+                    
+                      useEffect(() => {
+                        // Fetch users from API
+                        fetch('https://jsonplaceholder.typicode.com/users')
+                          .then((response) => response.json())
+                          .then((data) => {
+                            setUsers(data);
+                            setLoading(false);
+                          })
+                          .catch((error) => {
+                            console.error('Error fetching users:', error);
+                            setLoading(false);
+                          });
+                      }, []); // Empty dependency array means this runs only once after the first render
+                    
+                      if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+                    
+                      return (
+                        &lt;div&gt;
+                          &lt;h2&gt;User List&lt;/h2&gt;
+                          &lt;ul&gt;
+                            {users.map((user) =&gt; (
+                              &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+                            ))}
+                          &lt;/ul&gt;
+                        &lt;/div&gt;
+                      );
+                    }
+                    
+                    export default UserList;
+                    </code>
+                        </pre>
+                    
+                        <script>
+                            function copyCode(codeId) {
+                                var code = document.getElementById(codeId);
+                                var text = code.innerText || code.textContent;
+                                navigator.clipboard.writeText(text).then(function() {
+                                    alert('Code copied to clipboard!');
+                                });
+                            }
+                        </script>
+                   
+                       
+                    
+             
+                           
+                        
+                
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-JavaScript-Code.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="pratical-questions-for-javascript.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

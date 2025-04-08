@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Text and Formatting in HTML5 | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Understand the basic structure of an HTML5 document. Learn about essential HTML5 tags, syntax, and how to create a well-structured web page for modern web development.">
+    <meta name="keywords" content="Basic structure of HTML5, HTML5 document structure, HTML5 tags and syntax, HTML5 webpage structure, Learn HTML5 basics, HTML5 document template, HTML5 structure tutorial, HTML5 page layout, HTML5 for beginners, HTML5 document skeleton">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    
+
+    <!-- Open Graph Meta Tags (optional for social media sharing) -->
+    <meta property="og:title" content="Basic Structure of an HTML5 Document: Learn HTML5 Syntax and Structure">
+    <meta property="og:description" content="Understand the basic structure of an HTML5 document. Learn about essential HTML5 tags, syntax, and how to create a well-structured web page for modern web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://splycode.com/Textandformattinginhtml5.html">
+    <meta property="og:image" content="https://www.example.com/img/html.jfif">
+
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        .output {
+            background-color: #e9f7df;
+            padding: 10px;
+            border: 1px solid #d4e6c7;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .copy-btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .output-box {
+            margin-top: 15px;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="BasicStructureofanHTML5Document.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="LinksandNavigation.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="htmlfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Html5 Full Course</h1> <br>
+                    <h1 class="mb-4">Text and Formatting in HTML5</h1>
+                    <div class="container1">
+                        
+                        
+                        
+                            
+                       
+                        
+                        <h1>Text and Formatting in HTML5</h1>
+                        
+                        <h2>1. Text Elements</h2>
+                        
+                        <h3>Headings (<code>&lt;h1&gt; to &lt;h6&gt;</code>)</h3>
+                        <p>HTML provides six levels of headings. These are used to define headings and subheadings in your content.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code1')">Copy Code</button>
+                        <pre id="code1">
+                        &lt;h1&gt;Main Heading (h1)&lt;/h1&gt;
+                        &lt;h2&gt;Subheading Level 2 (h2)&lt;/h2&gt;
+                        &lt;h3&gt;Subheading Level 3 (h3)&lt;/h3&gt;
+                        &lt;h4&gt;Subheading Level 4 (h4)&lt;/h4&gt;
+                        &lt;h5&gt;Subheading Level 5 (h5)&lt;/h5&gt;
+                        &lt;h6&gt;Subheading Level 6 (h6)&lt;/h6&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+                        <div class="output">
+                            <h1>Main Heading (h1)</h1>
+                            <h2>Subheading Level 2 (h2)</h2>
+                            <h3>Subheading Level 3 (h3)</h3>
+                            <h4>Subheading Level 4 (h4)</h4>
+                            <h5>Subheading Level 5 (h5)</h5>
+                            <h6>Subheading Level 6 (h6)</h6>
+                        </div>
+                        <br>
+                        <h3>Paragraphs (<code>&lt;p&gt;</code>)</h3>
+                        <p>The <code>&lt;p&gt;</code> tag is used to define paragraphs of text. It automatically adds space between paragraphs.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code2')">Copy Code</button>
+                        <pre id="code2">
+                        &lt;p&gt;This is the first paragraph of text.&lt;/p&gt;
+                        &lt;p&gt;This is the second paragraph of text.&lt;/p&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <p>This is the first paragraph of text.</p>
+                            <p>This is the second paragraph of text.</p>
+                        </div>
+                        <br>
+                        <h3>Line Breaks (<code>&lt;br&gt;</code>)</h3>
+                        <p>The <code>&lt;br&gt;</code> tag is used to insert a line break within text. It doesn't start a new paragraph.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code3')">Copy Code</button>
+                        <pre id="code3">
+                        &lt;p&gt;This is some text.&lt;br&gt;This text appears on a new line, but it is still within the same paragraph.&lt;/p&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <p>This is some text.<br>This text appears on a new line, but it is still within the same paragraph.</p>
+                        </div>
+                        <br>
+                        <h3>Preformatted Text (<code>&lt;pre&gt;</code>)</h3>
+                        <p>The <code>&lt;pre&gt;</code> tag preserves whitespace and line breaks, displaying the text exactly as it is in the HTML code.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code4')">Copy Code</button>
+                        <pre id="code4">
+                        &lt;pre&gt;
+                        This    is    preformatted
+                          text.
+                             It    preserves   spaces
+                        and   line   breaks.
+                        &lt;/pre&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output-box">
+                            <pre>
+                        This    is    preformatted
+                          text.
+                             It    preserves   spaces
+                        and   line   breaks.
+                            </pre>
+                        </div>
+                        <br>
+                        
+                        <h2>2. Lists</h2>
+                        
+                        <h3>Unordered Lists (<code>&lt;ul&gt;</code>)</h3>
+                        <p>The <code>&lt;ul&gt;</code> tag creates an unordered (bulleted) list, with each list item defined by the <code>&lt;li&gt;</code> tag.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code10')">Copy Code</button>
+                        <pre id="code10">
+                        &lt;ul&gt;
+                            &lt;li&gt;Item 1&lt;/li&gt;
+                            &lt;li&gt;Item 2&lt;/li&gt;
+                            &lt;li&gt;Item 3&lt;/li&gt;
+                        &lt;/ul&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <h3>Ordered Lists (<code>&lt;ol&gt;</code>)</h3>
+                        <p>The <code>&lt;ol&gt;</code> tag creates an ordered (numbered) list, with each item defined by the <code>&lt;li&gt;</code> tag.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code11')">Copy Code</button>
+                        <pre id="code11">
+                        &lt;ol&gt;
+                            &lt;li&gt;First item&lt;/li&gt;
+                            &lt;li&gt;Second item&lt;/li&gt;
+                            &lt;li&gt;Third item&lt;/li&gt;
+                        &lt;/ol&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <ol>
+                                <li>First item</li>
+                                <li>Second item</li>
+                                <li>Third item</li>
+                            </ol>
+                        </div>
+                        <br><br>
+
+
+                        <div id="christ"> </div><br>
+                        <h2>3. Text Alignment</h2>
+                        
+                        <h3>Using Inline CSS for Text Alignment</h3>
+                        <p>You can align text using inline CSS with the <code>text-align</code> property.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code12')">Copy Code</button>
+                        <pre id="code12">
+                        &lt;p style="text-align: left;"&gt;This text is aligned to the left.&lt;/p&gt;
+                        &lt;p style="text-align: center;"&gt;This text is centered.&lt;/p&gt;
+                        &lt;p style="text-align: right;"&gt;This text is aligned to the right.&lt;/p&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <p style="text-align: left;">This text is aligned to the left.</p>
+                            <p style="text-align: center;">This text is centered.</p>
+                            <p style="text-align: right;">This text is aligned to the right.</p>
+                        </div>
+                        <br>
+                        <h3>&lt;center&gt; Tag (Deprecated in HTML5)</h3>
+                        <p>The <code>&lt;center&gt;</code> tag was used to center content in older versions of HTML, but it is deprecated in HTML5. Use CSS instead.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code13')">Copy Code</button>
+                        <pre id="code13">
+                        &lt;center&gt;This text is centered using the deprecated &lt;center&gt; tag.&lt;/center&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <center>This text is centered using the deprecated  tag.</center>
+                        </div>
+                        <br>
+                        <p class="error" id="error"></p>
+                        <h2>4. Text Formatting Tags</h2>
+                        
+                        <h3>Bold (<code>&lt;b&gt;, &lt;strong&gt;</code>)</h3>
+                        <p>The <code>&lt;b&gt;</code> tag makes text bold, while <code>&lt;strong&gt;</code> indicates importance.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code5')">Copy Code</button>
+                        <pre id="code5">
+                        &lt;b&gt;This text is bold using the &lt;b&gt; tag.&lt;/b&gt;&lt;br&gt;
+                        &lt;strong&gt;This text is bold using the &lt;strong&gt; tag, and it's also important.&lt;/strong&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <b>This text is bold using the  tag.</b><br>
+                            <strong>This text is bold using the  tag, and it's also important.</strong>
+                        </div>
+                        <br>
+                        <h3>Italic (<code>&lt;i&gt;, &lt;em&gt;</code>)</h3>
+                        <p>The <code>&lt;i&gt;</code> tag italicizes text, while <code>&lt;em&gt;</code> emphasizes the text (often italicized).</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code6')">Copy Code</button>
+                        <pre id="code6">
+                        &lt;i&gt;This text is italicized using the &lt;i&gt; tag.&lt;/i&gt;&lt;br&gt;
+                        &lt;em&gt;This text is emphasized and italicized using the &lt;em&gt; tag.&lt;/em&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <i>This text is italicized using the  tag.</i><br>
+                            <em>This text is emphasized and italicized using the  tag.</em>
+                        </div>
+                        
+                        
+                        
+                        <br>
+
+                        <h3>Subscript and Superscript (<code>&lt;sub&gt;, &lt;sup&gt;</code>)</h3>
+                        <p>The <code>&lt;sub&gt;</code> tag is used for subscript text, and <code>&lt;sup&gt;</code> is used for superscript text.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code9')">Copy Code</button>
+                        <pre id="code9">
+                        &lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+                        &lt;p&gt;Exponential notation: 10&lt;sup&gt;2&lt;/sup&gt; = 100&lt;/p&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <p>Water formula: H<sub>2</sub>O</p>
+                            <p>Exponential notation: 10<sup>2</sup> = 100</p>
+                        </div>
+
+                        <br>
+                        <div id="christ"> </div> <br>
+                        <h3>Underlined (<code>&lt;u&gt;</code>)</h3>
+                        <p>The <code>&lt;u&gt;</code> tag is used to underline text.</p>
+                        <button class="copy-btn" onclick="copyToClipboard('code7')">Copy Code</button>
+                        <pre id="code7">
+                        &lt;u&gt;This text is underlined using the &lt;u&gt; tag.&lt;/u&gt;
+                        </pre>
+                        <h3 style="text-align: left;">Output:</h3>
+
+                        <div class="output">
+                            <u>This text is underlined using the tag.</u>
+                        </div>
+                       
+
+                        <br>
+                        <h3>Strikethrough (<code>&lt;s&gt;</code>)</h3>
+<p>The <code>&lt;s&gt;</code> tag is used to represent text that has been struck through.</p>
+<button class="copy-btn" onclick="copyToClipboard('code8')">Copy Code</button>
+<pre id="code8">
+&lt;s&gt;This text has been struck through using the &lt;s&gt; tag.&lt;/s&gt;
+</pre>
+<h3 style="text-align: left;">Output:</h3>
+
+<div class="output">
+    <s>This text has been struck through using the  tag.</s>
+</div>
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="BasicStructureofanHTML5Document.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="LinksandNavigation.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+        function copyToClipboard(id) {
+            var copyText = document.getElementById(id);
+            var range = document.createRange();
+            range.selectNode(copyText);
+            window.getSelection().removeAllRanges(); // Clear previous selections
+            window.getSelection().addRange(range);
+            var successful = document.execCommand("copy");
+            window.getSelection().removeAllRanges(); // Deselect text
+            var errorMsg = document.getElementById('error');
+            
+            if (successful) {
+                alert("Code copied to clipboard!");
+                errorMsg.textContent = "";
+            } else {
+                errorMsg.textContent = "Oops! Your browser does not support the copy functionality.";
+            }
+        }
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

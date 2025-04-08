@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tables in Html | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Learn how to create and style tables in HTML5. Discover the essential tags, attributes, and best practices for designing responsive and organized tables for web content.">
+    <meta name="keywords" content="HTML tables tutorial, HTML5 table structure, HTML table tags, How to create tables in HTML, HTML table styling, HTML table examples, HTML5 tables for web design, Table tag HTML, HTML table attributes, Responsive HTML tables, Styling HTML tables with CSS, HTML table design best practices">
+    <meta name="author" content="Alhassan Emmanuel">
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+  
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="FormsandInputElements.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="HTML5StructuralElements.html"> Next page</a>
+          </div>
+
+          <div id="christ"> </div>
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="htmlfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Html5 Full Course</h1> <br>
+                    <h1 class="mb-4">Tables in Html</h1>
+                    <div class="container1">
+                        
+                        <h2>Tables in HTML</h2>
+                        <p>Tables are used to display data in a tabular format. In HTML, a table is created using the <code>&lt;table&gt;</code> tag. The table tag is used to define a table. The <code>&lt;tr&gt;</code> tag is used to define a row in a table. The <code>&lt;td&gt;</code> tag is used to define a cell in a table. The <code>&lt;th&gt;</code> tag is used to define a header cell in a table. The <code>&lt;caption&gt;</code> tag is used to define a table caption. The <code>&lt;colgroup&gt;</code> tag is used to define a group of columns in a table. The <code>&lt;col&gt;</code> tag is used to define a column in a table. The <code>&lt;thead&gt;</code> tag is used to group the header content in a table. The <code>&lt;tbody&gt;</code> tag is used to group the body content in a table. The <code>&lt;tfoot&gt;</code> tag is used to group the footer content in a table.</p>
+                        <h3>Creating a Table</h3>
+                        <p>To create a table in HTML, you need to use the <code>&lt;table&gt;</code> tag. The <code>&lt;table&gt;</code> tag is used to define a table. The <code>&lt;tr&gt;</code> tag is used to define a row in a table. The <code>&lt;td&gt;</code> tag is used to define a cell in a table. The <code>&lt;th&gt;</code> tag is used to define a header cell in a table. The <code>&lt;caption&gt;</code> tag is used to define a table caption. The <code>&lt;colgroup&gt;</code> tag is used to define a group of columns in a table. The <code>&lt;col&gt;</code> tag is used to define a column in a table. The <code>&lt;thead&gt;</code> tag is used to group the header content in a table. The <code>&lt;tbody&gt;</code> tag 
+                       
+                            <!DOCTYPE html>
+                            <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>HTML Tables Explained</title>
+                                <style>
+                                    /* Basic table styling */
+                                    table {
+                                        border-collapse: collapse;
+                                        width: 100%;
+                                    }
+                                    th, td {
+                                        border: 1px solid #ddd;
+                                        padding: 8px;
+                                        text-align: left;
+                                    }
+                                    th {
+                                        background-color: #f2f2f2;
+                                    }
+                                    .table-container {
+                                        overflow-x: auto;
+                                        max-width: 100%;
+                                    }
+                                    .code-container {
+                                        background-color: #f4f4f4;
+                                        padding: 20px;
+                                        margin: 20px 0;
+                                        border-radius: 8px;
+                                        font-family: 'Courier New', monospace;
+                                    }
+                                    button {
+                                        padding: 10px 15px;
+                                        background-color: #4CAF50;
+                                        color: white;
+                                        border: none;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        font-size: 14px;
+                                    }
+                                    button:hover {
+                                        background-color: #45a049;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                            
+                                <h1>HTML Tables Explained</h1>
+                            
+                                <h2>1. Basic Table Structure</h2>
+                                <p>Here is a basic table structure with rows and columns:</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>Header 1</th>
+                                            <th>Header 2</th>
+                                            <th>Header 3</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 1</td>
+                                            <td>Data 2</td>
+                                            <td>Data 3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 4</td>
+                                            <td>Data 5</td>
+                                            <td>Data 6</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                                <!-- Code Example with Copy Button -->
+                                <div class="code-container">
+                                    <pre id="codeExample1">
+                            &lt;table&gt;
+                              &lt;tr&gt;
+                                &lt;th&gt;Header 1&lt;/th&gt;
+                                &lt;th&gt;Header 2&lt;/th&gt;
+                                &lt;th&gt;Header 3&lt;/th&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;Data 1&lt;/td&gt;
+                                &lt;td&gt;Data 2&lt;/td&gt;
+                                &lt;td&gt;Data 3&lt;/td&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;Data 4&lt;/td&gt;
+                                &lt;td&gt;Data 5&lt;/td&gt;
+                                &lt;td&gt;Data 6&lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/table&gt;
+                                    </pre>
+                                    <button onclick="copyToClipboard('#codeExample1')">Copy Code</button>
+                                </div>
+                            
+                                <h2>2. Grouping Table Sections: <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code></h2>
+                                <p>Grouping table sections allows for better organization and easier styling:</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Data 1</td>
+                                                <td>Data 2</td>
+                                                <td>Data 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data 4</td>
+                                                <td>Data 5</td>
+                                                <td>Data 6</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3">Footer Information</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            <br>
+                            <div id="christ"> </div> <br>
+                                <!-- Code Example with Copy Button -->
+                                <div class="code-container">
+                                    <pre id="codeExample2">
+                            &lt;table&gt;
+                              &lt;thead&gt;
+                                &lt;tr&gt;
+                                  &lt;th&gt;Header 1&lt;/th&gt;
+                                  &lt;th&gt;Header 2&lt;/th&gt;
+                                  &lt;th&gt;Header 3&lt;/th&gt;
+                                &lt;/tr&gt;
+                              &lt;/thead&gt;
+                              &lt;tbody&gt;
+                                &lt;tr&gt;
+                                  &lt;td&gt;Data 1&lt;/td&gt;
+                                  &lt;td&gt;Data 2&lt;/td&gt;
+                                  &lt;td&gt;Data 3&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                  &lt;td&gt;Data 4&lt;/td&gt;
+                                  &lt;td&gt;Data 5&lt;/td&gt;
+                                  &lt;td&gt;Data 6&lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tbody&gt;
+                              &lt;tfoot&gt;
+                                &lt;tr&gt;
+                                  &lt;td colspan="3"&gt;Footer Information&lt;/td&gt;
+                                &lt;/tr&gt;
+                              &lt;/tfoot&gt;
+                            &lt;/table&gt;
+                                    </pre>
+                                    <button onclick="copyToClipboard('#codeExample2')">Copy Code</button>
+                                </div>
+                            
+                                <h2>3. Using <code>colspan</code> and <code>rowspan</code> for Merging Cells</h2>
+                                <p>Use <code>colspan</code> and <code>rowspan</code> to merge multiple rows or columns:</p>
+                                
+                                <div class="table-container">
+                                    <table border="1">
+                                        <tr>
+                                            <th colspan="2">Header Spanning 2 Columns</th>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">Data spanning 2 rows</td>
+                                            <td>Data 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                                <!-- Code Example with Copy Button -->
+                                <div class="code-container">
+                                    <pre id="codeExample3">
+                            &lt;table border="1"&gt;
+                              &lt;tr&gt;
+                                &lt;th colspan="2"&gt;Header Spanning 2 Columns&lt;/th&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td rowspan="2"&gt;Data spanning 2 rows&lt;/td&gt;
+                                &lt;td&gt;Data 1&lt;/td&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;Data 2&lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/table&gt;
+                                    </pre>
+                                    <button onclick="copyToClipboard('#codeExample3')">Copy Code</button>
+                                </div>
+                            
+                                <h2>4. Styling Tables with CSS</h2>
+                                <p>CSS can be used to style the table to improve readability:</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <tr>
+                                            <th>Header 1</th>
+                                            <th>Header 2</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 1</td>
+                                            <td>Data 2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                                <!-- Code Example with Copy Button -->
+                                <div class="code-container">
+                                    <pre id="codeExample4">
+                            &lt;table&gt;
+                              &lt;tr&gt;
+                                &lt;th&gt;Header 1&lt;/th&gt;
+                                &lt;th&gt;Header 2&lt;/th&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;Data 1&lt;/td&gt;
+                                &lt;td&gt;Data 2&lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/table&gt;
+                                    </pre>
+                                    <button onclick="copyToClipboard('#codeExample4')">Copy Code</button>
+                                </div>
+                            
+                                <h2>5. Accessibility Considerations</h2>
+                                <p>Always use <code>&lt;caption&gt;</code> and <code>scope</code> for accessibility:</p>
+                                
+                                <div class="table-container">
+                                    <table>
+                                        <caption>Sample Table with Data</caption>
+                                        <tr>
+                                            <th scope="col">Header 1</th>
+                                            <th scope="col">Header 2</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 1</td>
+                                            <td>Data 2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                                <!-- Code Example with Copy Button -->
+                                <div class="code-container">
+                                    <pre id="codeExample5">
+                            &lt;table&gt;
+                              &lt;caption&gt;Sample Table with Data&lt;/caption&gt;
+                              &lt;tr&gt;
+                                &lt;th scope="col"&gt;Header 1&lt;/th&gt;
+                                &lt;th scope="col"&gt;Header 2&lt;/th&gt;
+                              &lt;/tr&gt;
+                              &lt;tr&gt;
+                                &lt;td&gt;Data 1&lt;/td&gt;
+                                &lt;td&gt;Data 2&lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/table&gt;
+                                    </pre>
+                                    <button onclick="copyToClipboard('#codeExample5')">Copy Code</button>
+                                </div>
+                            
+                                <h2>6. Responsive Tables</h2>
+                                <p>For responsiveness, wrap the table in a container with overflow:</p>
+                                
+                                <div class="table-container">
+                                    <table border="1">
+                                        <tr>
+                                            <th>Header 1</th>
+                                            <th>Header 2</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Data 1</td>
+                                            <td>Data 2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            <br>
+                                <div id="christ"> </div>
+
+                                <br> <br>
+                                <h2> Notes</h2>
+    <p>Here are a few important things to consider when using tables:</p>
+    <ul>
+        <li><strong>Use tables for tabular data:</strong> Tables should be used to display data in a grid format, not for general layout purposes.</li>
+        <li><strong>Ensure accessibility:</strong> Use <code>&lt;caption&gt;</code> and <code>scope</code> attributes to make your tables more accessible to screen readers.</li>
+        <li><strong>Responsiveness:</strong> For mobile devices, you may need to make tables scrollable using <code>overflow-x: auto;</code>.</li>
+        <li><strong>Use CSS for styling:</strong> Use CSS for borders, padding, and row colors to make your tables easier to read and more visually appealing.</li>
+        <li><strong>Use <code>colspan</code> and <code>rowspan</code> with caution:</strong> They allow you to merge cells, but improper usage can make your tables harder to read or confusing.</li>
+    </ul>
+                            
+                                <script>
+                                    // Function to copy code to clipboard
+                                    function copyToClipboard(elementId) {
+                                        var code = document.querySelector(elementId).textContent;
+                                        var textArea = document.createElement("textarea");
+                                        textArea.value = code;
+                                        document.body.appendChild(textArea);
+                                        textArea.select();
+                                        document.execCommand('copy');
+                                        document.body.removeChild(textArea);
+                                        alert("Code copied to clipboard!");
+                                    }
+                                </script>
+                            </body>
+                            </html>
+                            
+
+                      
+                        
+          
+                   </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="FormsandInputElements.html">Go Back </a>   <br><br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="HTML5StructuralElements.html"> Next page</a>
+    </div> 
+    <div id="christ"> </div> <br>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

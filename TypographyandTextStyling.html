@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Typography and Text Styling | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Learn the essentials of HTML5 typography and text styling. Discover best practices for text elements, fonts, sizes, and formatting to create readable and aesthetically pleasing web content.">
+    <meta name="keywords" content="HTML5 typography, HTML5 text styling, web typography design, HTML text elements, HTML text formatting, CSS text styling, HTML text fonts, typography for web design, web content typography, HTML text styling best practices, font styling in HTML5">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    <!-- Title for SEO -->
+
+    <!-- Open Graph Meta Tags (optional for social media sharing) -->
+    <meta property="og:title" content="HTML5 Typography and Text Styling: Best Practices for Web Design">
+    <meta property="og:description" content="Learn the essentials of HTML5 typography and text styling. Discover best practices for text elements, fonts, sizes, and formatting to create readable and aesthetically pleasing web content.">
+    <meta property="og:type" content="SplyCode">
+    <meta property="og:url" content="https://www.splycode.com/typography-and-text-styling.html">
+    <meta property="og:image" content="https://www.splycode.com/img/html.jfif">
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+          <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+          </span>  
+        </div>
+
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+ <br>
+    <div style="display: flex; justify-content: space-between;">
+    <a class="btn btn-primary rounded-pill py-3 px-5" href="CSSBasicsandSyntax.html">Go Back </a>  <br> <br>
+    <a class="btn btn-primary rounded-pill py-3 px-5" href="BoxModelandLayoutincss.html"> Next page</a>
+      </div>
+      <div id="christ"> </div>
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="cssfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">CSS Full Course</h1> <br>
+                    <h1 class="mb-4">Typography and Text Styling</h1>
+                    <div style="text-align:left ;" class="container1">
+                        
+                       
+<style>
+    p {
+      font-family: "Arial", "Helvetica", sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      
+      text-align: left;
+      text-decoration: none;
+      line-height: 1.5;
+      word-spacing: 0.2em;
+    }
+
+    h1 {
+      font-family: 'Times New Roman', serif;
+      font-size: 2em;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+      letter-spacing: -0.05em;
+    }
+
+    .highlighted {
+      color: rgb(255, 0, 0);
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .oblique-text {
+      font-style: oblique;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .spaced {
+      letter-spacing: 2px;
+    }
+
+    .copy-btn {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-top: 5px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .copy-btn:hover {
+      background-color: #0056b3;
+    }
+
+    pre{
+        text-align: left;
+    }
+  </style>
+
+
+  <div class="container">
+    <h1>Font & Text Properties </h1>
+
+    <h2>Example 1: Font Family</h2>
+    <p>This is a paragraph with the font family set to Arial, then Helvetica, and a fallback to sans-serif.</p>
+    <button class="copy-btn" onclick="copyCode('.example1')">Copy Code</button>
+    <pre class="example1">
+p {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+    </pre>
+
+    <h2>Example 2: Font Size</h2>
+    <p>This is a paragraph with a font size of 16px. The heading (h1) has a font size of 2em, which is twice the root font size.</p>
+    <button class="copy-btn" onclick="copyCode('.example2')">Copy Code</button>
+    <pre class="example2">
+p {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2em;
+}
+    </pre>
+
+    <h2>Example 3: Font Weight</h2>
+    <p>This text is normal weight, while this <strong>strong text</strong> is bold, and the h1 has a font weight of 700 (bold).</p>
+    <button class="copy-btn" onclick="copyCode('.example3')">Copy Code</button>
+    <pre class="example3">
+p {
+  font-weight: normal;
+}
+strong {
+  font-weight: bold;
+}
+h1 {
+  font-weight: 700;
+}
+    </pre>
+
+    <h2>Example 4: Font Style</h2>
+    <em>This is italic text.</em> 
+    <div class="oblique-text">This is oblique text.</div>
+    <button class="copy-btn" onclick="copyCode('.example4')">Copy Code</button>
+    <pre class="example4">
+em {
+  font-style: italic;
+}
+.oblique-text {
+  font-style: oblique;
+}
+    </pre>
+
+    <h2>Example 5: Text Color</h2>
+    <p>This is blue text, and this heading is dark gray (#333). The highlighted text is red (rgb(255, 0, 0)).</p>
+    <button class="copy-btn" onclick="copyCode('.example5')">Copy Code</button>
+    <pre class="example5">
+p {
+  color: blue;
+}
+h1 {
+  color: #333;
+}
+.highlighted {
+  color: rgb(255, 0, 0);
+}
+    </pre>
+
+    <h2>Example 6: Text Alignment</h2>
+    <p style="text-align:left">Left-aligned text.</p>
+    <h1 style="text-align:center">Centered Heading</h1>
+    <button class="copy-btn" onclick="copyCode('.example6')">Copy Code</button>
+    <pre class="example6">
+p {
+  text-align: left;
+}
+h1 {
+  text-align: center;
+}
+    </pre>
+
+    <h2>Example 7: Text Decoration</h2>
+    <a href="#">This link has no underline.</a> <span class="underline">This text is underlined.</span> <br>
+    <button class="copy-btn" onclick="copyCode('.example7')">Copy Code</button>
+    <pre class="example7">
+a {
+  text-decoration: none;
+}
+.underline {
+  text-decoration: underline;
+}
+    </pre>
+
+    <h2>Example 8: Line Height</h2>
+    <p>This paragraph has a line height of 1.5 times the font size, making the text more readable.</p>
+    <button class="copy-btn" onclick="copyCode('.example8')">Copy Code</button>
+    <pre class="example8">
+p {
+  line-height: 1.5;
+}
+    </pre>
+
+    <h2>Example 9: Letter Spacing</h2>
+    <h1 style="letter-spacing: -0.05em">This heading has tighter letter spacing.</h1>
+    <p style="letter-spacing: 2px">This paragraph has 2px of letter spacing.</p>
+    <button class="copy-btn" onclick="copyCode('.example9')">Copy Code</button>
+    <pre class="example9">
+h1 {
+  letter-spacing: -0.05em;
+}
+p {
+  letter-spacing: 2px;
+}
+    </pre>
+
+    <h2>Example 10: Word Spacing</h2>
+    <p>This paragraph has a word spacing of 0.2em, making the words slightly more spaced apart.</p>
+    <button class="copy-btn" onclick="copyCode('.example10')">Copy Code</button>
+    <pre class="example10">
+p {
+  word-spacing: 0.2em;
+}
+    </pre>
+
+    <h2>Web Font Example (Google Fonts)</h2>
+    <h1>This heading uses the 'Roboto' font.</h1>
+    <button class="copy-btn" onclick="copyCode('.example-google-font')">Copy Code</button>
+    <pre class="example-google-font">
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-weight: 700;
+}
+    </pre>
+  </div>
+
+  <script>
+    function copyCode(className) {
+      const codeBlock = document.querySelector(className);
+      const text = codeBlock.innerText || codeBlock.textContent;
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert('Code copied to clipboard!');
+    }
+  </script>
+
+
+
+
+ 
+
+
+
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">  
+
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="CSSBasicsandSyntax.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="BoxModelandLayoutincss.html"> Next page</a>
+    </div>
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

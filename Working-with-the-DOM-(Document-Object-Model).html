@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Working with the DOM (Document Object Model)| Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to interact with the Document Object Model (DOM) in JavaScript, manipulate HTML elements, handle events, and modify the structure and style of web pages dynamically using JavaScript.">
+    <meta name="keywords" content="DOM in JavaScript, JavaScript DOM manipulation, JavaScript document object model tutorial, Manipulating HTML with JavaScript, JavaScript DOM methods, JavaScript DOM events, DOM tree structure in JavaScript, Selecting elements in JavaScript, JavaScript addEventListener, JavaScript DOM document.getElementById, JavaScript DOM node manipulation, Learn JavaScript DOM manipulation, JavaScript change content dynamically, DOM events in JavaScript">
+    <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>   
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-javascript.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Events-in-Javascript.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Working with the DOM (Document Object Model)</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                        
+                            <style>
+                               
+                                pre {
+                                    background-color: #f4f4f4;
+                                    padding: 15px;
+                                    border-radius: 5px;
+                                    overflow-x: auto;
+                                }
+                                
+                                .btn1 {
+                                    padding: 5px 10px;
+                                    margin-top: 10px;
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                }
+                                .btn1:hover {
+                                    background-color: #45a049;
+                                }
+                                .output {
+                                    background-color: #e9e9e9;
+                                    border: 1px solid #ccc;
+                                    padding: 10px;
+                                    margin-top: 15px;
+                                    border-radius: 4px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                        
+                            <div class="container">
+                                <h1>Working with the DOM (Document Object Model) in JavaScript</h1>
+                        
+                                <p>The <strong>DOM</strong> (Document Object Model) is a programming interface for web documents. It represents the structure of an HTML document as a tree of nodes, where each node is an object representing a part of the document (such as an element, attribute, or text). The DOM allows programming languages like JavaScript to interact with the content, structure, and styles of web pages dynamically.</p>
+                        
+                                <h2>DOM Tree Structure:</h2>
+                                <ul>
+                                    <li><strong>Document</strong>: The root node representing the entire document.</li>
+                                    <li><strong>Element nodes</strong>: Represent HTML tags (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, etc.).</li>
+                                    <li><strong>Text nodes</strong>: The textual content inside HTML elements.</li>
+                                    <li><strong>Attribute nodes</strong>: Attributes of elements like <code>class</code>, <code>id</code>, etc.</li>
+                                </ul>
+                        
+                                <h2>1. Selecting Elements</h2>
+                                <p>In JavaScript, you can select and interact with elements on the page using various methods:</p>
+                        
+                                <h3>1.1. <code>getElementById()</code></h3>
+                                <p>This method returns the element with the specified <code>id</code>.</p>
+                                <pre id="code1">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;getElementById Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1 id="heading"&gt;Hello World!&lt;/h1&gt;
+                            &lt;script&gt;
+                                const element = document.getElementById('heading');
+                                console.log(element.innerText);  // Output: Hello World!
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code1')">Copy Code</button>
+                        
+                                <h3>1.2. <code>getElementsByClassName()</code></h3>
+                                <p>This method returns a live HTMLCollection of elements with the specified class name.</p>
+                                <pre id="code2">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;getElementsByClassName Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                            &lt;script&gt;
+                                const boxes = document.getElementsByClassName('box');
+                                console.log(boxes.length);  // Output: 2
+                                console.log(boxes[0].innerText);  // Output: Box 1
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code2')">Copy Code</button>
+                        
+                                <h3>1.3. <code>getElementsByTagName()</code></h3>
+                                <p>This method returns a live HTMLCollection of elements with the specified tag name.</p>
+                                <pre id="code3">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;getElementsByTagName Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p&gt;Paragraph 1&lt;/p&gt;
+                            &lt;p&gt;Paragraph 2&lt;/p&gt;
+                            &lt;script&gt;
+                                const paragraphs = document.getElementsByTagName('p');
+                                console.log(paragraphs.length);  // Output: 2
+                                console.log(paragraphs[1].innerText);  // Output: Paragraph 2
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code3')">Copy Code</button>
+                        
+                                <h3>1.4. <code>querySelector()</code></h3>
+                                <p>This method returns the first element that matches the specified CSS selector.</p>
+                                <pre id="code4">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;querySelector Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                            &lt;script&gt;
+                                const firstBox = document.querySelector('.box');
+                                console.log(firstBox.innerText);  // Output: Box 1
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code4')">Copy Code</button>
+                        
+                                <h3>1.5. <code>querySelectorAll()</code></h3>
+                                <p>This method returns all elements that match the specified CSS selector as a NodeList.</p>
+                                <pre id="code5">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;querySelectorAll Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div class="box"&gt;Box 1&lt;/div&gt;
+                            &lt;div class="box"&gt;Box 2&lt;/div&gt;
+                            &lt;script&gt;
+                                const allBoxes = document.querySelectorAll('.box');
+                                allBoxes.forEach(box =&gt; console.log(box.innerText));  // Output: Box 1, Box 2
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code5')">Copy Code</button>
+                        
+                                <h2>2. Manipulating Elements</h2>
+                                <h3>2.1. Changing Content</h3>
+                                <p>Use <code>.innerText</code> or <code>.innerHTML</code> to change the text or HTML content of an element.</p>
+                                <pre id="code6">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Change Content&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p id="para"&gt;Original Text&lt;/p&gt;
+                            &lt;script&gt;
+                                const para = document.getElementById('para');
+                                para.innerText = 'Updated Text!';
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code6')">Copy Code</button>
+                        
+                                <h3>2.2. Changing Attributes</h3>
+                                <p>Use <code>.setAttribute()</code> to change an element’s attribute.</p>
+                                <pre id="code7">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Change Attribute&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;img id="image" src="old-image.jpg" alt="Old Image"&gt;
+                            &lt;script&gt;
+                                const image = document.getElementById('image');
+                                image.setAttribute('src', 'new-image.jpg');
+                                image.setAttribute('alt', 'New Image');
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code7')">Copy Code</button>
+                        
+                                <h3>2.3. Changing Styles</h3>
+                                <p>Use <code>.style</code> to manipulate the styles of an element.</p>
+                                <pre id="code8">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Change Styles&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div id="box" style="width:100px; height:100px; background-color:red;"&gt;&lt;/div&gt;
+                            &lt;script&gt;
+                                const box = document.getElementById('box');
+                                box.style.backgroundColor = 'blue';
+                                box.style.width = '200px';
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code8')">Copy Code</button>
+                        
+                                <h2>3. Creating and Adding Elements</h2>
+                                <p>You can create new HTML elements dynamically and add them to the DOM:</p>
+                                <pre id="code9">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Create and Add Elements&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div id="container"&gt;&lt;/div&gt;
+                            &lt;script&gt;
+                                const container = document.getElementById('container');
+                                const newDiv = document.createElement('div');
+                                newDiv.innerText = 'Newly created div!';
+                                container.appendChild(newDiv);
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code9')">Copy Code</button>
+                        
+                                <h2>4. Removing Elements</h2>
+                                <p>To remove an element from the DOM, use <code>.remove()</code> or <code>.parentNode.removeChild()</code>.</p>
+                                <pre id="code10">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Remove Element&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div id="box"&gt;This will be removed&lt;/div&gt;
+                            &lt;script&gt;
+                                const box = document.getElementById('box');
+                                box.remove();  // Removes the box from the DOM
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code10')">Copy Code</button>
+                        
+                                <h2>5. Event Handling</h2>
+                                <p>Event listeners allow you to respond to user interactions like clicks, keypresses, etc.</p>
+                        
+                                <h3>5.1. Adding Event Listeners</h3>
+                                <p>Use <code>.addEventListener()</code> to listen for events on elements.</p>
+                                <pre id="code11">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;Event Listener Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;button id="myButton"&gt;Click Me&lt;/button&gt;
+                            &lt;script&gt;
+                                const button = document.getElementById('myButton');
+                                button.addEventListener('click', function() {
+                                    alert('Button was clicked!');
+                                });
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code11')">Copy Code</button>
+                        
+                                <h2>6. DOM Traversal</h2>
+                                <p>Navigating the DOM tree allows you to move between nodes (parent, child, sibling).</p>
+                                <pre id="code12">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;title&gt;DOM Traversal Example&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;div id="parent"&gt;
+                                &lt;p id="child"&gt;This is a child element&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;script&gt;
+                                const child = document.getElementById('child');
+                                const parent = child.parentNode;
+                                console.log(parent);  // Output: <div id="parent">...</div>
+                            &lt;/script&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                                </pre>
+                                <button class="btn1" onclick="copyCode('code12')">Copy Code</button>
+                        
+                            </div>
+                        
+                            <script>
+                                function copyCode(codeId) {
+                                    const codeElement = document.getElementById(codeId);
+                                    const range = document.createRange();
+                                    range.selectNode(codeElement);
+                                    window.getSelection().removeAllRanges();
+                                    window.getSelection().addRange(range);
+                                    document.execCommand('copy');
+                                    window.getSelection().removeAllRanges();
+                                    alert('Code copied to clipboard!');
+                                }
+                            </script>
+                        
+                        </body>
+                        </html>
+                              
+                        
+                
+
+
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-javascript.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Events-in-Javascript.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

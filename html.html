@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #ecf0f1;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            margin: 0 10px;
+        }
+
+        /* Main Content Section */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Product Card Styles */
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-price {
+            font-size: 1.1em;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+
+        .card-description {
+            font-size: 0.9em;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+
+            .navbar-brand {
+                font-size: 1.2em;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                background-color: #3498db;
+            }
+
+            .nav-links a {
+                margin: 10px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navbar-brand">Business Name</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Product Cards Container -->
+    <div class="container">
+        <!-- Product Cards (15 Cards) -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 1</h3>
+                <p class="card-price">$29.99</p>
+                <p class="card-description">This is a short description of the first product. Great for everyday use!</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 2</h3>
+                <p class="card-price">$49.99</p>
+                <p class="card-description">This product is amazing for all your outdoor adventures and much more.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 3</h3>
+                <p class="card-price">$19.99</p>
+                <p class="card-description">This is a compact and practical product that solves everyday problems.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 4</h3>
+                <p class="card-price">$39.99</p>
+                <p class="card-description">Perfect for the tech enthusiast, this product is both stylish and functional.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 5</h3>
+                <p class="card-price">$15.99</p>
+                <p class="card-description">Affordable and practical for everyday tasks.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 6</h3>
+                <p class="card-price">$22.99</p>
+                <p class="card-description">Innovative design with great features!</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 7</h3>
+                <p class="card-price">$25.99</p>
+                <p class="card-description">Stylish and functional for all occasions.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 8</h3>
+                <p class="card-price">$45.99</p>
+                <p class="card-description">Perfect for any adventure, robust and reliable.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <div class="card-content">
+                <h3 class="card-title">Product 9</h3>
+                <p class="card-price">$39.99</p>
+                <p class="card-description">Sleek and elegant, designed for modern lifestyles.</p>
+                <button class="card-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Repeat the above block for more cards up to 15 -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Product Store | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            alert('Product added to cart!');
+        }
+
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

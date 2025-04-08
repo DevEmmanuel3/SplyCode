@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Quiz | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Take our interactive HTML quiz to test your knowledge of HTML5 elements, tags, and attributes. Perfect for beginners and experienced developers who want to improve their HTML skills.">
+    <meta name="keywords" content="HTML quiz, HTML5 quiz questions, HTML test, HTML knowledge quiz, HTML quiz for beginners, Test your HTML skills, HTML practice quiz, Interactive HTML quiz, HTML coding quiz, HTML quiz questions and answers, Learn HTML quiz">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+
+
+      header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        label:hover {
+            background-color: #e0e0e0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+           margin-left: auto;
+           margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #quizResult {
+            text-align: center;
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+       
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+<br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="AccessibilityinHTML5.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="TryPracticalQuestions.html"> Next page</a>
+        
+          </div>
+          <br>
+          <div id="christ"> </div>
+    
+
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+
+                    <h1 class="display-1">Quiz</h1>
+                    <h1 class="mb-4">Html full Course Quiz</h1>
+
+                    <form id="quizForm">
+                        <!-- All the questions remain unchanged here -->
+                        <section class="question">
+                            <h2>1. What does HTML stand for?</h2>
+                            <label>
+                                <input type="radio" name="q1" value="a"> Hyper Text Markup Language
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b"> High Text Markup Language
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c"> Hyperlinks and Text Markup Language
+                            </label>
+                        </section>
+                        
+
+
+
+
+   <!-- Question 2 -->
+   <section class="question">
+    <h2>2. Which HTML element is used to display an image?</h2>
+    <label>
+        <input type="radio" name="q2" value="a"> image
+    </label>
+    <label>
+        <input type="radio" name="q2" value="b"> img
+    </label>
+    <label>
+        <input type="radio" name="q2" value="c"> picture
+    </label>
+</section>
+
+<!-- Question 3 -->
+<section class="question">
+    <h2>3. Which HTML5 element is used to define the main content of a document?</h2>
+    <label>
+        <input type="radio" name="q3" value="a"> section
+    </label>
+    <label>
+        <input type="radio" name="q3" value="b"> header
+    </label>
+    <label>
+        <input type="radio" name="q3" value="c"> main
+    </label>
+</section>
+
+<!-- Question 4 -->
+<section class="question">
+    <h2>4. What is the correct syntax to create a link in HTML?</h2>
+    <label>
+        <input type="radio" name="q4" value="a"> &lt;a href="url"&gt;Link&lt;/a&gt;
+    </label>
+    <label>
+        <input type="radio" name="q4" value="b"> &lt;link href="url"&gt;Link&lt;/link&gt;
+    </label>
+    <label>
+        <input type="radio" name="q4" value="c"> &lt;href="url"&gt;Link&lt;/href&gt;
+    </label>
+</section>
+
+<!-- Question 5 -->
+<section class="question">
+    <h2>5. Which HTML5 element is used to define a navigation bar?</h2>
+    <label>
+        <input type="radio" name="q5" value="a"> nav
+    </label>
+    <label>
+        <input type="radio" name="q5" value="b"> navigation
+    </label>
+    <label>
+        <input type="radio" name="q5" value="c"> navbar
+    </label>
+</section>
+
+<!-- Question 6 -->
+<section class="question">
+    <h2>6. What is the purpose of the <meta> tag?</h2>
+    <label>
+        <input type="radio" name="q6" value="a"> To link to external stylesheets
+    </label>
+    <label>
+        <input type="radio" name="q6" value="b"> To define metadata about the document
+    </label>
+    <label>
+        <input type="radio" name="q6" value="c"> To display images on the webpage
+    </label>
+</section>
+
+<!-- Question 7 -->
+<section class="question">
+    <h2>7. Which tag is used to define an unordered list?</h2>
+    <label>
+        <input type="radio" name="q7" value="a"> ul
+    </label>
+    <label>
+        <input type="radio" name="q7" value="b"> ol
+    </label>
+    <label>
+        <input type="radio" name="q7" value="c"> li
+    </label>
+</section>
+
+<!-- Question 8 -->
+<section class="question">
+    <h2>8. What is the default value of the "type" attribute in the "input" tag?</h2>
+    <label>
+        <input type="radio" name="q8" value="a"> text
+    </label>
+    <label>
+        <input type="radio" name="q8" value="b"> number
+    </label>
+    <label>
+        <input type="radio" name="q8" value="c"> password
+    </label>
+</section>
+
+<!-- Question 9 -->
+<section class="question">
+    <h2>9. What does the canvas element do in HTML5?</h2>
+    <label>
+        <input type="radio" name="q9" value="a"> Allows drawing graphics on the page
+    </label>
+    <label>
+        <input type="radio" name="q9" value="b"> Embeds video content
+    </label>
+    <label>
+        <input type="radio" name="q9" value="c"> Defines a container for interactive elements
+    </label>
+</section>
+
+<!-- Question 10 -->
+<section class="question">
+    <h2>10. Which element is used to display a table in HTML?</h2>
+    <label>
+        <input type="radio" name="q10" value="a"> table
+    </label>
+    <label>
+        <input type="radio" name="q10" value="b"> tab
+    </label>
+    <label>
+        <input type="radio" name="q10" value="c"> tr
+    </label>
+</section>
+<div id="christ"> </div>
+<!-- Question 11 -->
+<section class="question">
+    <h2>11. What is the purpose of the <section> element?</h2>
+    <label>
+        <input type="radio" name="q11" value="a"> To create a section of content
+    </label>
+    <label>
+        <input type="radio" name="q11" value="b"> To define the header of the page
+    </label>
+    <label>
+        <input type="radio" name="q11" value="c"> To define a footer section
+    </label>
+</section>
+
+<!-- Question 12 -->
+<section class="question">
+    <h2>12. What is the correct syntax for a comment in HTML?</h2>
+    <label>
+        <input type="radio" name="q12" value="a"> &lt;!-- Comment --&gt;
+    </label>
+    <label>
+        <input type="radio" name="q12" value="b"> /* Comment */
+    </label>
+    <label>
+        <input type="radio" name="q12" value="c"> // Comment
+    </label>
+</section>
+
+<!-- Question 13 -->
+<section class="question">
+    <h2>13. Which tag is used to create a form in HTML?</h2>
+    <label>
+        <input type="radio" name="q13" value="a"> form
+    </label>
+    <label>
+        <input type="radio" name="q13" value="b"> input
+    </label>
+    <label>
+        <input type="radio" name="q13" value="c">button
+    </label>
+</section>
+
+<!-- Question 14 -->
+<section class="question">
+    <h2>14. What does the "target='_blank'" attribute do in a link?</h2>
+    <label>
+        <input type="radio" name="q14" value="a"> Opens the link in the same tab
+    </label>
+    <label>
+        <input type="radio" name="q14" value="b"> Opens the link in a new tab
+    </label>
+    <label>
+        <input type="radio" name="q14" value="c"> Disables the link
+    </label>
+</section>
+
+<!-- Question 15 -->
+<section class="question">
+    <h2>15. Which element is used to group inline elements in HTML5?</h2>
+    <label>
+        <input type="radio" name="q15" value="a"> div
+    </label>
+    <label>
+        <input type="radio" name="q15" value="b"> span
+    </label>
+    <label>
+        <input type="radio" name="q15" value="c"> p
+    </label>
+</section>
+
+<!-- Question 16 -->
+<section class="question">
+    <h2>16. What does the <audio> tag in HTML5 do?</h2>
+    <label>
+        <input type="radio" name="q16" value="a"> Embeds audio content
+    </label>
+    <label>
+        <input type="radio" name="q16" value="b"> Embeds video content
+    </label>
+    <label>
+        <input type="radio" name="q16" value="c"> Embeds a YouTube video
+    </label>
+</section>
+
+<!-- Question 17 -->
+<section class="question">
+    <h2>17. Which attribute is used to specify an image's alternate text in the <img> tag?</h2>
+    <label>
+        <input type="radio" name="q17" value="a"> alt
+    </label>
+    <label>
+        <input type="radio" name="q17" value="b"> title
+    </label>
+    <label>
+        <input type="radio" name="q17" value="c"> description
+    </label>
+</section>
+
+<!-- Question 18 -->
+<section class="question">
+    <h2>18. What does the <section> element represent in HTML5?</h2>
+    <label>
+        <input type="radio" name="q18" value="a"> A standalone section of content
+    </label>
+    <label>
+        <input type="radio" name="q18" value="b"> A header of the document
+    </label>
+    <label>
+        <input type="radio" name="q18" value="c"> A footer of the document
+    </label>
+</section>
+
+<!-- Question 19 -->
+<section class="question">
+    <h2>19. Which tag is used to embed a video in HTML5?</h2>
+    <label>
+        <input type="radio" name="q19" value="a"> video
+    </label>
+    <label>
+        <input type="radio" name="q19" value="b"> media
+    </label>
+    <label>
+        <input type="radio" name="q19" value="c">movie
+    </label>
+</section>
+
+<!-- Question 20 -->
+<section class="question">
+    <h2>20. What does the <footer> tag represent in HTML5?</h2>
+    <label>
+        <input type="radio" name="q20" value="a"> Footer of the document or section
+    </label>
+    <label>
+        <input type="radio" name="q20" value="b"> Navigation menu
+    </label>
+    <label>
+        <input type="radio" name="q20" value="c"> Header of the document
+    </label>
+</section>
+
+<!-- Question 21 -->
+<section class="question">
+    <h2>21. Which of the following is used for creating a hyperlink in HTML?</h2>
+    <label>
+        <input type="radio" name="q21" value="a">  &lt;a href="url"&gt;Link&lt;/a&gt;
+    </label>
+    <label>
+        <input type="radio" name="q21" value="b"> &lt;link href="url"&gt;Link&lt;/link&gt;
+    </label>
+    <label>
+        <input type="radio" name="q21" value="c"> &lt;hyperlink href="url"&gt;Link&lt;/hyperlink&gt;
+    </label>
+</section>
+
+<!-- Question 22 -->
+<section class="question">
+    <h2>22. Which HTML5 element defines the main content of a document?</h2>
+    <label>
+        <input type="radio" name="q22" value="a"> main
+    </label>
+    <label>
+        <input type="radio" name="q22" value="b"> section
+    </label>
+    <label>
+        <input type="radio" name="q22" value="c"> article
+    </label>
+</section>
+
+ <!-- Question 23 -->
+ <section class="question">
+    <h2>23. What does the main element represent?</h2>
+    <label>
+        <input type="radio" name="q23" value="a"> Main content of the document
+    </label>
+    <label>
+        <input type="radio" name="q23" value="b"> Header of the document
+    </label>
+    <label>
+        <input type="radio" name="q23" value="c"> Sidebar content
+    </label>
+</section>
+
+ <!-- Question 24 -->
+ <section class="question">
+    <h2>24. What is the role of <article> in HTML5?</h2>
+    <label>
+        <input type="radio" name="q24" value="a"> Represents an independent section of content
+    </label>
+    <label>
+        <input type="radio" name="q24" value="b"> Represents the main header of the page
+    </label>
+    <label>
+        <input type="radio" name="q24" value="c"> Represents the footer of the page
+    </label>
+</section>
+
+                        <section class="question">
+                            <h2>25. How do you make an input field required in HTML5?</h2>
+                            <label>
+                                <input type="radio" name="q25" value="a"> Using the "required" attribute
+                            </label>
+                            <label>
+                                <input type="radio" name="q25" value="b"> Using the "mandatory" attribute
+                            </label>
+                            <label>
+                                <input type="radio" name="q25" value="c"> Using the "validate" attribute
+                            </label>
+                        </section >   
+                        <!-- Question 26 -->
+        <section class="question">
+            <h2>26. Which of the following is used to store data in HTML5 locally?</h2>
+            <label>
+                <input type="radio" name="q26" value="a"> localStorage
+            </label>
+            <label>
+                <input type="radio" name="q26" value="b"> sessionStorage
+            </label>
+            <label>
+                <input type="radio" name="q26" value="c"> Both localStorage and sessionStorage
+            </label>
+        </section>
+                        <section class="question">
+                            <h2>27. Which attribute in the input element defines the maximum number of characters allowed?</h2>
+                            <label>
+                                <input type="radio" name="q27" value="a"> maxlength
+                            </label>
+                            <label>
+                                <input type="radio" name="q27" value="b"> size
+                            </label>
+                            <label>
+                                <input type="radio" name="q27" value="c"> minlength
+                            </label>
+                        </section>
+
+
+
+                        <div id="christ"> </div>
+
+
+                        <section class="question">
+                            <h2>28. What is the function of the <figure> tag in HTML5?</h2>
+                            <label>
+                                <input type="radio" name="q28" value="a"> It defines a figure, such as an image with a caption
+                            </label>
+                            <label>
+                                <input type="radio" name="q28" value="b"> It defines an article section
+                            </label>
+                            <label>
+                                <input type="radio" name="q28" value="c"> It defines a block-level container
+                            </label>
+                        </section>
+
+
+
+
+
+
+                        <section class="question">
+                            <h2>29. Which tag is used to display preformatted text?</h2>
+                            <label>
+                                <input type="radio" name="q29" value="a"> pre
+                            </label>
+                            <label>
+                                <input type="radio" name="q29" value="b"> code
+                            </label>
+                            <label>
+                                <input type="radio" name="q29" value="c"> plaintext
+                                                        </label>
+                        </section>
+
+
+                    <section class="question">
+                        <h2>30. What does the <link> element do in the <head> section of an HTML document?</h2>
+                        <label>
+                            <input type="radio" name="q30" value="a"> Links external resources such as stylesheets
+                        </label>
+                        <label>
+                            <input type="radio" name="q30" value="b"> Adds a hyperlink to the page
+                        </label>
+                        <label>
+                            <input type="radio" name="q30" value="c"> Displays an external image
+                        </label>
+                    </section>
+                    
+                    
+                
+                        <button type="submit">Submit Quiz</button>
+                   
+                
+                    <div id="quizResult" class="hidden">
+                        <h3>Your Results</h3>
+                        <p id="score"></p>
+                    </div>
+</form>
+
+                
+                       
+
+
+
+
+
+
+
+
+
+
+<br>
+                    
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="TryPracticalQuestions.html">Try Practical Questions</a> 
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+        
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p style="    color: white;" class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p style="    color: white;" class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            let score = 0;
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'c',
+                q4: 'a',
+                q5: 'a',
+                q6: 'b',
+                q7: 'a',
+                q8: 'a',
+                q9: 'a',
+                q10: 'a',
+                q11: 'a',
+                q12: 'a',
+                q13: 'a',
+                q14: 'b',
+                q15: 'b',
+                q16: 'a',
+                q17: 'a',
+                q18: 'a',
+                q19: 'a',
+                q20: 'a',
+                q21: 'a',
+                q22: 'a',
+                q23: 'a',
+                q24: 'a',
+                q25: 'a',
+                q26: 'c',
+                q27: 'a',
+                q28: 'a',
+                q29: 'a',
+                q30: 'a'
+            };
+    
+            for (let question in answers) {
+                const selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+    
+            const totalQuestions = Object.keys(answers).length;
+            const percentage = (score / totalQuestions) * 100;
+    
+            document.getElementById('score').textContent = `You scored ${score} out of ${totalQuestions} (${percentage.toFixed(2)}%)`;
+            document.getElementById('quizResult').classList.remove('hidden');
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

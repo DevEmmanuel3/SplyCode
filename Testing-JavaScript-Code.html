@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Strikethrough (<s>)
+        | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to test JavaScript code using frameworks like Jest, Mocha, and Jasmine. Explore unit testing, TDD, mocking, integration tests, and end-to-end testing best practices.">
+    <meta name="keywords" content="JavaScript testing, unit testing, test-driven development, Jest, Mocha, Jasmine, mocking in JavaScript, integration testing, end-to-end testing, testing frameworks">
+    <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Modern-JavaScript-(ES6+Features).html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="JavaScript-Framworks-and-Libraries-(Introduction).html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="javascriptfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">JavaScript Full Course</h1> <br>
+                    <h1 class="mb-4">Testing JavaScript Code</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                       
+                        
+                            <style>
+                               
+                                code {
+                                    background-color: #f4f4f4;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                    display: block;
+                                    margin-top: 10px;
+                                }
+                                .button {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    padding: 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    margin-top: 10px;
+                                }
+                                .button:hover {
+                                    background-color: #45a049;
+                                }
+                                pre {
+                                    background-color: #f4f4f4;
+                                    padding: 15px;
+                                    border-radius: 5px;
+                                    overflow-x: auto;
+                                }
+                                #output {
+                                    background-color: #e7f7e7;
+                                    padding: 10px;
+                                    border: 1px solid #ddd;
+                                    margin-top: 10px;
+                                }
+                            </style>
+                        
+                        
+                            <h1>Testing JavaScript Code</h1>
+                        
+                            <h2>1. Introduction to Testing</h2>
+                            <p>Testing is a critical part of the development process. It ensures that your code works as expected, is reliable, and reduces the chances of bugs appearing in production. There are two major types of tests:</p>
+                            <ul>
+                                <li><strong>Unit Testing</strong>: Tests individual units of code (usually functions or methods).</li>
+                                <li><strong>Integration Testing</strong>: Ensures that multiple parts of the application work together as expected.</li>
+                            </ul>
+                        
+                            <h2>2. Testing Frameworks</h2>
+                            <p><strong>Jest</strong> is a popular testing framework, especially for React applications. It includes a test runner and assertion library.</p>
+                            <p><strong>Mocha</strong> is another popular framework often used with Node.js and allows you to use different assertion libraries like Chai.</p>
+                        
+                            <h2>3. Writing Test Cases</h2>
+                            <p>Here’s an example of how to write test cases using Jest. Let’s say you have a simple function `add` that adds two numbers together:</p>
+                        
+                            <h3>Example: Testing an Add Function Using Jest</h3>
+                            <button class="button" onclick="copyCode('code1')">Copy Code</button>
+                            <pre id="code1">
+                        <code>
+                        // add.js
+                        function add(a, b) {
+                          return a + b;
+                        }
+                        
+                        module.exports = add;
+                        
+                        // add.test.js
+                        const add = require('./add');
+                        
+                        test('adds 1 + 2 to equal 3', () => {
+                          expect(add(1, 2)).toBe(3);
+                        });
+                        
+                        test('adds -1 + 2 to equal 1', () => {
+                          expect(add(-1, 2)).toBe(1);
+                        });
+                        </code>
+                            </pre>
+                        
+                            <h2>4. Test-Driven Development (TDD)</h2>
+                            <p>TDD is an approach where you write tests before the code, following the "Red-Green-Refactor" cycle.</p>
+                            <h3>Example of TDD with Multiply Function</h3>
+                            <button class="button" onclick="copyCode('code2')">Copy Code</button>
+                            <pre id="code2">
+                        <code>
+                        // multiply.test.js
+                        const multiply = require('./multiply');
+                        
+                        test('multiplies 2 and 3 to equal 6', () => {
+                          expect(multiply(2, 3)).toBe(6);
+                        });
+                        
+                        // multiply.js
+                        function multiply(a, b) {
+                          return a * b;
+                        }
+                        
+                        module.exports = multiply;
+                        </code>
+                            </pre>
+                        
+                            <h2>5. Running Tests</h2>
+                            <p>After writing your tests, you can run them using Jest. To do so, run the following command:</p>
+                            <pre>
+                        <code>
+                        npx jest
+                        </code>
+                            </pre>
+                        
+                            <h2>6. Output</h2>
+                            <div id="output"></div>
+                        
+                            <script>
+                                function copyCode(codeId) {
+                                    var code = document.getElementById(codeId);
+                                    var text = code.innerText || code.textContent;
+                                    navigator.clipboard.writeText(text).then(function() {
+                                        alert('Code copied to clipboard!');
+                                    });
+                                }
+                        
+                                // Simulating running a test to show output on page
+                                function runTest() {
+                                    const output = document.getElementById('output');
+                                    output.textContent = "Test Passed: adds 1 + 2 to equal 3";
+                                }
+                        
+                                // You can simulate running tests here if needed
+                                runTest();
+                            </script>
+                       
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Modern-JavaScript-(ES6+Features).html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="JavaScript-Framworks-and-Libraries-(Introduction).html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Web Design in Css | Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Learn how to implement responsive web design using CSS. Discover the best practices for creating adaptive layouts that work seamlessly across devices, from desktops to smartphones, with CSS media queries.">
+    <meta name="keywords" content="Responsive web design CSS, Mobile-first CSS design, CSS media queries, Adaptive web design, CSS for responsive design, Creating mobile-friendly websites, CSS responsive layout tutorial, CSS breakpoints for responsiveness, Fluid layouts with CSS, Designing for mobile and desktop with CSS, Responsive design techniques, CSS grid and Flexbox for responsive design, Best practices for responsive web design">
+    <meta name="author" content="Alhassan Emmanuel">
+
+    <!-- Title for SEO -->
+
+    <!-- Open Graph Meta Tags (optional for social media sharing) -->
+    <meta property="og:title" content="HTML5 Typography and Text Styling: Best Practices for Web Design">
+    <meta property="og:description" content="Learn the essentials of HTML5 typography and text styling. Discover best practices for text elements, fonts, sizes, and formatting to create readable and aesthetically pleasing web content.">
+    <meta property="og:type" content="SplyCode">
+    <meta property="og:url" content="https://www.splycode.com/typography-and-text-styling.html">
+    <meta property="og:image" content="https://www.splycode.com/img/html.jfif">
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+
+ <br>
+    <div style="display: flex; justify-content: space-between;">
+    <a class="btn btn-primary rounded-pill py-3 px-5" href="CSSGridlayout.html">Go Back </a>  <br> <br>
+    <a class="btn btn-primary rounded-pill py-3 px-5" href="ColorsandBackgroundsincss.html"> Next page</a>
+      </div>
+      <div id="christ"> </div>
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 90%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="cssfullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">CSS Full Course</h1> <br>
+                    <h1 class="mb-4">Responsive Web Design</h1>
+                    <div style="text-align:left ;" class="container1">
+                        
+                        
+                            <style>
+                                
+                        
+                                h1, h2 {
+                                    color: #333;
+                                }
+                               code{
+                                text-align: left;
+                               }
+                                pre {
+                                    background-color: #f4f4f4;
+                                    padding: 15px;
+                                    border-radius: 5px;
+                                    white-space: pre-wrap;
+                                    word-wrap: break-word;
+                                    margin: 15px 0;
+                                    text-align: left;
+                                }
+                        
+                                .example-container {
+                                    margin-bottom: 30px;
+                                }
+                        
+                                .button {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    padding: 10px 15px;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                }
+                        
+                                .button:hover {
+                                    background-color: #45a049;
+                                }
+                        
+                                .output-container {
+                                    margin-top: 20px;
+                                }
+                        
+                                .responsive-container {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr 1fr;
+                                    gap: 20px;
+                                }
+                        
+                                .item {
+                                    background-color: lightblue;
+                                    padding: 20px;
+                                    text-align: center;
+                                    height: 150px;
+                                }
+                        
+                                @media (max-width: 768px) {
+                                    .responsive-container {
+                                        grid-template-columns: 1fr 1fr;
+                                    }
+                                }
+                        
+                                @media (max-width: 480px) {
+                                    .responsive-container {
+                                        grid-template-columns: 1fr;
+                                    }
+                                }
+                        
+                                .responsive-image {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                        
+                            </style>
+                        </head>
+                        <body>
+                        
+                            <h1>Responsive Web Design Explanation</h1>
+                            <p>This section explains the key principles behind responsive web design with examples.</p>
+                        
+                            <h2>1. Media Queries</h2>
+                            <p>Media queries allow you to apply CSS styles based on conditions like screen width, height, device type, or orientation.</p>
+                            <div class="example-container">
+                                <pre><code>@media (max-width: 768px) {
+                            body {
+                                background-color: lightgray;
+                            }
+                        }</code></pre>
+                                <button class="button" onclick="copyCode('media-query')">Copy Code</button>
+                            </div>
+                        
+                            <h2>2. Responsive Design Principles</h2>
+                            <p>Responsive design ensures that web pages work well across different devices and screen sizes. Principles include:</p>
+                            <ul>
+                                <li>Flexible layouts</li>
+                                <li>Fluid grids</li>
+                                <li>Responsive images</li>
+                            </ul>
+                        
+                            <h2>3. Viewport Meta Tag</h2>
+                            <p>The viewport meta tag is essential for controlling the layout on mobile devices. It helps to make the design responsive.</p>
+                            <div class="example-container">
+                                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                                <button class="button" onclick="copyCode('viewport-meta')">Copy Code</button>
+                            </div>
+                        
+                            <h2>4. Fluid Layouts</h2>
+                            <p>Fluid layouts use relative units like percentages to define widths, so the layout adapts to different screen sizes.</p>
+                            <div class="example-container">
+                                <pre><code>.container {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        
+                        .box {
+                            background-color: lightcoral;
+                            padding: 20px;
+                            text-align: center;
+                            flex: 1 1 200px;
+                        }</code></pre>
+                                <button class="button" onclick="copyCode('fluid-layout')">Copy Code</button>
+                            </div>
+                        
+                            <h2>5. Mobile-First Approach</h2>
+                            <p>With the mobile-first approach, you start by designing for smaller screens first and then use media queries to adapt for larger screens.</p>
+                            <div class="example-container">
+                                <pre><code>/* Base styles for mobile-first design */
+                        body {
+                            font-size: 16px;
+                        }
+                        
+                        @media (min-width: 768px) {
+                            /* Styles for tablets and above */
+                            body {
+                                font-size: 18px;
+                            }
+                        }</code></pre>
+                                <button class="button" onclick="copyCode('mobile-first')">Copy Code</button>
+                            </div>
+                        
+                            <h2>6. Responsive Images</h2>
+                            <p>Responsive images are images that scale to fit the container and adjust depending on screen size.</p>
+                            <div class="example-container">
+                                <pre><code>&lt;img src="image.jpg" class="responsive-image"&gt;</code></pre>
+                                <button class="button" onclick="copyCode('responsive-image')">Copy Code</button>
+                            </div>
+                        
+                            <h2>7. CSS Units</h2>
+                            <p>CSS units are important for creating responsive layouts. They are divided into two categories: relative units and absolute units.</p>
+                        
+                            <h3>a. Relative Units</h3>
+                            <ul>
+                                <li><code>%</code>: Percentage based on the parent element's dimensions.</li>
+                                <li><code>em</code>: Relative to the font-size of the parent element.</li>
+                                <li><code>rem</code>: Relative to the root font size.</li>
+                                <li><code>vw</code>: Relative to 1% of the viewport's width.</li>
+                                <li><code>vh</code>: Relative to 1% of the viewport's height.</li>
+                            </ul>
+                            
+                            <div class="example-container">
+                                <pre><code>.container {
+                            width: 80%;
+                            height: 50vh;
+                        }</code></pre>
+                                <button class="button" onclick="copyCode('relative-units')">Copy Code</button>
+                            </div>
+                        
+                            <h3>b. Absolute Units</h3>
+                            <p>Absolute units are fixed measurements and do not scale. Examples include:</p>
+                            <ul>
+                                <li><code>px</code>: Pixels, an absolute unit for screen display.</li>
+                            </ul>
+                        
+                            <div class="example-container">
+                                <pre><code>.container {
+                            width: 500px;
+                            height: 300px;
+                        }</code></pre>
+                                <button class="button" onclick="copyCode('absolute-units')">Copy Code</button>
+                            </div>
+                        
+                            <h2>Example Output:</h2>
+                            <div class="output-container">
+                                <div class="responsive-container">
+                                    <div class="item">Item 1</div>
+                                    <div class="item">Item 2</div>
+                                    <div class="item">Item 3</div>
+                                </div>
+                            </div>
+                        
+                            <script>
+                                function copyCode(selector) {
+                                    const code = document.querySelectorAll(`[data-code="${selector}"]`)[0].textContent;
+                                    const textArea = document.createElement('textarea');
+                                    textArea.value = code;
+                                    document.body.appendChild(textArea);
+                                    textArea.select();
+                                    document.execCommand('copy');
+                                    document.body.removeChild(textArea);
+                                    alert('Code copied to clipboard!');
+                                }
+                            </script>
+                        
+                        </body>
+                        </html>
+                        
+
+
+
+
+ 
+
+
+
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">  
+
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="CSSGridlayout.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="ColorsandBackgroundsincss.html"> Next page</a>
+    </div>
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
