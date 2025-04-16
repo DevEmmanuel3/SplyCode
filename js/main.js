@@ -109,7 +109,7 @@
 
 
 
-function payWithPaystack() {
+function payWithPaystac() {
     let amount = document.getElementById("amount").value;
     if (!amount || amount <= 0) {
         alert("Please enter a valid amount");
@@ -681,10 +681,20 @@ const searchIcon = document.querySelector('.search-icon');
     { title: "Method Overriding and super() in Python ", link: "Object-Oriented-Programming-(OOP)-in-Python.html" },
     { title: "Data Hiding Abstract Classes and Interfaces in Python ", link: "Object-Oriented-Programming-(OOP)-in-Python.html" },
     { title: "Property Decorators in Python ", link: "Object-Oriented-Programming-(OOP)-in-Python.html" },
-    { title: " ", link: "" },
-
-
-
+    { title: "Python File Handling, Serialization & Directory Operations", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "File Handling in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Opening and Closing Files in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "File Modes in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Basic File Operations in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Reading and Writing Files in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Appending to Files in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Binary Files in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Data Serialization in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "CSV (Comma-Separated Values) in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Pickle (Python Object Serialization) in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Working with Directories in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+    { title: "Quick Reference Cheat Sheet in Python", link: "File-Handling-and-Input-Output-in-python.html" },
+   
 
 
 
