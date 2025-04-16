@@ -116,7 +116,7 @@ function payWithPaystac() {
         return;
     }
     let handler = PaystackPop.setup({
-        key: 'pk_live_c9d478ee22829a6731de13bd34d3771abd6e4868', // Replace with your Paystack public key
+        key: 'pk_test_fd30cdb9df9a96bdd58b178223718bab7c240c9c', // Replace with your Paystack public key
         email: 'customer@example.com',
         amount: amount * 100, // Convert amount to kobo
         currency: 'GHS',
