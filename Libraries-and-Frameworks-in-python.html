@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Libraries and Frameworks in Python| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Comprehensive guide to essential Python libraries including NumPy, Pandas, Matplotlib, Requests, Flask/Django, and SQL databases with practical code examples">
+    <meta name="keywords" content="Python, NumPy, Pandas, Matplotlib, Seaborn, Requests, Flask, Django, SQL, Data Science, Web Development">        
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Python-Concepts.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-and-Debugging-in-python.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Python-full-course.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Python Full Course</h1> <br>
+                    <h1 class="mb-4">Libraries and Frameworks in Python</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                        
+                            <style>
+                                
+                                h1, h2, h3 {
+                                    color: #2c3e50;
+                                    margin-top: 30px;
+                                }
+                                pre {
+                                    background: #f8f9fa;
+                                    padding: 15px;
+                                    border-left: 4px solid #3498db;
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow-x: auto;
+                                }
+                                .copy-button {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    background: #3498db;
+                                    color: white;
+                                    border: none;
+                                    padding: 5px 10px;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                    font-size: 12px;
+                                }
+                                .copy-button:hover {
+                                    background: #2980b9;
+                                }
+                                .output {
+                                    background: #e8f5e9;
+                                    padding: 10px 15px;
+                                    border-left: 4px solid #2ecc71;
+                                    border-radius: 4px;
+                                    margin-top: 10px;
+                                    font-family: monospace;
+                                    white-space: pre-wrap;
+                                }
+                                .note {
+                                    background: #fffde7;
+                                    padding: 15px;
+                                    border-left: 4px solid #ffd600;
+                                    margin: 20px 0;
+                                }
+                                
+                                code {
+                                    background: #f0f0f0;
+                                    padding: 2px 4px;
+                                    border-radius: 3px;
+                                    font-family: monospace;
+                                }
+                                table {
+                                    border-collapse: collapse;
+                                    width: 100%;
+                                    margin: 20px 0;
+                                }
+                                th, td {
+                                    border: 1px solid #ddd;
+                                    padding: 8px;
+                                    text-align: left;
+                                }
+                                th {
+                                    background-color: #f2f2f2;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                        
+                        <h1>Comprehensive Guide to Python Libraries and Frameworks</h1>
+                        
+                        <div class="section" id="numpy">
+                            <h2>1. NumPy (Numerical Python)</h2>
+                            
+                            <h3>What is NumPy?</h3>
+                            <p>NumPy is the <strong>foundational library for numerical computing</strong> in Python. It provides:</p>
+                            <ul>
+                                <li><strong>N-dimensional arrays (ndarray)</strong> for efficient storage and operations</li>
+                                <li><strong>Mathematical functions</strong> (linear algebra, statistics, trigonometry)</li>
+                                <li><strong>Broadcasting</strong> for vectorized operations (avoiding loops)</li>
+                            </ul>
+                            
+                            <h3>Creating Arrays</h3>
+                            <pre id="code1">
+                        import numpy as np
+                        
+                        # 1D array
+                        arr1 = np.array([1, 2, 3])
+                        
+                        # 2D array (matrix)
+                        arr2 = np.array([[1, 2], [3, 4]])
+                        
+                        # Special arrays
+                        zeros = np.zeros((3, 3))  # 3x3 matrix of zeros
+                        ones = np.ones((2, 2))    # 2x2 matrix of ones
+                        range_arr = np.arange(0, 10, 2)  # [0, 2, 4, 6, 8]
+                        linspace = np.linspace(0, 1, 5)  # 5 evenly spaced numbers between 0 and 1
+                        
+                        print("1D Array:", arr1)
+                        print("2D Array:\n", arr2)
+                        print("Zeros:\n", zeros)
+                        print("Linspace:", linspace)</pre>
+                            <button class="copy-button" onclick="copyCode('code1')">Copy</button>
+                            <div class="output">
+                        1D Array: [1 2 3]
+                        2D Array:
+                         [[1 2]
+                         [3 4]]
+                        Zeros:
+                         [[0. 0. 0.]
+                         [0. 0. 0.]
+                         [0. 0. 0.]]
+                        Linspace: [0.   0.25 0.5  0.75 1.  ]
+                            </div>
+                            
+                            <h3>Array Operations (Vectorization & Broadcasting)</h3>
+                            <pre id="code2">
+                        a = np.array([1, 2, 3])
+                        b = np.array([4, 5, 6])
+                        
+                        # Element-wise operations
+                        print("Addition:", a + b)  # [5, 7, 9]
+                        print("Multiplication:", a * b)  # [4, 10, 18]
+                        
+                        # Broadcasting (applying operations to mismatched shapes)
+                        print("Array + Scalar:", a + 5)  # [6, 7, 8]</pre>
+                            <button class="copy-button" onclick="copyCode('code2')">Copy</button>
+                            <div class="output">
+                        Addition: [5 7 9]
+                        Multiplication: [ 4 10 18]
+                        Array + Scalar: [6 7 8]
+                            </div>
+                            <div class="note">
+                                <strong>Explanation:</strong><br>
+                                - <strong>Vectorization</strong> avoids loops (faster computation)<br>
+                                - <strong>Broadcasting</strong> allows operations between arrays of different shapes
+                            </div>
+                            <br>     <div id="ad-container2" ></div>                <br>
+                            <h3>Mathematical & Linear Algebra Functions</h3>
+                            <pre id="code3">
+                        # Trigonometry
+                        angles = np.array([0, 30, 45, 60, 90]) * np.pi / 180
+                        print("Sine:", np.sin(angles))
+                        
+                        # Statistics
+                        data = np.array([1, 2, 3, 4, 5])
+                        print("Mean:", np.mean(data))
+                        print("Standard Deviation:", np.std(data))
+                        
+                        # Matrix operations
+                        A = np.array([[1, 2], [3, 4]])
+                        B = np.array([[5, 6], [7, 8]])
+                        print("Matrix Multiplication:\n", np.matmul(A, B))
+                        print("Inverse of A:\n", np.linalg.inv(A))</pre>
+                            <button class="copy-button" onclick="copyCode('code3')">Copy</button>
+                            <div class="output">
+                        Sine: [0.  0.5 0.707 0.866 1. ]
+                        Mean: 3.0
+                        Standard Deviation: 1.414
+                        Matrix Multiplication:
+                         [[19 22]
+                         [43 50]]
+                        Inverse of A:
+                         [[-2.   1. ]
+                         [ 1.5 -0.5]]
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="pandas">
+                            <h2>2. Pandas (Data Analysis & Manipulation)</h2>
+                            
+                            <h3>What is Pandas?</h3>
+                            <p>Pandas provides <strong>DataFrames</strong> (tables) and <strong>Series</strong> (columns) for:</p>
+                            <ul>
+                                <li><strong>Data cleaning</strong> (handling missing values)</li>
+                                <li><strong>Data manipulation</strong> (filtering, grouping, merging)</li>
+                                <li><strong>Statistical analysis</strong> (mean, median, correlation)</li>
+                            </ul>
+                            
+                            <h3>Creating DataFrames & Series</h3>
+                            <pre id="code4">
+                        import pandas as pd
+                        
+                        # Series (1D array with labels)
+                        series = pd.Series([10, 20, 30], index=["A", "B", "C"])
+                        
+                        # DataFrame (2D table)
+                        data = {"Name": ["Alice", "Bob"], "Age": [25, 30]}
+                        df = pd.DataFrame(data)
+                        
+                        print("Series:\n", series)
+                        print("DataFrame:\n", df)</pre>
+                            <button class="copy-button" onclick="copyCode('code4')">Copy</button>
+                            <div class="output">
+                        Series:
+                         A    10
+                        B    20
+                        C    30
+                        dtype: int64
+                        
+                        DataFrame:
+                            Name  Age
+                        0  Alice   25
+                        1    Bob   30
+                            </div>
+                            
+                            <h3>Data Manipulation (Filtering, Grouping, Aggregation)</h3>
+                            <pre id="code5">
+                        # Filtering
+                        print("Age > 25:\n", df[df["Age"] > 25])
+                        
+                        # Grouping & Aggregation
+                        sales = pd.DataFrame({
+                            "Region": ["East", "West", "East", "West"],
+                            "Sales": [200, 300, 150, 400]
+                        })
+                        print("Average Sales by Region:\n", sales.groupby("Region").mean())</pre>
+                            <button class="copy-button" onclick="copyCode('code5')">Copy</button>
+                            <div class="output">
+                        Age > 25:
+                           Name  Age
+                        1  Bob   30
+                        
+                        Average Sales by Region:
+                                 Sales
+                        Region        
+                        East     175
+                        West     350
+                            </div>
+                            
+                            <h3>Handling Missing Data</h3>
+                            <pre id="code6">
+                        df = pd.DataFrame({"A": [1, None, 3], "B": [4, 5, None]})
+                        print("Original:\n", df)
+                        print("Filled NA:\n", df.fillna(0))  # Replace missing values with 0</pre>
+                            <button class="copy-button" onclick="copyCode('code6')">Copy</button>
+                            <div class="output">
+                        Original:
+                              A    B
+                        0  1.0  4.0
+                        1  NaN  5.0
+                        2  3.0  NaN
+                        
+                        Filled NA:
+                              A    B
+                        0  1.0  4.0
+                        1  0.0  5.0
+                        2  3.0  0.0
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="visualization">
+                            <h2>3. Matplotlib & Seaborn (Data Visualization)</h2>
+                            
+                            <h3>What are Matplotlib & Seaborn?</h3>
+                            <ul>
+                                <li><strong>Matplotlib</strong>: Basic plotting (line, bar, scatter plots)</li>
+                                <li><strong>Seaborn</strong>: High-level statistical visualizations (violin plots, heatmaps)</li>
+                            </ul>
+                            
+                            <h3>Line & Bar Plots (Matplotlib)</h3>
+                            <pre id="code7">
+                        import matplotlib.pyplot as plt
+                        
+                        x = [1, 2, 3, 4]
+                        y = [10, 20, 15, 25]
+                        
+                        plt.plot(x, y, label="Line Plot")
+                        plt.bar(x, y, label="Bar Plot")
+                        plt.xlabel("X-axis")
+                        plt.ylabel("Y-axis")
+                        plt.legend()
+                        plt.show()</pre>
+                            <button class="copy-button" onclick="copyCode('code7')">Copy</button>
+                            <div class="note">
+                                <strong>Output:</strong> A combined line and bar chart appears
+                            </div>
+                            
+                            <h3>Seaborn Statistical Plots</h3>
+                            <pre id="code8">
+                        import seaborn as sns
+                        
+                        tips = sns.load_dataset("tips")
+                        sns.boxplot(x="day", y="total_bill", data=tips)
+                        plt.title("Bill Distribution by Day")
+                        plt.show()</pre>
+                            <button class="copy-button" onclick="copyCode('code8')">Copy</button>
+                            <div class="note">
+                                <strong>Output:</strong> A boxplot showing bill amounts across days
+                            </div>
+                        </div>
+                        <br>    <div id="ad-container3" ></div>                <br>
+                        <div class="section" id="requests">
+                            <h2>4. Requests (HTTP Requests & Web Scraping)</h2>
+                            
+                            <h3>What is the Requests Library?</h3>
+                            <ul>
+                                <li>Used for <strong>HTTP requests</strong> (GET, POST, API calls)</li>
+                                <li>Helps in <strong>web scraping</strong> (extracting data from websites)</li>
+                            </ul>
+                            
+                            <h3>GET & POST Requests</h3>
+                            <pre id="code9">
+                        import requests
+                        
+                        # GET request
+                        response = requests.get("https://api.github.com")
+                        print("Status Code:", response.status_code)
+                        print("JSON Data:", response.json())
+                        
+                        # POST request
+                        data = {"key": "value"}
+                        response = requests.post("https://httpbin.org/post", data=data)
+                        print("POST Response:", response.json())</pre>
+                            <button class="copy-button" onclick="copyCode('code9')">Copy</button>
+                            <div class="output">
+                        Status Code: 200
+                        JSON Data: {'current_user_url': 'https://api.github.com/user', ...}
+                        POST Response: {'args': {}, 'data': '', 'form': {'key': 'value'}, ...}
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="web-frameworks">
+                            <h2>5. Flask & Django (Web Development)</h2>
+                            
+                            <h3>Flask (Microframework)</h3>
+                            <pre id="code10">
+                        from flask import Flask
+                        
+                        app = Flask(__name__)
+                        
+                        @app.route("/")
+                        def home():
+                            return "Hello, World!"
+                        
+                        if __name__ == "__main__":
+                            app.run(debug=True)</pre>
+                            <button class="copy-button" onclick="copyCode('code10')">Copy</button>
+                            <div class="note">
+                                <strong>Explanation:</strong><br>
+                                - Runs a <strong>local web server</strong> (<code>http://127.0.0.1:5000</code>)<br>
+                                - Returns "Hello, World!" at the root URL
+                            </div>
+                            
+                            <h3>Django (Full-stack Framework)</h3>
+                            <ul>
+                                <li>Used for <strong>larger web apps</strong> (admin panel, authentication, ORM)</li>
+                                <li>Requires <code>django-admin startproject</code> to create a project</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="section" id="databases">
+                            <h2>6. SQL & Database Interactions</h2>
+                            
+                            <h3>SQLite (Lightweight Database)</h3>
+                            <pre id="code11">
+                        import sqlite3
+                        
+                        conn = sqlite3.connect("example.db")
+                        cursor = conn.cursor()
+                        
+                        # Create table
+                        cursor.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER, name TEXT)")
+                        
+                        # Insert data
+                        cursor.execute("INSERT INTO users VALUES (1, 'Alice')")
+                        
+                        # Query data
+                        cursor.execute("SELECT * FROM users")
+                        print(cursor.fetchall())  # [(1, 'Alice')]
+                        
+                        conn.commit()
+                        conn.close()</pre>
+                            <button class="copy-button" onclick="copyCode('code11')">Copy</button>
+                            <div class="note">
+                                <strong>Explanation:</strong><br>
+                                - Creates a <strong>SQLite database</strong> (<code>example.db</code>)<br>
+                                - Inserts and retrieves data using SQL queries
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="conclusion">
+                            <h2>Conclusion</h2>
+                            <p>This guide covered:</p>
+                            <ul>
+                                <li>✅ <strong>NumPy</strong> (numerical computing)</li>
+                                <li>✅ <strong>Pandas</strong> (data analysis)</li>
+                                <li>✅ <strong>Matplotlib/Seaborn</strong> (visualization)</li>
+                                <li>✅ <strong>Requests</strong> (HTTP/web scraping)</li>
+                                <li>✅ <strong>Flask/Django</strong> (web development)</li>
+                                <li>✅ <strong>SQL/Databases</strong> (data storage)</li>
+                            </ul>
+                            <p>Each library serves a <strong>specific purpose</strong> in Python development, from <strong>data science</strong> to <strong>web apps</strong>. 🚀</p>
+                        </div>
+                        
+                        <script>
+                            function copyCode(elementId) {
+                                const codeElement = document.getElementById(elementId);
+                                const range = document.createRange();
+                                range.selectNode(codeElement);
+                                window.getSelection().removeAllRanges();
+                                window.getSelection().addRange(range);
+                                document.execCommand('copy');
+                                window.getSelection().removeAllRanges();
+                                
+                                // Visual feedback
+                                const button = codeElement.nextElementSibling;
+                                button.textContent = 'Copied!';
+                                setTimeout(() => {
+                                    button.textContent = 'Copy';
+                                }, 2000);
+                            }
+                        </script>
+                        
+             
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Python-Concepts.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Testing-and-Debugging-in-python.html"> Next page</a>
+    </div>    
+<br>     <div id="ad-container4" ></div>  <br>              
+<!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

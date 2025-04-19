@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>File Handling and Input Output in Python| Sply Code</title>
+    <title>Object-Oriented Programming (OOP) in Python| Sply Code</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Complete Python File Handling Guide with examples for file operations, data serialization (JSON/CSV/Pickle), and directory management">
-    <meta name="keywords" content="Python, File Handling, JSON, CSV, Pickle, Directory Operations, Python Tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Object-Oriented Programming (OOP) in Python, covering key concepts like classes, objects, attributes, methods, encapsulation, inheritance, polymorphism, constructors, destructors, self keyword, advanced OOP topics including class methods, static methods, multiple inheritance, method overriding, super(), abstract classes, interfaces, data hiding, and property decorators." />
+    <meta name="keywords" content="Python OOP, Object-Oriented Programming in Python, classes, objects, attributes, methods, encapsulation, inheritance, polymorphism, constructors, destructors, self keyword, class methods, static methods, multiple inheritance, method overriding, super(), abstract classes, interfaces, data hiding, property decorators" />
         
     <meta name="author" content="Emmanuel Alhassan">
    
@@ -90,13 +91,14 @@
     </nav>
     <!-- Navbar End -->
 
+    <div id="ad-container1" ></div>
 
     <br>
     <div style="display: flex; justify-content: space-between;">
         <a class="btn btn-primary rounded-pill py-3 px-5" href="Object-Oriented-Programming-(OOP)-in-Python.html">Go Back </a>  <br> <br>
         <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Python-Concepts.html"> Next page</a>
           </div>
-          <div id="christ"> </div>
+          
 
     <!-- 404 Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -105,316 +107,337 @@
                 <div style="width: 100%;" class="col-lg-6">
                     <a class="btn btn-primary rounded-pill py-3 px-5" href="Python-full-course.html">Go Back Course Outline </a>  <br> <br>
 
-                    <h1 style="font-size:xx-large;" class="display-1">Python Full Course</h1> <br>
-                    <h1 class="mb-4">File Handling and Input Output in Python</h1>
-                    <div style="text-align: left;" class="container1">
-                        
-                        
-                            <style>
-                               
-                                h1, h2, h3 {
-                                    color: #2c3e50;
-                                    margin-top: 30px;
-                                }
-                                pre {
-                                    background: #f8f9fa;
-                                    padding: 15px;
-                                    border-left: 4px solid #3498db;
-                                    border-radius: 4px;
-                                    position: relative;
-                                    overflow-x: auto;
-                                }
-                                .copy-button {
-                                    position: absolute;
-                                    top: 5px;
-                                    right: 5px;
-                                    background: #3498db;
-                                    color: white;
-                                    border: none;
-                                    padding: 5px 10px;
-                                    border-radius: 3px;
-                                    cursor: pointer;
-                                    font-size: 12px;
-                                }
-                                .copy-button:hover {
-                                    background: #2980b9;
-                                }
-                                .output {
-                                    background: #e8f5e9;
-                                    padding: 10px 15px;
-                                    border-left: 4px solid #2ecc71;
-                                    border-radius: 4px;
-                                    margin-top: 10px;
-                                    font-family: monospace;
-                                    white-space: pre-wrap;
-                                }
-                                table {
-                                    border-collapse: collapse;
-                                    width: 100%;
-                                    margin: 20px 0;
-                                }
-                                th, td {
-                                    border: 1px solid #ddd;
-                                    padding: 8px;
-                                    text-align: left;
-                                }
-                                th {
-                                    background-color: #f2f2f2;
-                                }
-                                .note {
-                                    background: #fffde7;
-                                    padding: 15px;
-                                    border-left: 4px solid #ffd600;
-                                    margin: 20px 0;
-                                }
-                            </style>
                     
-                        
-                        <h1>📁 Python File Handling, Serialization & Directory Operations</h1>
-                        
-                        <section id="file-handling">
-                            <h2>1. File Handling in Python</h2>
-                            
-                            <h3>Opening and Closing Files</h3>
-                            <p>Python uses the <code>open()</code> function to handle files.</p>
-                            
-                            <h4>File Modes</h4>
-                            <table>
-                                <tr><th>Mode</th><th>Description</th></tr>
-                                <tr><td><code>'r'</code></td><td>Read (default). File must exist.</td></tr>
-                                <tr><td><code>'w'</code></td><td>Write. Overwrites or creates file.</td></tr>
-                                <tr><td><code>'a'</code></td><td>Append. Adds to file or creates it.</td></tr>
-                                <tr><td><code>'b'</code></td><td>Binary mode. Used with <code>r</code>, <code>w</code>, <code>a</code>.</td></tr>
-                                <tr><td><code>'+'</code></td><td>Read and write.</td></tr>
-                            </table>
-                        
-                            <h4>Basic File Operations</h4>
-                            <pre id="code1">
-                        # Basic file writing
-                        file = open("sample.txt", "w")  # Open for writing
-                        file.write("Hello, Python!")
-                        file.close()  # Always close to save changes</pre>
-                            <button class="copy-button" onclick="copyCode('code1')">Copy</button>
-                            
-                            <div class="note">
-                                <strong>Better Practice:</strong> Use <code>with</code> statement for automatic file closing.
-                            </div>
-                            
-                            <pre id="code2">
-                        # Safer method using 'with'
-                        with open("sample.txt", "r") as file:
-                            content = file.read()
-                            print(content)</pre>
-                            <button class="copy-button" onclick="copyCode('code2')">Copy</button>
-                            <div class="output">
-                        Hello, Python!
-                            </div>
-                            
-                            <h3>Reading and Writing Files</h3>
-                            <pre id="code3">
-                        # Writing multiple lines
-                        with open("greet.txt", "w") as f:
-                            f.write("Good morning!\n")
-                            f.write("Welcome to Python.")</pre>
-                            <button class="copy-button" onclick="copyCode('code3')">Copy</button>
-                            <div class="output">
-                        # File contents (greet.txt):
-                        Good morning!
-                        Welcome to Python.
-                            </div>
-                            
-                            <pre id="code4">
-                        # Reading entire file
-                        with open("greet.txt", "r") as f:
-                            print(f.read())</pre>
-                            <button class="copy-button" onclick="copyCode('code4')">Copy</button>
-                            <div class="output">
-                        Good morning!
-                        Welcome to Python.
-                            </div>
-                            
-                            <pre id="code5">
-                        # Reading line by line
-                        with open("greet.txt", "r") as f:
-                            for line in f:
-                                print(line.strip())</pre>
-                            <button class="copy-button" onclick="copyCode('code5')">Copy</button>
-                            <div class="output">
-                        Good morning!
-                        Welcome to Python.
-                            </div>
-                            
-                            <h3>Appending to Files</h3>
-                            <pre id="code6">
-                        with open("greet.txt", "a") as f:
-                            f.write("\nHave a great day!")</pre>
-                            <button class="copy-button" onclick="copyCode('code6')">Copy</button>
-                            <div class="output">
-                        # Updated greet.txt:
-                        Good morning!
-                        Welcome to Python.
-                        Have a great day!
-                            </div>
-                            
-                            <h3>Binary Files</h3>
-                            <pre id="code7">
-                        # Writing binary data
-                        with open("binary_file.dat", "wb") as f:
-                            f.write(b"This is binary data")
-                        
-                        # Reading binary data
-                        with open("binary_file.dat", "rb") as f:
-                            print(f.read())</pre>
-                            <button class="copy-button" onclick="copyCode('code7')">Copy</button>
-                            <div class="output">
-                        b'This is binary data'
-                            </div>
-                        </section>
-                        
-                        <section id="serialization">
-                            <h2>2. Data Serialization</h2>
-                            
-                            <h3>JSON (JavaScript Object Notation)</h3>
-                            <pre id="code8">
-                        import json
-                        
-                        # Writing JSON
-                        data = {"name": "Emmanuel", "age": 22}
-                        with open("data.json", "w") as f:
-                            json.dump(data, f)
-                        
-                        # Reading JSON
-                        with open("data.json", "r") as f:
-                            person = json.load(f)
-                            print(person["name"])</pre>
-                            <button class="copy-button" onclick="copyCode('code8')">Copy</button>
-                            <div class="output">
-                        Emmanuel
-                            </div>
-                            
-                            <h3>CSV (Comma-Separated Values)</h3>
-                            <pre id="code9">
-                        import csv
-                        
-                        # Writing CSV
-                        rows = [["Name", "Age"], ["Emmanuel", 22], ["John", 30]]
-                        with open("people.csv", "w", newline="") as f:
-                            writer = csv.writer(f)
-                            writer.writerows(rows)
-                        
-                        # Reading CSV
-                        with open("people.csv", "r") as f:
-                            reader = csv.reader(f)
-                            for row in reader:
-                                print(row)</pre>
-                            <button class="copy-button" onclick="copyCode('code9')">Copy</button>
-                            <div class="output">
-                        ['Name', 'Age']
-                        ['Emmanuel', '22']
-                        ['John', '30']
-                            </div>
-                            
-                            <h3>Pickle (Python Object Serialization)</h3>
-                            <pre id="code10">
-                        import pickle
-                        
-                        # Saving data
-                        data = {"name": "Emmanuel", "skills": ["Python", "Flutter"]}
-                        with open("data.pkl", "wb") as f:
-                            pickle.dump(data, f)
-                        
-                        # Loading data
-                        with open("data.pkl", "rb") as f:
-                            obj = pickle.load(f)
-                            print(obj["skills"])</pre>
-                            <button class="copy-button" onclick="copyCode('code10')">Copy</button>
-                            <div class="output">
-                        ['Python', 'Flutter']
-                            </div>
-                        </section>
-                        
-                        <section id="directories">
-                            <h2>3. Working with Directories</h2>
-                            
-                            <pre id="code11">
-                        import os
-                        
-                        # Create directory
-                        os.mkdir("test_folder")
-                        
-                        # Rename directory
-                        os.rename("test_folder", "renamed_folder")
-                        
-                        # Remove directory
-                        os.rmdir("renamed_folder")
-                        
-                        # List files
-                        print("Files in current directory:")
-                        for file in os.listdir("."):
-                            print(file)
-                        
-                        # Check existence
-                        print("\nFile checks:")
-                        print(os.path.exists("data.json"))  # True/False
-                        print(os.path.isfile("data.json"))  # True if file
-                        print(os.path.isdir("my_folder"))  # True if directory</pre>
-                            <button class="copy-button" onclick="copyCode('code11')">Copy</button>
-                            <div class="output">
-                        Files in current directory:
-                        sample.txt
-                        greet.txt
-                        data.json
-                        people.csv
-                        data.pkl
-                        
-                        File checks:
-                        True
-                        True
-                        False
-                            </div>
-                        </section>
-                        
-                        <section id="cheatsheet">
-                            <h2>📋 Quick Reference Cheat Sheet</h2>
-                            <table>
-                                <tr><th>Task</th><th>Function/Code</th></tr>
-                                <tr><td>Open file</td><td><code>open("file.txt", "mode")</code></td></tr>
-                                <tr><td>Read file</td><td><code>file.read()</code> or <code>file.readlines()</code></td></tr>
-                                <tr><td>Write to file</td><td><code>file.write("text")</code></td></tr>
-                                <tr><td>JSON save</td><td><code>json.dump(data, file)</code></td></tr>
-                                <tr><td>JSON load</td><td><code>data = json.load(file)</code></td></tr>
-                                <tr><td>CSV write</td><td><code>csv.writer(file).writerows(rows)</code></td></tr>
-                                <tr><td>CSV read</td><td><code>csv.reader(file)</code></td></tr>
-                                <tr><td>Pickle save</td><td><code>pickle.dump(obj, file)</code></td></tr>
-                                <tr><td>Pickle load</td><td><code>obj = pickle.load(file)</code></td></tr>
-                                <tr><td>Create dir</td><td><code>os.mkdir("folder")</code></td></tr>
-                                <tr><td>List files</td><td><code>os.listdir(".")</code></td></tr>
-                            </table>
-                        </section>
-                        
-                        <script>
-                            function copyCode(elementId) {
-                                const codeElement = document.getElementById(elementId);
-                                const range = document.createRange();
-                                range.selectNode(codeElement);
-                                window.getSelection().removeAllRanges();
-                                window.getSelection().addRange(range);
-                                document.execCommand('copy');
-                                window.getSelection().removeAllRanges();
-                                
-                                // Visual feedback
-                                const button = codeElement.nextElementSibling;
-                                button.textContent = 'Copied!';
-                                setTimeout(() => {
-                                    button.textContent = 'Copy';
-                                }, 2000);
-                            }
-                        </script>
+                    <br>
+                    
+                
+                    <!-- 404 Start -->
+                    
+                
+                                    <h1 style="font-size:xx-large;" class="display-1">Python Full Course</h1> <br>
+                                    <h1 class="mb-4">File Handling and Input Output in Python</h1>
+                                    <div style="text-align: left;" class="container1">
+                                        
+                                        
+                                            <style>
+                                               
+                                                h1, h2, h3 {
+                                                    color: #2c3e50;
+                                                }
+                                                pre {
+                                                    background: #f8f9fa;
+                                                    padding: 15px;
+                                                    border-left: 4px solid #3498db;
+                                                    border-radius: 4px;
+                                                    position: relative;
+                                                    overflow-x: auto;
+                                                }
+                                                .copy-button {
+                                                    top: 5px;
+                                                    right: 5px;
+                                                    background: #3498db;
+                                                    color: white;
+                                                    border: none;
+                                                    padding: 5px 10px;
+                                                    border-radius: 3px;
+                                                    cursor: pointer;
+                                                    font-size: 12px;
+                                                }
+                                                .copy-button:hover {
+                                                    background: #2980b9;
+                                                }
+                                                .output {
+                                                    background: #e8f5e9;
+                                                    padding: 10px 15px;
+                                                    border-left: 4px solid #2ecc71;
+                                                    border-radius: 4px;
+                                                    margin-top: 10px;
+                                                    font-family: monospace;
+                                                    white-space: pre-wrap;
+                                                }
+                                                table {
+                                                    border-collapse: collapse;
+                                                    width: 100%;
+                                                    margin: 20px 0;
+                                                }
+                                                th, td {
+                                                    border: 1px solid #ddd;
+                                                    padding: 8px;
+                                                    text-align: left;
+                                                }
+                                                th {
+                                                    background-color: #f2f2f2;
+                                                }
+                                                .note {
+                                                    background: #fffde7;
+                                                    padding: 15px;
+                                                    border-left: 4px solid #ffd600;
+                                                    margin: 20px 0;
+                                                }
+                                            </style>
+                                    
+                                        
+                                        <h1>📁 Python File Handling, Serialization & Directory Operations</h1>
+                                        
+                                        <section id="file-handling">
+                                            <h2>1. File Handling in Python</h2>
+                                            
+                                            <h3>Opening and Closing Files</h3>
+                                            <p>Python uses the <code>open()</code> function to handle files.</p>
+                                            
+                                            <h4>File Modes</h4>
+                                            <table>
+                                                <tr><th>Mode</th><th>Description</th></tr>
+                                                <tr><td><code>'r'</code></td><td>Read (default). File must exist.</td></tr>
+                                                <tr><td><code>'w'</code></td><td>Write. Overwrites or creates file.</td></tr>
+                                                <tr><td><code>'a'</code></td><td>Append. Adds to file or creates it.</td></tr>
+                                                <tr><td><code>'b'</code></td><td>Binary mode. Used with <code>r</code>, <code>w</code>, <code>a</code>.</td></tr>
+                                                <tr><td><code>'+'</code></td><td>Read and write.</td></tr>
+                                            </table>
+                                        
+                                            <h4>Basic File Operations</h4>
+                                            <pre id="code1">
+                                        # Basic file writing
+                                        file = open("sample.txt", "w")  # Open for writing
+                                        file.write("Hello, Python!")
+                                        file.close()  # Always close to save changes</pre>
+                                            <button class="copy-button" onclick="copyCode('code1')">Copy</button>
+                                            
+                                            <div class="note">
+                                                <strong>Better Practice:</strong> Use <code>with</code> statement for automatic file closing.
+                                            </div>
+                                            
+                                            <pre id="code2">
+                                        # Safer method using 'with'
+                                        with open("sample.txt", "r") as file:
+                                            content = file.read()
+                                            print(content)</pre>
+                                            <button class="copy-button" onclick="copyCode('code2')">Copy</button>
+                                            <div class="output">
+                                        Hello, Python!
+                                            </div>
+                                            
+                                            <h3>Reading and Writing Files</h3>
+                                            <pre id="code3">
+                                        # Writing multiple lines
+                                        with open("greet.txt", "w") as f:
+                                            f.write("Good morning!\n")
+                                            f.write("Welcome to Python.")</pre>
+                                            <button class="copy-button" onclick="copyCode('code3')">Copy</button>
+                                            <div class="output">
+                                        # File contents (greet.txt):
+                                        Good morning!
+                                        Welcome to Python.
+                                            </div>
+                                            
+                                            <pre id="code4">
+                                        # Reading entire file
+                                        with open("greet.txt", "r") as f:
+                                            print(f.read())</pre>
+                                            <button class="copy-button" onclick="copyCode('code4')">Copy</button>
+                                            <div class="output">
+                                        Good morning!
+                                        Welcome to Python.
+                                            </div>
+                                            
+                                            <pre id="code5">
+                                        # Reading line by line
+                                        with open("greet.txt", "r") as f:
+                                            for line in f:
+                                                print(line.strip())</pre>
+                                            <button class="copy-button" onclick="copyCode('code5')">Copy</button>
+                                            <div class="output">
+                                        Good morning!
+                                        Welcome to Python.
+                                            </div>
+                                            
+                                            <h3>Appending to Files</h3>
+                                            <pre id="code6">
+                                        with open("greet.txt", "a") as f:
+                                            f.write("\nHave a great day!")</pre>
+                                            <button class="copy-button" onclick="copyCode('code6')">Copy</button>
+                                            <div class="output">
+                                        # Updated greet.txt:
+                                        Good morning!
+                                        Welcome to Python.
+                                        Have a great day!
+                                            </div>
+                                            
+                                            <h3>Binary Files</h3>
+                                            <pre id="code7">
+                                        # Writing binary data
+                                        with open("binary_file.dat", "wb") as f:
+                                            f.write(b"This is binary data")
+                                        
+                                        # Reading binary data
+                                        with open("binary_file.dat", "rb") as f:
+                                            print(f.read())</pre>
+                                            <button class="copy-button" onclick="copyCode('code7')">Copy</button>
+                                            <div class="output">
+                                        b'This is binary data'
+                                            </div>
+                                        </section>
+                                        <br><br>
+                                        <div id="ad-container2" ></div>
+                                        <br><br>
+
+                                        <section id="serialization">
+                                            <h2>2. Data Serialization</h2>
+                                            
+                                            <h3>JSON (JavaScript Object Notation)</h3>
+                                            <pre id="code8">
+                                        import json
+                                        
+                                        # Writing JSON
+                                        data = {"name": "Emmanuel", "age": 22}
+                                        with open("data.json", "w") as f:
+                                            json.dump(data, f)
+                                        
+                                        # Reading JSON
+                                        with open("data.json", "r") as f:
+                                            person = json.load(f)
+                                            print(person["name"])</pre>
+                                            <button class="copy-button" onclick="copyCode('code8')">Copy</button>
+                                            <div class="output">
+                                        Emmanuel
+                                            </div>
+                                            
+                                            <h3>CSV (Comma-Separated Values)</h3>
+                                            <pre id="code9">
+                                        import csv
+                                        
+                                        # Writing CSV
+                                        rows = [["Name", "Age"], ["Emmanuel", 22], ["John", 30]]
+                                        with open("people.csv", "w", newline="") as f:
+                                            writer = csv.writer(f)
+                                            writer.writerows(rows)
+                                        
+                                        # Reading CSV
+                                        with open("people.csv", "r") as f:
+                                            reader = csv.reader(f)
+                                            for row in reader:
+                                                print(row)</pre>
+                                            <button class="copy-button" onclick="copyCode('code9')">Copy</button>
+                                            <div class="output">
+                                        ['Name', 'Age']
+                                        ['Emmanuel', '22']
+                                        ['John', '30']
+                                            </div>
+                                            
+                                            <h3>Pickle (Python Object Serialization)</h3>
+                                            <pre id="code10">
+                                        import pickle
+                                        
+                                        # Saving data
+                                        data = {"name": "Emmanuel", "skills": ["Python", "Flutter"]}
+                                        with open("data.pkl", "wb") as f:
+                                            pickle.dump(data, f)
+                                        
+                                        # Loading data
+                                        with open("data.pkl", "rb") as f:
+                                            obj = pickle.load(f)
+                                            print(obj["skills"])</pre>
+                                            <button class="copy-button" onclick="copyCode('code10')">Copy</button>
+                                            <div class="output">
+                                        ['Python', 'Flutter']
+                                            </div>
+                                        </section>
+                                        
+                                        <section id="directories">
+                                            <h2>3. Working with Directories</h2>
+                                            
+                                            <pre id="code11">
+                                        import os
+                                        
+                                        # Create directory
+                                        os.mkdir("test_folder")
+                                        
+                                        # Rename directory
+                                        os.rename("test_folder", "renamed_folder")
+                                        
+                                        # Remove directory
+                                        os.rmdir("renamed_folder")
+                                        
+                                        # List files
+                                        print("Files in current directory:")
+                                        for file in os.listdir("."):
+                                            print(file)
+                                        
+                                        # Check existence
+                                        print("\nFile checks:")
+                                        print(os.path.exists("data.json"))  # True/False
+                                        print(os.path.isfile("data.json"))  # True if file
+                                        print(os.path.isdir("my_folder"))  # True if directory</pre>
+                                            <button class="copy-button" onclick="copyCode('code11')">Copy</button>
+                                            <div class="output">
+                                        Files in current directory:
+                                        sample.txt
+                                        greet.txt
+                                        data.json
+                                        people.csv
+                                        data.pkl
+                                        
+                                        File checks:
+                                        True
+                                        True
+                                        False
+                                            </div>
+                                        </section>
+                                      <br><br>
+
+                                        <div id="ad-container3" ></div>
+
+                                        <br><br>
+                                        <section id="cheatsheet" style="word-break: break-all;">
+                                            <h2>📋 Quick Reference Cheat Sheet</h2>
+                                    <table>
+                                                <tr><th>Task</th><th>Function/Code</th></tr>
+                                                <tr><td>Open file</td><td><code>open("file.txt", "mode")</code></td></tr>
+                                                <tr><td>Read file</td><td><code>file.read()</code> or <code>file.readlines()</code></td></tr>
+                                                <tr><td>Write to file</td><td><code>file.write("text")</code></td></tr>
+                                                <tr><td>JSON save</td><td><code>json.dump(data, file)</code></td></tr>
+                                                <tr><td>JSON load</td><td><code>data = json.load(file)</code></td></tr>
+                                                <tr><td>CSV write</td><td><code>csv.writer(file).writerows(rows)</code></td></tr>
+                                                <tr><td>CSV read</td><td><code>csv.reader(file)</code></td></tr>
+                                                <tr><td>Pickle save</td><td><code>pickle.dump(obj, file)</code></td></tr>
+                                                <tr><td>Pickle load</td><td><code>obj = pickle.load(file)</code></td></tr>
+                                                <tr><td>Create dir</td><td><code>os.mkdir("folder")</code></td></tr>
+                                                <tr><td>List files</td><td><code>os.listdir(".")</code></td></tr>
+                                            </table>
+                                        </section>
+                                        
+                                        <script>
+                                            function copyCode(elementId) {
+                                                const codeElement = document.getElementById(elementId);
+                                                const range = document.createRange();
+                                                range.selectNode(codeElement);
+                                                window.getSelection().removeAllRanges();
+                                                window.getSelection().addRange(range);
+                                                document.execCommand('copy');
+                                                window.getSelection().removeAllRanges();
+                                                
+                                                // Visual feedback
+                                                const button = codeElement.nextElementSibling;
+                                                button.textContent = 'Copied!';
+                                                setTimeout(() => {
+                                                    button.textContent = 'Copy';
+                                                }, 2000);
+                                            }
+                                        </script>
+                                               
+                                      
+                                      
+                                        
+                                      
                                
-                      
+                        
+                          
+                            
+                         
+                     
                       
                         
-                      
+                       
                           
                       
                        
@@ -439,9 +462,10 @@
     <!-- 404 End -->
     <div style="display: flex; justify-content: space-between;">           
         <a class="btn btn-primary rounded-pill py-3 px-5" href="Object-Oriented-Programming-(OOP)-in-Python.html">Go Back </a>  <br> <br>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-JavaScript-Concepts.html"> Next page</a>
-    </div>    
-    <div id="christ"> </div>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Python-Concepts.html"> Next page</a>
+    </div>    <br><br>
+    <div id="ad-container4" ></div>
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -452,7 +476,7 @@
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
                     <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
-                    <a class="btn btn-link" href=""disclaimer.html>Disclaimer</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
                     <a class="btn btn-link" href="faq.html">FAQ</a>
                     <a class="btn btn-link" href="help.html">Help</a>
                 </div>
@@ -503,6 +527,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     
+    <script src="ads.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

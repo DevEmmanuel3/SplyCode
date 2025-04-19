@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Testing and Debugging in Python| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Complete guide to Python testing and debugging with unittest, pdb, logging, and profiling - practical examples and best practices">
+    <meta name="keywords" content="Python, Testing, Debugging, unittest, pdb, logging, profiling, TDD, Python Debugger">
+        
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Libraries-and-Frameworks-in-python.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Project-Work-and-Best-Practices.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Python-full-course.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Python Full Course</h1> <br>
+                    <h1 class="mb-4">Testing and Debugging in Python</h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                            <style>
+                                
+                                h1, h2, h3 {
+                                    color: #2c3e50;
+                                    margin-top: 30px;
+                                }
+                                pre {
+                                    background: #f8f9fa;
+                                    padding: 15px;
+                                    border-left: 4px solid #3498db;
+                                    border-radius: 4px;
+                                    position: relative;
+                                    overflow-x: auto;
+                                }
+                                .copy-button {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    background: #3498db;
+                                    color: white;
+                                    border: none;
+                                    padding: 5px 10px;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                    font-size: 12px;
+                                }
+                                .copy-button:hover {
+                                    background: #2980b9;
+                                }
+                                .output {
+                                    background: #e8f5e9;
+                                    padding: 10px 15px;
+                                    border-left: 4px solid #2ecc71;
+                                    border-radius: 4px;
+                                    margin-top: 10px;
+                                    font-family: monospace;
+                                    white-space: pre-wrap;
+                                }
+                                .note {
+                                    background: #fffde7;
+                                    padding: 15px;
+                                    border-left: 4px solid #ffd600;
+                                    margin: 20px 0;
+                                }
+                                
+                                code {
+                                    background: #f0f0f0;
+                                    padding: 2px 4px;
+                                    border-radius: 3px;
+                                    font-family: monospace;
+                                }
+                                table {
+                                    border-collapse: collapse;
+                                    width: 100%;
+                                    margin: 20px 0;
+                                }
+                                th, td {
+                                    border: 1px solid #ddd;
+                                    padding: 8px;
+                                    text-align: left;
+                                }
+                                th {
+                                    background-color: #f2f2f2;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                        
+                        <h1>Comprehensive Guide to Testing and Debugging in Python</h1>
+                        
+                        <div class="section" id="unit-testing">
+                            <h2>1. Unit Testing with <code>unittest</code></h2>
+                            
+                            <h3>What is Unit Testing?</h3>
+                            <p>Unit testing involves <strong>testing individual components</strong> (functions, methods, classes) to ensure they work correctly. Python's built-in <code>unittest</code> module provides tools for:</p>
+                            <ul>
+                                <li>Writing <strong>test cases</strong></li>
+                                <li>Running <strong>test suites</strong></li>
+                                <li>Checking <strong>assertions</strong> (expected vs. actual results)</li>
+                            </ul>
+                            
+                            <h3>Example: Writing Test Cases</h3>
+                            <pre id="code1">
+                        # calculator.py (Module to test)
+                        def add(a, b):
+                            return a + b
+                        
+                        def subtract(a, b):
+                            return a - b
+                        
+                        def multiply(a, b):
+                            return a * b
+                        
+                        def divide(a, b):
+                            if b == 0:
+                                raise ValueError("Cannot divide by zero!")
+                            return a / b</pre>
+                            <button class="copy-button" onclick="copyCode('code1')">Copy</button>
+                            
+                            <pre id="code2">
+                        # test_calculator.py (Test file)
+                        import unittest
+                        from calculator import add, subtract, multiply, divide
+                        
+                        class TestCalculator(unittest.TestCase):
+                            def test_add(self):
+                                self.assertEqual(add(2, 3), 5)  # 2 + 3 = 5
+                                self.assertEqual(add(-1, 1), 0)  # -1 + 1 = 0
+                        
+                            def test_subtract(self):
+                                self.assertEqual(subtract(5, 3), 2)  # 5 - 3 = 2
+                                self.assertEqual(subtract(10, -5), 15)  # 10 - (-5) = 15
+                        
+                            def test_multiply(self):
+                                self.assertEqual(multiply(3, 4), 12)  # 3 * 4 = 12
+                                self.assertEqual(multiply(-2, 5), -10)  # -2 * 5 = -10
+                        
+                            def test_divide(self):
+                                self.assertEqual(divide(10, 2), 5)  # 10 / 2 = 5
+                                self.assertAlmostEqual(divide(1, 3), 0.333, places=3)  # Approximate float comparison
+                                
+                                # Test exception handling
+                                with self.assertRaises(ValueError):
+                                    divide(10, 0)  # Should raise ValueError
+                        
+                        if __name__ == "__main__":
+                            unittest.main()</pre>
+                            <button class="copy-button" onclick="copyCode('code2')">Copy</button>
+                            
+                            <h4>Running the Tests</h4>
+                            <pre id="code3">
+                        python -m unittest test_calculator.py</pre>
+                            <button class="copy-button" onclick="copyCode('code3')">Copy</button>
+                            <div class="output">
+                        ....
+                        ----------------------------------------------------------------------
+                        Ran 4 tests in 0.001s
+                        
+                        OK
+                            </div>
+                            <div class="note">
+                                <strong>Key:</strong><br>
+                                - <strong>.</strong> means a test passed<br>
+                                - <strong>F</strong> would mean a test failed<br>
+                                - <strong>E</strong> would mean an error occurred
+                            </div>
+                            
+                            <h3>Test-Driven Development (TDD)</h3>
+                            <p>TDD follows this cycle:</p>
+                            <ol>
+                                <li><strong>Write a failing test</strong> (before writing the actual code)</li>
+                                <li><strong>Write minimal code</strong> to pass the test</li>
+                                <li><strong>Refactor</strong> (improve code without breaking tests)</li>
+                            </ol>
+                            
+                            <h4>Example: TDD for a <code>factorial</code> function</h4>
+                            <pre id="code4">
+                        # Step 1: Write the test first
+                        def test_factorial(self):
+                            self.assertEqual(factorial(0), 1)
+                            self.assertEqual(factorial(5), 120)</pre>
+                            <button class="copy-button" onclick="copyCode('code4')">Copy</button>
+                            
+                            <pre id="code5">
+                        # Step 2: Implement the function
+                        def factorial(n):
+                            if n == 0:
+                                return 1
+                            return n * factorial(n - 1)</pre>
+                            <button class="copy-button" onclick="copyCode('code5')">Copy</button>
+                            
+                            <pre id="code6">
+                        # Step 3: Run the test
+                        python -m unittest test_factorial.py</pre>
+                            <button class="copy-button" onclick="copyCode('code6')">Copy</button>
+                        </div>
+                        <br>     <div id="ad-container2" ></div>                <br>
+                        <div class="section" id="debugging">
+                            <h2>2. Debugging with <code>pdb</code></h2>
+                            
+                            <h3>What is Debugging?</h3>
+                            <p>Debugging is the process of <strong>finding and fixing errors</strong> in code. Python provides:</p>
+                            <ul>
+                                <li><strong><code>pdb</code></strong> (Python Debugger): Interactive debugging tool</li>
+                                <li><strong>Breakpoints</strong>: Pause execution at specific lines</li>
+                                <li><strong>Step-through execution</strong>: Execute code line by line</li>
+                            </ul>
+                            
+                            <h3>Example: Debugging with <code>pdb</code></h3>
+                            <pre id="code7">
+                        # buggy_script.py
+                        def divide_numbers(a, b):
+                            result = a / b  # Potential ZeroDivisionError
+                            return result
+                        
+                        def main():
+                            x = 10
+                            y = 0
+                            print(divide_numbers(x, y))
+                        
+                        if __name__ == "__main__":
+                            import pdb; pdb.set_trace()  # Start debugger
+                            main()</pre>
+                            <button class="copy-button" onclick="copyCode('code7')">Copy</button>
+                            
+                            <h4>Running the Debugger</h4>
+                            <pre id="code8">
+                        python buggy_script.py</pre>
+                            <button class="copy-button" onclick="copyCode('code8')">Copy</button>
+                            <div class="output">
+                        > /path/to/buggy_script.py(10)<module>()
+                        -> main()
+                        (Pdb) 
+                            </div>
+                            
+                            <div class="note">
+                                <strong><code>pdb</code> commands:</strong><br>
+                                - <strong>n</strong> (next line)<br>
+                                - <strong>c</strong> (continue)<br>
+                                - <strong>s</strong> (step into function)<br>
+                                - <strong>l</strong> (list code)<br>
+                                - <strong>p &lt;variable&gt;</strong> (print variable)<br>
+                                - <strong>q</strong> (quit)
+                            </div>
+                            
+                            <h4>Debugging Session Example</h4>
+                            <div class="output">
+                        (Pdb) n  # Step to next line
+                        > /path/to/buggy_script.py(5)main()
+                        -> x = 10
+                        (Pdb) n
+                        > /path/to/buggy_script.py(6)main()
+                        -> y = 0
+                        (Pdb) n
+                        > /path/to/buggy_script.py(7)main()
+                        -> print(divide_numbers(x, y))
+                        (Pdb) s  # Step into divide_numbers
+                        > /path/to/buggy_script.py(2)divide_numbers()
+                        -> result = a / b
+                        (Pdb) p a, b  # Print variables
+                        (10, 0)
+                        (Pdb) n  # Execute division (raises error)
+                        ZeroDivisionError: division by zero
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="logging">
+                            <h2>3. Logging for Debugging</h2>
+                            
+                            <h3>What is Logging?</h3>
+                            <p>Logging helps <strong>track program execution</strong> by recording messages (debug, info, warnings, errors).</p>
+                            
+                            <h3>Example: Using <code>logging</code></h3>
+                            <pre id="code9">
+                        import logging
+                        
+                        # Configure logging
+                        logging.basicConfig(
+                            level=logging.DEBUG,  # Minimum level to log
+                            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+                            filename="app.log"  # Log to file
+                        )
+                        
+                        def divide(a, b):
+                            logging.debug(f"Attempting division: {a} / {b}")
+                            try:
+                                result = a / b
+                                logging.info(f"Division successful: {result}")
+                                return result
+                            except ZeroDivisionError:
+                                logging.error("Division by zero!")
+                                raise
+                        
+                        divide(10, 2)
+                        divide(5, 0)</pre>
+                            <button class="copy-button" onclick="copyCode('code9')">Copy</button>
+                            
+                            <h4>Output (<code>app.log</code>)</h4>
+                            <div class="output">
+                        2023-10-01 12:00:00 - root - DEBUG - Attempting division: 10 / 2
+                        2023-10-01 12:00:00 - root - INFO - Division successful: 5.0
+                        2023-10-01 12:00:00 - root - DEBUG - Attempting division: 5 / 0
+                        2023-10-01 12:00:00 - root - ERROR - Division by zero!
+                            </div>
+                        </div>
+                        <br>    <div id="ad-container3" ></div>                <br>
+                        <div class="section" id="profiling">
+                            <h2>4. Code Profiling</h2>
+                            
+                            <h3>What is Profiling?</h3>
+                            <p>Profiling measures <strong>code performance</strong> (execution time, memory usage).</p>
+                            
+                            <h3>Example: Using <code>cProfile</code></h3>
+                            <pre id="code10">
+                        # slow_function.py
+                        import time
+                        
+                        def slow_function():
+                            total = 0
+                            for i in range(1000000):
+                                total += i
+                            return total
+                        
+                        if __name__ == "__main__":
+                            import cProfile
+                            cProfile.run("slow_function()")</pre>
+                            <button class="copy-button" onclick="copyCode('code10')">Copy</button>
+                            
+                            <h4>Running the Profiler</h4>
+                            <pre id="code11">
+                        python slow_function.py</pre>
+                            <button class="copy-button" onclick="copyCode('code11')">Copy</button>
+                            <div class="output">
+                                 4 function calls in 0.100 seconds
+                        
+                           Ordered by: standard name
+                        
+                           ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+                                1    0.100    0.100    0.100    0.100 slow_function.py:4(slow_function)
+                                1    0.000    0.000    0.100    0.100 <string>:1(<module>)
+                                1    0.000    0.000    0.100    0.100 {built-in method builtins.exec}
+                                1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+                            </div>
+                            <div class="note">
+                                <strong>Key Metrics:</strong><br>
+                                - <strong>ncalls</strong>: Number of calls<br>
+                                - <strong>tottime</strong>: Total time spent in the function<br>
+                                - <strong>cumtime</strong>: Cumulative time (including sub-calls)
+                            </div>
+                        </div>
+                        
+                        <div class="section" id="summary">
+                            <h2>Summary</h2>
+                            <table>
+                                <tr><th>Topic</th><th>Key Tools</th><th>Use Case</th></tr>
+                                <tr><td><strong>Unit Testing</strong></td><td><code>unittest</code>, <code>pytest</code></td><td>Verify individual functions</td></tr>
+                                <tr><td><strong>Debugging</strong></td><td><code>pdb</code>, <code>breakpoint()</code></td><td>Step-through code execution</td></tr>
+                                <tr><td><strong>Logging</strong></td><td><code>logging</code> module</td><td>Track runtime events</td></tr>
+                                <tr><td><strong>Profiling</strong></td><td><code>cProfile</code>, <code>timeit</code></td><td>Measure performance</td></tr>
+                            </table>
+                            
+                            <h3>Best Practices</h3>
+                            <ul>
+                                <li>✅ <strong>Write tests before code (TDD)</strong></li>
+                                <li>✅ <strong>Use <code>pdb</code> for interactive debugging</strong></li>
+                                <li>✅ <strong>Log important events (<code>DEBUG</code>, <code>INFO</code>, <code>ERROR</code>)</strong></li>
+                                <li>✅ <strong>Profile before optimizing</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <script>
+                            function copyCode(elementId) {
+                                const codeElement = document.getElementById(elementId);
+                                const range = document.createRange();
+                                range.selectNode(codeElement);
+                                window.getSelection().removeAllRanges();
+                                window.getSelection().addRange(range);
+                                document.execCommand('copy');
+                                window.getSelection().removeAllRanges();
+                                
+                                // Visual feedback
+                                const button = codeElement.nextElementSibling;
+                                button.textContent = 'Copied!';
+                                setTimeout(() => {
+                                    button.textContent = 'Copy';
+                                }, 2000);
+                            }
+                        </script>
+                        
+                        
+                        
+                           
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Libraries-and-Frameworks-in-python.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Project-Work-and-Best-Practices.html"> Next page</a>
+    </div>    
+<br>     <div id="ad-container4" ></div>  <br>              
+<!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
