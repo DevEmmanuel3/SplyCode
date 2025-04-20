@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Functions in C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Comprehensive guide to C++ functions covering declarations, parameters, overloading, and best practices">
+    <meta name="keywords" content="C++, functions, programming, parameters, overloading, inline functions">
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Object-Oriented-Programming-(OOP)-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Functins in C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                       
+                        <style>
+                        
+                        h2, h3 {
+                            color: #333;
+                        }
+                        pre {
+                            background-color: #f4f4f4;
+                            padding: 10px;
+                            border: 1px solid #ddd;
+                            overflow-x: auto;
+                            position: relative;
+                        }
+                        code {
+                            display: block;
+                            white-space: pre-wrap;
+                        }
+                        .output {
+                            background-color: #e9e9e9;
+                            padding: 10px;
+                            border: 1px solid #ccc;
+                            margin-bottom: 10px;
+                        }
+                        .copy-button {
+                            position: absolute;
+                            top: 5px;
+                            right: 5px;
+                            background-color: #4CAF50;
+                            color: white;
+                            border: none;
+                            padding: 5px 10px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 12px;
+                            cursor: pointer;
+                            border-radius: 5px;
+                        }
+                        .explanation {
+                            margin-bottom: 15px;
+                            color: #555;
+                        }
+                        </style>
+                        </head>
+                        <body>
+                        
+                        <h2>Functions</h2>
+                        <p>Functions are fundamental building blocks in most programming languages. They allow you to encapsulate a block of code that performs a specific task, which can then be executed (or "called") multiple times from different parts of your program. This promotes code reusability, modularity, and makes your programs easier to understand and maintain.</p>
+                        
+                        <h3>Function Declaration &amp; Definition</h3>
+                        <p>In many statically-typed languages like C++, you'll often see a distinction between function declaration and function definition.</p>
+                        
+                        <h4>Function Declaration (or Prototype)</h4>
+                        <p>This tells the compiler about the function's existence, its name, the types of parameters it accepts, and the type of value it returns. It essentially provides the function's signature. Declarations are often placed in header files (.h or .hpp) to make the function's interface known to other parts of the program before its actual implementation.</p>
+                        
+                        <h4>Function Definition</h4>
+                        <p>This contains the actual code that the function executes. It includes the function's header (which is similar to the declaration) and the function's body (the block of statements within curly braces {}).</p>
+                        
+                        <h4>Return Types</h4>
+                        <p>A function can optionally return a value back to the part of the code that called it. The return type specifies the data type of this value. If a function doesn't return any value, its return type is typically <code>void</code>.</p>
+                        
+                        <h4>Parameters</h4>
+                        <p>Parameters are variables listed in the function's declaration and definition that receive values (arguments) when the function is called. They act as inputs to the function. A function can have zero or more parameters. Each parameter has a specific data type and a name.</p>
+                        
+                        <h4>C++ Example:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        // Function Declaration (in a header file or before main())
+                        int add(int a, int b); // Declares a function named 'add' that takes two integers and returns an integer
+                        
+                        // Function Definition (in a source file or after main())
+                        int add(int a, int b) { // Defines the 'add' function
+                          int sum = a + b;
+                          return sum;         // Returns the calculated sum
+                        }
+                        
+                        #include &lt;iostream&gt;
+                        
+                        int main() {
+                          int num1 = 5;
+                          int num2 = 3;
+                          int result = add(num1, num2); // Calling the 'add' function with arguments
+                          std::cout &lt;&lt; "The sum is: " &lt;&lt; result &lt;&lt; std::endl;
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        The sum is: 8
+                        </div>
+                        <p class="explanation">
+                        The <code>int add(int a, int b);</code> line declares the function <code>add</code>.
+                        The subsequent block defines the function, specifying that it takes two integer parameters (<code>a</code> and <code>b</code>), calculates their sum, and returns the integer result.
+                        In <code>main()</code>, the <code>add</code> function is called with the arguments <code>num1</code> (value 5) and <code>num2</code> (value 3).
+                        The returned value (8) is stored in the <code>result</code> variable and then printed.
+                        </p>
+                        <br>     <div id="ad-container2" ></div>                <br>
+                        <h3>Parameter Passing</h3>
+                        <p>When you call a function, the values of the arguments you provide are passed to the function's parameters. Different programming languages (and sometimes within the same language) offer various mechanisms for parameter passing. Here are the common ones, particularly relevant in languages like C++:</p>
+                        
+                        <h4>1. Pass by Value:</h4>
+                        <p>A copy of the argument's value is passed to the function's parameter. Any modifications made to the parameter inside the function do not affect the original argument in the calling code.</p>
+                        
+                        <h4>C++ Example:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        
+                        void modifyValue(int x) {
+                          x = x * 2;
+                          std::cout &lt;&lt; "Inside function, x = " &lt;&lt; x &lt;&lt; std::endl;
+                        }
+                        
+                        int main() {
+                          int num = 10;
+                          std::cout &lt;&lt; "Before function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          modifyValue(num);
+                          std::cout &lt;&lt; "After function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Before function call, num = 10
+                        Inside function, x = 20
+                        After function call, num = 10
+                        </div>
+                        <p class="explanation">
+                        The <code>modifyValue</code> function receives a copy of the <code>num</code> variable's value (10).
+                        Inside the function, <code>x</code> is modified to 20, but this change only affects the local copy of <code>x</code>.
+                        The original <code>num</code> in <code>main()</code> remains unchanged after the function call.
+                        </p>
+                        
+                        <h4>2. Pass by Reference (&amp;):</h4>
+                        <p>An alias (another name) for the original argument is passed to the function's parameter. The parameter directly refers to the original memory location of the argument. Any modifications made to the parameter inside the function directly affect the original argument in the calling code.</p>
+                        
+                        <h4>C++ Example:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        
+                        void modifyReference(int&amp; y) {
+                          y = y * 2;
+                          std::cout &lt;&lt; "Inside function, y = " &lt;&lt; y &lt;&lt; std::endl;
+                        }
+                        
+                        int main() {
+                          int num = 10;
+                          std::cout &lt;&lt; "Before function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          modifyReference(num);
+                          std::cout &lt;&lt; "After function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Before function call, num = 10
+                        Inside function, y = 20
+                        After function call, num = 20
+                        </div>
+                        <p class="explanation">
+                        The <code>int&amp; y</code> in the function definition indicates that <code>y</code> is a reference to an integer.
+                        When <code>modifyReference(num)</code> is called, <code>y</code> becomes an alias for the <code>num</code> variable.
+                        Modifying <code>y</code> inside the function directly modifies the original <code>num</code> in <code>main()</code>.
+                        </p>
+                        
+                        <h4>3. Pass by Pointer:</h4>
+                        <p>The memory address of the argument is passed to the function's parameter (which is a pointer). The function can then use the pointer to indirectly access and modify the original argument. This requires using the dereference operator (<code>*</code>) to access the value at the memory address.</p>
+                        
+                        <h4>C++ Example:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        
+                        void modifyPointer(int* z) {
+                          *z = *z * 2; // Dereference the pointer to modify the value at the address
+                          std::cout &lt;&lt; "Inside function, *z = " &lt;&lt; *z &lt;&lt; std::endl;
+                        }
+                        
+                        int main() {
+                          int num = 10;
+                          std::cout &lt;&lt; "Before function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          modifyPointer(&amp;num); // Pass the address of 'num' using the '&' (address-of) operator
+                          std::cout &lt;&lt; "After function call, num = " &lt;&lt; num &lt;&lt; std::endl;
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Before function call, num = 10
+                        Inside function, *z = 20
+                        After function call, num = 20
+                        </div>
+                        <p class="explanation">
+                        The <code>int* z</code> in the function definition indicates that <code>z</code> is a pointer to an integer.
+                        When <code>modifyPointer(&amp;num)</code> is called, the memory address of <code>num</code> is passed to <code>z</code>.
+                        Inside the function, <code>*z</code> dereferences the pointer <code>z</code>, allowing you to access and modify the value stored at that memory address (which is the original <code>num</code>).
+                        </p>
+                        
+                        <h4>4. const Correctness:</h4>
+                        <p>The <code>const</code> keyword can be used with parameters (especially references and pointers) to indicate that the function will not modify the value of the argument passed. This is a crucial aspect of writing safe and maintainable code.</p>
+                        <ul>
+                            <li><strong>const with Pass by Value:</strong> While you can use <code>const</code> with pass-by-value parameters, it's generally less impactful because the function is already working with a copy. It primarily prevents the function from reassigning the parameter variable itself within the function's scope.</li>
+                            <li><strong>const with Pass by Reference (<code>const &amp;</code>):</strong> This is very common and important. It allows the function to access the original argument without the overhead of copying (like pass by value) but guarantees that the function will not modify the original argument.</li>
+                            <li><strong>const with Pass by Pointer (<code>const *</code>):</strong> This indicates that the function will not modify the value that the pointer points to. You can still modify the pointer itself (e.g., make it point to a different memory location), but not the data it currently references.</li>
+                        </ul>
+                        
+                        <h4>C++ Examples with const:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        
+                        void printValue(const int val) { // Pass by value, marked as const (less common use)
+                          // val = 20; // Error: Cannot assign to variable with const-qualified type 'const int'
+                          std::cout &lt;&lt; "Value: " &lt;&lt; val &lt;&lt; std::endl;
+                        }
+                        
+                        void printReference(const int&amp; ref) { // Pass by const reference (very common for read-only access)
+                          // ref = 30; // Error: Cannot assign to variable with const-qualified type 'const int &'
+                          std::cout &lt;&lt; "Reference value: " &lt;&lt; ref &lt;&lt; std::endl;
+                        }
+                        
+                        void printPointer(const int* ptr) { // Pass by const pointer (function won't modify the pointed-to value)
+                          // *ptr = 40; // Error: Cannot assign to return expression with const-qualified type 'const int'
+                          std::cout &lt;&lt; "Pointer value: " &lt;&lt; *ptr &lt;&lt; std::endl;
+                        }
+                        
+                        int main() {
+                          int num = 15;
+                          printValue(num);
+                          printReference(num);
+                          printPointer(&amp;num);
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Value: 15
+                        Reference value: 15
+                        Pointer value: 15
+                        </div>
+                        <p class="explanation">
+                        The <code>printValue</code> function takes a <code>const int</code> by value, preventing reassignment within the function.
+                        The <code>printReference</code> function takes a <code>const int&amp;</code>, allowing efficient access without copying and guaranteeing no modification of the original.
+                        The <code>printPointer</code> function takes a <code>const int*</code>, ensuring that the value pointed to by the pointer is not modified.
+                        </p>
+                        
+                        <h4>Benefits of const Correctness:</h4>
+                        <ul>
+                            <li><strong>Improved Code Safety:</strong> Prevents accidental modifications to data that should remain unchanged.</li>
+                            <li><strong>Enhanced Readability:</strong> Makes it clear which functions are intended to modify their arguments and which are not.</li>
+                            <li><strong>Compiler Optimizations:</strong> Can enable the compiler to perform more aggressive optimizations.</li>
+                            <li><strong>Better Collaboration:</strong> Provides clearer contracts between different parts of the code.</li>
+                        </ul>
+                        
+                        <h3>Overloading</h3>
+                        <p>Function overloading is a feature that allows you to define multiple functions with the same name but different parameter lists (different number of parameters, different types of parameters, or both). The compiler determines which function to call based on the arguments provided in the function call.</p>
+                        
+                        <h4>C++ Example:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        
+                        int add(int a, int b) {
+                          std::cout &lt;&lt; "Adding two integers" &lt;&lt; std::endl;
+                          return a + b;
+                        }
+                        
+                        double add(double a, double b) {
+                          std::cout &lt;&lt; "Adding two doubles" &lt;&lt; std::endl;
+                          return a + b;
+                        }
+                        
+                        int add(int a, int b, int c) {
+                          std::cout &lt;&lt; "Adding three integers" &lt;&lt; std::endl;
+                          return a + b + c;
+                        }
+                        
+                        int main() {
+                          int sum1 = add(5, 3);       // Calls the first 'add' function
+                          double sum2 = add(2.5, 1.7); // Calls the second 'add' function
+                          int sum3 = add(1, 2, 3);    // Calls the third 'add' function
+                        
+                          std::cout &lt;&lt; "Sum of integers: " &lt;&lt; sum1 &lt;&lt; std::endl;
+                          std::cout &lt;&lt; "Sum of doubles: " &lt;&lt; sum2 &lt;&lt; std::endl;
+                          std::cout &lt;&lt; "Sum of three integers: " &lt;&lt; sum3 &lt;&lt; std::endl;
+                        
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Adding two integers
+                        Adding two doubles
+                        Adding three integers
+                        Sum of integers: 8
+                        Sum of doubles: 4.2
+                        Sum of three integers: 6
+                        </div>
+                        <p class="explanation">
+                        We have three functions named <code>add</code>.
+                        The compiler distinguishes between them based on the types and number of arguments passed during the function call.
+                        <code>add(5, 3)</code> matches the <code>int add(int a, int b)</code> signature.
+                        <code>add(2.5, 1.7)</code> matches the <code>double add(double a, double b)</code> signature.
+                        <code>add(1, 2, 3)</code> matches the <code>int add(int a, int b, int c)</code> signature.
+                        </p>
+                        <br>     <div id="ad-container3" ></div>                <br>
+
+                        <h3>Default Arguments:</h3>
+                        <p>You can provide default values for function parameters. If an argument is omitted during the function call, the default value is used. Default arguments must be specified from right to left in the parameter list.</p>
+                        
+                        <h4>C++ Example with Default Arguments:</h4>
+                        <pre>
+                        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+                        <code>
+                        #include &lt;iostream&gt;
+                        #include &lt;string&gt;
+                        
+                        void greet(std::string name, std::string greeting = "Hello") {
+                          std::cout &lt;&lt; greeting &lt;&lt; ", " &lt;&lt; name &lt;&lt; "!" &lt;&lt; std::endl;
+                        }
+                        
+                        int main() {
+                          greet("Alice");       // Uses the default greeting "Hello"
+                          greet("Bob", "Hi");   // Overrides the default greeting
+                          return 0;
+                        }
+                        </code>
+                        </pre>
+                        <div class="output">
+                        Hello, Alice!
+                        Hi, Bob!
+                        </div>
+                        <p class="explanation">
+                        The <code>greet</code> function has two parameters: <code>name</code> (without a default) and <code>greeting</code> (with a default
+                        
+                        value of "Hello").
+When <code>greet("Alice")</code> is called, the <code>greeting</code> argument is omitted, so the default value "Hello" is used.
+When <code>greet("Bob", "Hi")</code> is called, the provided argument "Hi" overrides the default value for <code>greeting</code>.
+</p>
+
+<h3>Inline Functions</h3>
+<p>The <code>inline</code> keyword is a request to the compiler to replace the function call with the actual code of the function at the point of the call. This is done with the intention of reducing the overhead associated with function calls (such as pushing arguments onto the stack, jumping to the function's code, and returning).</p>
+
+<h4>When inline might be beneficial:</h4>
+<ul>
+    <li>For small, frequently called functions.</li>
+    <li>Where the overhead of the function call is significant compared to the function's execution time.</li>
+</ul>
+
+<h4>Important Considerations:</h4>
+<ul>
+    <li><code>inline</code> is just a suggestion to the compiler. The compiler is free to ignore it if it deems inlining not beneficial (e.g., for very large or complex functions).</li>
+    <li>Excessive inlining can lead to code bloat (larger executable size), which might negatively impact cache performance and overall program speed.</li>
+    <li>Compilers are often quite sophisticated at making inlining decisions on their own, so explicitly using <code>inline</code> might not always be necessary or even helpful.</li>
+</ul>
+
+<h4>C++ Example:</h4>
+<pre>
+<button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+<code>
+#include &lt;iostream&gt;
+
+inline int square(int n) {
+  return n * n;
+}
+
+int main() {
+  int num = 5;
+  int squared_num = square(num); // The compiler might replace this with '5 * 5'
+  std::cout &lt;&lt; "The square of " &lt;&lt; num &lt;&lt; " is: " &lt;&lt; squared_num &lt;&lt; std::endl;
+  return 0;
+}
+</code>
+</pre>
+<div class="output">
+The square of 5 is: 25
+</div>
+<p class="explanation">
+The <code>square</code> function is declared with the <code>inline</code> keyword.
+When the compiler encounters the call <code>square(num)</code>, it might choose to replace it directly with the code <code>num * num</code> (which becomes <code>5 * 5</code> in this case) instead of performing a traditional function call.
+</p>
+
+<p>In summary, functions are essential for structuring your code effectively. Understanding function declarations, definitions, different parameter passing mechanisms, overloading, default arguments, and the concept of inline functions will significantly improve your ability to write robust, efficient, and maintainable programs. Remember that the specific syntax and nuances might vary slightly between different programming languages, but the underlying concepts are generally applicable.</p>
+
+<script>
+function copyCode(button) {
+    var pre = button.parentNode;
+    var code = pre.querySelector('code');
+    var range = document.createRange();
+    range.selectNode(code);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    button.textContent = "Copied!";
+    setTimeout(function() {
+        button.textContent = "Copy Code";
+    }, 2000);
+}
+</script>
+
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Arrays-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Object-Oriented-Programming-(OOP)-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

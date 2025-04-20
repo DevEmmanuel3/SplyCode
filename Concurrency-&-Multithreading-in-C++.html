@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Concurrency & Multithreading in C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Explanation and examples of concurrency and multithreading in C++, covering threads (std::thread, joining/detaching), mutexes & locks (std::mutex, std::lock_guard, std::unique_lock), asynchronous operations (std::async, std::future, std::promise), and atomic operations (std::atomic<T>).">
+    <meta name="keywords" content="C++, concurrency, multithreading, threads, std::thread, join, detach, mutexes, locks, std::mutex, std::lock_guard, std::unique_lock, asynchronous operations, std::async, std::future, std::promise, atomic operations, std::atomic">
+     <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Modern-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="File-I-O-&-Serialization-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Concurrency & Multithreading in C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+    <style>
+       
+        h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: monospace;
+        }
+        .output {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Concurrency & Multithreading in C++</h1>
+
+    <p>Concurrency and multithreading are essential for modern software development, allowing programs to perform multiple tasks seemingly simultaneously, improving responsiveness and efficiency. C++ provides a rich set of tools in its standard library (primarily introduced in C++11) to support concurrent programming.</p>
+
+    <h2>Threads (<code>std::thread</code>)</h2>
+    <p>The <code>std::thread</code> class represents a single thread of execution. You can create new threads to execute functions concurrently.</p>
+
+    <h3>Joining and Detaching</h3>
+    <ul>
+        <li><code>join()</code>: The calling thread waits for the thread associated with the <code>std::thread</code> object to complete its execution. You should typically call <code>join()</code> before the <code>std::thread</code> object goes out of scope to ensure proper resource management.</li>
+        <li><code>detach()</code>: The <code>std::thread</code> object is detached from the calling thread, and the new thread continues to run independently in the background. You lose direct control over its execution and need to ensure that the detached thread manages its resources properly.</li>
+    </ul>
+    <pre><code id="threadsCode">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+
+void workerFunction(int id) {
+    std::cout &lt;&lt; "Worker thread " &lt;&lt; id &lt;&lt; " started." &lt;&lt; std::endl;
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    std::cout &lt;&lt; "Worker thread " &lt;&lt; id &lt;&lt; " finished." &lt;&lt; std::endl;
+}
+
+int main() {
+    std::thread t1(workerFunction, 1);
+    std::thread t2(workerFunction, 2);
+
+    std::cout &lt;&lt; "Main thread continues." &lt;&lt; std::endl;
+
+    t1.join(); // Wait for t1 to finish
+    std::cout &lt;&lt; "Thread 1 joined." &lt;&lt; std::endl;
+
+    t2.detach(); // t2 will run independently
+    std::cout &lt;&lt; "Thread 2 detached." &lt;&lt; std::endl;
+
+    // Be cautious with detached threads; ensure they don't access invalid memory
+    std::this_thread::sleep_for(std::chrono::seconds(3)); // Allow detached thread to potentially finish
+    std::cout &lt;&lt; "Main thread finished." &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('threadsCode')">Copy Code</button></pre>
+    <div class="output">
+        Main thread continues.<br>
+        Worker thread 1 started.<br>
+        Worker thread 2 started.<br>
+        Worker thread 1 finished.<br>
+        Thread 1 joined.<br>
+        Thread 2 detached.<br>
+        Worker thread 2 finished.<br>
+        Main thread finished.
+    </div>
+ <br>   <div id="ad-container2" ></div>                <br>
+    <h2>Mutexes & Locks</h2>
+    <p>Mutexes are fundamental synchronization primitives used to protect shared data from race conditions by ensuring that only one thread can access a critical section of code at a time.</p>
+
+    <h3><code>std::mutex</code></h3>
+    <p>A basic mutex that can be locked and unlocked.</p>
+
+    <h3><code>std::lock_guard</code></h3>
+    <p>A RAII (Resource Acquisition Is Initialization) wrapper for a mutex. It automatically locks the mutex upon construction and automatically unlocks it when the <code>std::lock_guard</code> object goes out of scope, even if exceptions are thrown.</p>
+
+    <h3><code>std::unique_lock</code></h3>
+    <p>A more flexible RAII wrapper for a mutex than <code>std::lock_guard</code>. It allows deferred locking, time-constrained locking attempts, recursive locking (for <code>std::recursive_mutex</code>), and transfer of ownership of the lock.</p>
+    <pre><code id="mutexLocksCode">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+
+std::mutex mtx;
+int sharedCounter = 0;
+
+void incrementWithLockGuard() {
+    std::lock_guard&lt;std::mutex&gt; lock(mtx); // Lock acquired upon construction, released on destruction
+    sharedCounter++;
+    std::cout &lt;&lt; "Counter (lock_guard) incremented by thread " &lt;&lt; std::this_thread::get_id() &lt;&lt; " to: " &lt;&lt; sharedCounter &lt;&lt; std::endl;
+}
+
+void incrementWithUniqueLock() {
+    std::unique_lock&lt;std::mutex&gt; lock(mtx); // Lock acquired upon construction
+    sharedCounter++;
+    std::cout &lt;&lt; "Counter (unique_lock) incremented by thread " &lt;&lt; std::this_thread::get_id() &lt;&lt; " to: " &lt;&lt; sharedCounter &lt;&lt; std::endl;
+    lock.unlock(); // Explicitly unlock if needed
+    // ... perform operations without the lock ...
+    lock.lock(); // Re-acquire the lock
+    sharedCounter++;
+    std::cout &lt;&lt; "Counter (unique_lock) incremented again by thread " &lt;&lt; std::this_thread::get_id() &lt;&lt; " to: " &lt;&lt; sharedCounter &lt;&lt; std::endl;
+}
+
+int main() {
+    std::thread t1(incrementWithLockGuard);
+    std::thread t2(incrementWithUniqueLock);
+
+    t1.join();
+    t2.join();
+
+    std::cout &lt;&lt; "Final counter value: " &lt;&lt; sharedCounter &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('mutexLocksCode')">Copy Code</button></pre>
+    <div class="output">
+        Counter (lock_guard) incremented by thread 140735708293888 to: 1<br>
+        Counter (unique_lock) incremented by thread 140735700197632 to: 2<br>
+        Counter (unique_lock) incremented again by thread 140735700197632 to: 3<br>
+        Final counter value: 3
+    </div>
+
+    <h2>Asynchronous Operations</h2>
+    <p>C++ provides mechanisms to perform tasks asynchronously, allowing the main thread to continue execution without waiting for the result immediately.</p>
+
+    <h3><code>std::async</code></h3>
+    <p><code>std::async</code> runs a function (or callable object) in a separate thread and returns a <code>std::future</code> that can be used to retrieve the result.</p>
+
+    <h3><code>std::future</code></h3>
+    <p>A <code>std::future</code> represents the result of an asynchronous operation. It provides a way to wait for the result to become available and to retrieve it (using <code>get()</code>).</p>
+
+    <h3><code>std::promise</code></h3>
+    <p>A <code>std::promise</code> provides a way to set a value (or an exception) that will be made available to a <code>std::future</code> associated with the same promise.</p>
+    <pre><code id="asyncFuturePromiseCode">#include &lt;iostream&gt;
+#include &lt;future&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+
+int calculateSquare(int num, std::promise&lt;int&gt; resultPromise) {
+    std::cout &lt;&lt; "Calculating square of " &lt;&lt; num &lt;&lt; " in another thread." &lt;&lt; std::endl;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    int result = num * num;
+    resultPromise.set_value(result); // Set the result for the future
+    return result;
+}
+
+int main() {
+    std::promise&lt;int&gt; squarePromise;
+    std::future&lt;int&gt; squareFuture = squarePromise.get_future();
+
+    std::thread calculationThread(calculateSquare, 5, std::move(squarePromise));
+
+    std::cout &lt;&lt; "Main thread waiting for the square." &lt;&lt; std::endl;
+    int square = squareFuture.get(); // Wait for and get the result from the promise
+    std::cout &lt;&lt; "Square is: " &lt;&lt; square &lt;&lt; std::endl;
+
+    calculationThread.join();
+
+    std::future&lt;int&gt; asyncFuture = std::async(std::launch::async, [](int x){
+        std::cout &lt;&lt; "Calculating cube of " &lt;&lt; x &lt;&lt; " asynchronously." &lt;&lt; std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        return x * x * x;
+    }, 3);
+
+    std::cout &lt;&lt; "Main thread waiting for the cube." &lt;&lt; std::endl;
+    int cube = asyncFuture.get();
+    std::cout &lt;&lt; "Cube is: " &lt;&lt; cube &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('asyncFuturePromiseCode')">Copy Code</button></pre>
+    <div class="output">
+        Main thread waiting for the square.<br>
+        Calculating square of 5 in another thread.<br>
+        Square is: 25<br>
+        Main thread waiting for the cube.<br>
+        Calculating cube of 3 asynchronously.<br>
+        Cube is: 27
+    </div>
+    <br>   <div id="ad-container3" ></div>                <br>
+
+    <h2>Atomic Operations (<code>std::atomic&lt;T&gt;</code>)</h2>
+    <p>Atomic operations are operations that are performed indivisibly, meaning they cannot be interrupted by other threads. The <code>std::atomic</code> template provides atomic versions of built-in types, allowing for thread-safe operations without the need for explicit locking in simple cases.</p>
+    <pre><code id="atomicOperationsCode">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;atomic&gt;
+#include &lt;vector&gt;
+
+std::atomic&lt;int&gt; atomicCounter(0);
+
+void incrementAtomicCounter(int iterations) {
+    for (int i = 0; i &lt; iterations; ++i) {
+        atomicCounter++; // Atomic increment
+    }
+}
+
+int main() {
+    std::vector&lt;std::thread&gt; threads;
+    int numThreads = 4;
+    int iterations = 10000;
+
+    for (int i = 0; i &lt; numThreads; ++i) {
+        threads.emplace_back(incrementAtomicCounter, iterations);
+    }
+
+    for (auto& thread : threads) {
+        thread.join();
+    }
+
+    std::cout &lt;&lt; "Final atomic counter value: " &lt;&lt; atomicCounter &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Expected value: " &lt;&lt; numThreads * iterations &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('atomicOperationsCode')">Copy Code</button></pre>
+    <div class="output">
+        Final atomic counter value: 40000<br>
+        Expected value: 40000
+    </div>
+
+    <p>Understanding and utilizing these concurrency and multithreading tools in C++ is crucial for building high-performance and responsive applications.</p>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const code = codeElement.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
+    </script>
+
+    
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Modern-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="File-I-O-&-Serialization-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

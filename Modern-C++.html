@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Morden  C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Explanation and examples of modern C++ features introduced in C++11, C++14, C++17, and C++20, including auto and decltype, range-based loops, uniform initialization, variadic templates, concepts & constraints, and modules.">
+    <meta name="keywords" content="C++, modern C++, C++11, C++14, C++17, C++20, auto, decltype, type deduction, range-based loops, uniform initialization, brace initialization, variadic templates, parameter packs, fold expressions, concepts, constraints, requires clauses, modules">
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Concepts-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Concurrency-&-Multithreading-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Morden  C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                       
+    <style>
+        
+        h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: monospace;
+        }
+        .output {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modern C++ Features</h1>
+
+    <p>Modern C++ standards (C++11, C++14, C++17, and C++20) have introduced numerous features that make the language more expressive, safer, and more efficient. Let's explore some of these key additions.</p>
+
+    <h2>Auto & Decltype (C++11)</h2>
+    <p><code>auto</code> and <code>decltype</code> provide powerful mechanisms for type deduction, reducing verbosity and improving code flexibility.</p>
+
+    <h3><code>auto</code></h3>
+    <p><code>auto</code> allows the compiler to deduce the type of a variable from its initializer. This is particularly useful for complex types or when the type is obvious from the initialization.</p>
+    <pre><code id="autoCode">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+
+int main() {
+    auto x = 10; // x is deduced as int
+    auto y = 3.14; // y is deduced as double
+    auto z = "hello"; // z is deduced as const char*
+
+    std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+    for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+        std::cout &lt;&lt; *it &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    std::map&lt;std::string, int&gt; ages = {{"Alice", 30}, {"Bob", 25}};
+    for (auto const&amp; [name, age] : ages) { // Using structured binding (C++17) with auto
+        std::cout &lt;&lt; name &lt;&lt; ": " &lt;&lt; age &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('autoCode')">Copy Code</button></pre>
+    <div class="output">
+        1 2 3 4 5 <br>
+        Alice: 30<br>
+        Bob: 25
+    </div>
+
+    <h3><code>decltype</code> (C++11)</h3>
+    <p><code>decltype</code> inspects the declared type of an entity or the type of an expression without actually evaluating the expression.</p>
+    <pre><code id="decltypeCode">#include &lt;iostream&gt;
+#include &lt;typeinfo&gt;
+
+int main() {
+    int x = 10;
+    decltype(x) y = 20; // y has the same type as x (int)
+    std::cout &lt;&lt; "Type of y: " &lt;&lt; typeid(y).name() &lt;&lt; ", Value of y: " &lt;&lt; y &lt;&lt; std::endl;
+
+    auto add = [](int a, int b) -> int { return a + b; };
+    decltype(add) anotherAdd = add; // anotherAdd has the same type as the lambda 'add'
+    std::cout &lt;&lt; "Result of anotherAdd(5, 3): " &lt;&lt; anotherAdd(5, 3) &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('decltypeCode')">Copy Code</button></pre>
+    <div class="output">
+        Type of y: i, Value of y: 20<br>
+        Result of anotherAdd(5, 3): 8
+    </div>
+
+    <h2>Range-Based Loops (C++11)</h2>
+    <p>Range-based for loops provide a more concise and readable way to iterate over elements in containers and other ranges.</p>
+    <pre><code id="rangeBasedLoopsCode">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::vector&lt;int&gt; numbers = {10, 20, 30, 40, 50};
+    std::cout &lt;&lt; "Numbers: ";
+    for (auto& num : numbers) { // Iterate by reference to allow modification
+        num *= 2;
+        std::cout &lt;&lt; num &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    std::string message = "Hello";
+    std::cout &lt;&lt; "Characters in message: ";
+    for (char c : message) { // Iterate by value (copy)
+        std::cout &lt;&lt; c &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('rangeBasedLoopsCode')">Copy Code</button></pre>
+    <div class="output">
+        Numbers: 20 40 60 80 100 <br>
+        Characters in message: H e l l o 
+    </div>
+ <br>   <div id="ad-container2" ></div>                <br>
+    <h2>Uniform Initialization (C++11)</h2>
+    <p>Uniform initialization allows you to use brace initialization <code>{}</code> for all types of objects, providing a more consistent and less error-prone way to initialize variables.</p>
+    <pre><code id="uniformInitializationCode">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;complex&gt;
+
+struct MyStruct {
+    int x;
+    double y;
+};
+
+int main() {
+    int a{10};
+    double b{3.14};
+    std::vector&lt;int&gt; v{1, 2, 3};
+    std::complex&lt;double&gt; c{1.0, 2.0};
+    MyStruct s{5, 2.7};
+    int arr[]{100, 200, 300};
+
+    std::cout &lt;&lt; "a: " &lt;&lt; a &lt;&lt; std::endl;
+    std::cout &lt;&lt; "b: " &lt;&lt; b &lt;&lt; std::endl;
+    std::cout &lt;&lt; "v: "; for (int val : v) std::cout &lt;&lt; val &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+    std::cout &lt;&lt; "c: " &lt;&lt; c &lt;&lt; std::endl;
+    std::cout &lt;&lt; "s: {" &lt;&lt; s.x &lt;&lt; ", " &lt;&lt; s.y &lt;&lt; "}" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "arr: "; for (int val : arr) std::cout &lt;&lt; val &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('uniformInitializationCode')">Copy Code</button></pre>
+    <div class="output">
+        a: 10<br>
+        b: 3.14<br>
+        v: 1 2 3 <br>
+        c: (1,2)<br>
+        s: {5, 2.7}<br>
+        arr: 100 200 300 
+    </div>
+
+    <h2>Variadic Templates (C++11)</h2>
+    <p>Variadic templates allow you to define templates that can take a variable number of arguments (both type and non-type). This is often used for features like <code>std::printf</code> or for implementing tuple-like structures.</p>
+
+    <h3>Parameter Packs</h3>
+    <p>A parameter pack is a template parameter that accepts zero or more template arguments. Within the template definition, you can use an ellipsis (<code>...</code>) to indicate a parameter pack.</p>
+
+    <h3>Fold Expressions (C++17)</h3>
+    <p>Fold expressions provide a concise way to perform operations over a parameter pack.</p>
+    <pre><code id="variadicTemplatesCode">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// Base case for recursive print (when no arguments are left)
+void print() {
+    std::cout &lt;&lt; std::endl;
+}
+
+// Recursive template function to print arguments
+template &lt;typename T, typename... Args&gt;
+void print(T first, Args... rest) {
+    std::cout &lt;&lt; first &lt;&lt; " ";
+    print(rest...); // Recursive call with the rest of the arguments
+}
+
+// Fold expression (C++17) to sum all arguments
+template &lt;typename... Args&gt;
+auto sum(Args... args) {
+    return (args + ...); // Binary left fold
+}
+
+// Fold expression (C++17) to concatenate all strings
+template &lt;typename... Args&gt;
+auto concatenate(Args... args) {
+    return (std::string("") + ... + args); // Binary left fold with initial value
+}
+
+int main() {
+    print(1, 2.5, "hello", 'c');
+    std::cout &lt;&lt; "Sum: " &lt;&lt; sum(1, 2, 3, 4, 5) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Concatenation: " &lt;&lt; concatenate("This ", "is ", "a ", "string.") &lt;&lt; std::endl;
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('variadicTemplatesCode')">Copy Code</button></pre>
+    <div class="output">
+        1 2.5 hello c <br>
+        Sum: 15<br>
+        Concatenation: This is a string.
+    </div>
+    <br>   <div id="ad-container3" ></div>                <br>
+
+    <h2>Concepts & Constraints (C++20)</h2>
+    <p>Concepts provide a way to specify requirements on template arguments, making template usage clearer and improving compiler error messages. Constraints are used to enforce these requirements.</p>
+    <pre><code id="conceptsConstraintsCode">#include &lt;iostream&gt;
+#include &lt;concepts&gt;
+
+// Define a concept for types that support the less-than operator
+template &lt;typename T&gt;
+concept LessThanComparable = requires(T a, T b) {
+    { a &lt; b } -&gt; std::convertible_to&lt;bool&gt;;
+};
+
+// Template function that requires LessThanComparable
+template &lt;LessThanComparable T&gt;
+bool isSmaller(const T& a, const T& b) {
+    return a &lt; b;
+}
+
+// Another way to use concepts in function templates
+template &lt;typename T&gt;
+requires LessThanComparable&lt;T&gt;
+bool isSmallerAlternative(const T& a, const T& b) {
+    return a &lt; b;
+}
+
+struct NotComparable {};
+
+int main() {
+    std::cout &lt;&lt; "Is 5 &lt; 10? " &lt;&lt; std::boolalpha &lt;&lt; isSmaller(5, 10) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Is 3.14 &lt; 2.71? " &lt;&lt; std::boolalpha &lt;&lt; isSmaller(3.14, 2.71) &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; "Is 'a' &lt; 'z'? " &lt;&lt; std::boolalpha &lt;&lt; isSmallerAlternative('a', 'z') &lt;&lt; std::endl;
+
+    // The following line would result in a compile error because NotComparable
+    // does not satisfy the LessThanComparable concept.
+    // isSmaller(NotComparable{}, NotComparable{});
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('conceptsConstraintsCode')">Copy Code</button></pre>
+    <div class="output">
+        Is 5 < 10? true<br>
+        Is 3.14 < 2.71? false<br>
+        Is 'a' < 'z'? true
+    </div>
+
+    <h2>Modules (C++20)</h2>
+    <p>Modules are a significant improvement over traditional header files. They aim to provide better build times, prevent macro pollution, and improve encapsulation.</p>
+    <p>Due to the complexity of setting up and compiling modules, a simple runnable code example within this HTML context is not feasible. However, the basic idea is to replace <code>#include</code> directives with <code>import</code> statements for pre-compiled module interfaces.</p>
+    <pre><code class="language-cpp">
+        // my_module.ixx (module interface unit)
+        export module my_module;
+        export int add(int a, int b);
+
+        // my_module.cpp (module implementation unit)
+        module my_module;
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        // main.cpp
+        import my_module;
+        #include &lt;iostream&gt;
+
+        int main() {
+            std::cout &lt;&lt; "Sum: " &lt;&lt; add(5, 3) &lt;&lt; std::endl;
+            return 0;
+        }
+    </code></pre>
+    <p>Key benefits of modules include faster compilation (as interfaces are compiled once), no macro pollution (macros are not exported or imported), and stronger encapsulation (only exported names are visible).</p>
+
+    <p>These modern C++ features collectively contribute to writing more robust, efficient, and maintainable code.</p>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const code = codeElement.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
+    </script>
+
+    
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Concepts-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Concurrency-&-Multithreading-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

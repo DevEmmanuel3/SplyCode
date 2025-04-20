@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Exception Handling in  C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Explanation and examples of exception handling in C++, covering try/catch/throw, exception propagation, stack unwinding, exception safety, noexcept specifier, RAII for exceptions, and custom exceptions.">
+    <meta name="keywords" content="C++, exception handling, try, catch, throw, exception propagation, stack unwinding, exception safety, noexcept, RAII, custom exceptions, std::exception">
+
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Features-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Concepts-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Exception Handling in  C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+    <style>
+        
+        h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: monospace;
+        }
+        .output {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exception Handling in C++</h1>
+
+    <p>Exception handling is a crucial mechanism in C++ for dealing with runtime errors and unexpected situations that can disrupt the normal flow of a program. It allows you to gracefully handle these errors, prevent crashes, and potentially recover from them.</p>
+
+    <h2>Try/Catch/Throw</h2>
+    <p>C++ provides the <code>try</code>, <code>catch</code>, and <code>throw</code> keywords for exception handling:</p>
+    <ul>
+        <li><code>try</code>: A block of code where exceptions might occur is enclosed in a <code>try</code> block.</li>
+        <li><code>throw</code>: When an exceptional condition is detected within the <code>try</code> block (or in a function called from within the <code>try</code> block), an exception is "thrown" using the <code>throw</code> keyword. The operand of <code>throw</code> is the exception object itself (which can be of any type).</li>
+        <li><code>catch</code>: One or more <code>catch</code> blocks follow the <code>try</code> block. Each <code>catch</code> block specifies the type of exception it can handle. When an exception is thrown, the program looks for a <code>catch</code> block that can handle an exception of that type (or a compatible type).</li>
+    </ul>
+    <pre><code id="tryCatchThrowCode">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+int divide(int a, int b) {
+    if (b == 0) {
+        throw std::runtime_error("Division by zero!");
+    }
+    return a / b;
+}
+
+int main() {
+    int x = 10;
+    int y = 0;
+    int result;
+
+    try {
+        result = divide(x, y);
+        std::cout &lt;&lt; "Result of division: " &lt;&lt; result &lt;&lt; std::endl;
+    } catch (const std::runtime_error&amp; error) {
+        std::cerr &lt;&lt; "Caught an exception: " &lt;&lt; error.what() &lt;&lt; std::endl;
+    }
+
+    std::cout &lt;&lt; "Program continues after exception handling." &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('tryCatchThrowCode')">Copy Code</button></pre>
+    <div class="output">
+        Caught an exception: Division by zero!<br>
+        Program continues after exception handling.
+    </div>
+  <br>  <div id="ad-container2" ></div>                <br>
+    <h3>Exception Propagation</h3>
+    <p>If an exception is thrown within a function and is not caught by a <code>catch</code> block within that function, the exception is propagated back to the caller function. This process continues up the call stack until a suitable <code>catch</code> handler is found. If no handler is found all the way up to the <code>main</code> function, the program will typically terminate (often by calling <code>std::terminate</code>).</p>
+    <pre><code id="exceptionPropagationCode">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+
+void innerFunction() {
+    std::cout &lt;&lt; "Inner function started." &lt;&lt; std::endl;
+    throw std::runtime_error("Exception from inner function!");
+    std::cout &lt;&lt; "Inner function finished." &lt;&lt; std::endl; // This line will not be reached
+}
+
+void middleFunction() {
+    std::cout &lt;&lt; "Middle function started." &lt;&lt; std::endl;
+    innerFunction();
+    std::cout &lt;&lt; "Middle function finished." &lt;&lt; std::endl; // This line will not be reached
+}
+
+int main() {
+    std::cout &lt;&lt; "Main function started." &lt;&lt; std::endl;
+    try {
+        middleFunction();
+    } catch (const std::runtime_error&amp; error) {
+        std::cerr &lt;&lt; "Caught in main: " &lt;&lt; error.what() &lt;&lt; std::endl;
+    }
+    std::cout &lt;&lt; "Main function finished." &lt;&lt; std::endl;
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('exceptionPropagationCode')">Copy Code</button></pre>
+    <div class="output">
+        Main function started.<br>
+        Middle function started.<br>
+        Inner function started.<br>
+        Caught in main: Exception from inner function!<br>
+        Main function finished.
+    </div>
+
+    <h3>Stack Unwinding</h3>
+    <p>When an exception is thrown and propagates up the call stack, the process of destroying all local objects that were created on the stack between the point where the exception was thrown and the point where it is caught is called stack unwinding. During stack unwinding, the destructors of these local objects are automatically called, which is crucial for resource management (e.g., ensuring that dynamically allocated memory is freed).</p>
+
+    <h2>Exception Safety</h2>
+    <p>Exception safety refers to writing code that behaves correctly even in the presence of exceptions. There are different levels of exception safety:</p>
+    <ul>
+        <li><strong>No guarantee:</strong> The program might be in an invalid or unusable state after an exception.</li>
+        <li><strong>Basic guarantee:</strong> If an exception is thrown, all of the object's invariants remain valid. No resources are leaked. However, the object's state might have changed.</li>
+        <li><strong>Strong guarantee:</strong> If an exception is thrown, the operation has no effect. The program state remains as if the operation had never been attempted. This often involves a "commit or rollback" mechanism.</li>
+        <li><strong>No-throw guarantee:</strong> The operation will never throw an exception. This can be indicated using the <code>noexcept</code> specifier (introduced in C++11).</li>
+    </ul>
+
+    <h3><code>noexcept</code> Specifier (C++11+)</h3>
+    <p>The <code>noexcept</code> specifier can be added to function declarations to indicate whether a function is guaranteed not to throw any exceptions. This can help the compiler perform optimizations and can also affect the behavior of stack unwinding.</p>
+    <pre><code id="noexceptCode">#include &lt;iostream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;vector&gt;
+
+void mightThrow() {
+    throw std::runtime_error("This function might throw.");
+}
+
+void doesNotThrow() noexcept {
+    std::cout &lt;&lt; "This function does not throw." &lt;&lt; std::endl;
+}
+
+int main() {
+    try {
+        mightThrow();
+    } catch (const std::runtime_error&amp; e) {
+        std::cerr &lt;&lt; "Caught exception from mightThrow: " &lt;&lt; e.what() &lt;&lt; std::endl;
+    }
+
+    doesNotThrow();
+
+    // std::vector&lt;int&gt; v;
+    // v.push_back(5); // push_back might throw if allocation fails, but std::vector tries to provide strong exception safety
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('noexceptCode')">Copy Code</button></pre>
+    <div class="output">
+        Caught exception from mightThrow: This function might throw.<br>
+        This function does not throw.
+    </div>
+    <br>  <div id="ad-container3" ></div>                <br>
+
+    <h3>RAII for Exceptions</h3>
+    <p>The Resource Acquisition Is Initialization (RAII) principle is particularly important in the context of exception handling. By managing resources (like memory, file handles, locks) through objects whose lifetime is tied to the scope, RAII ensures that resources are automatically released when an exception causes stack unwinding. Smart pointers are a prime example of RAII that helps with exception safety for dynamically allocated memory.</p>
+    <pre><code id="raiiExceptionCode">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;memory&gt;
+#include &lt;stdexcept&gt;
+
+class FileWrapper {
+private:
+    std::ofstream file;
+    std::string filename;
+
+public:
+    FileWrapper(const std::string&amp; fname) : filename(fname), file(fname) {
+        if (!file.is_open()) {
+            throw std::runtime_error("Could not open file: " + filename);
+        }
+        std::cout &lt;&lt; "File '" &lt;&lt; filename &lt;&lt; "' opened." &lt;&lt; std::endl;
+    }
+
+    ~FileWrapper() {
+        if (file.is_open()) {
+            file.close();
+            std::cout &lt;&lt; "File '" &lt;&lt; filename &lt;&lt; "' closed." &lt;&lt; std::endl;
+        }
+    }
+
+    void write(const std::string&amp; data) {
+        if (file.is_open()) {
+            file &lt;&lt; data &lt;&lt; std::endl;
+        } else {
+            throw std::runtime_error("File not open for writing.");
+        }
+    }
+};
+
+void processFile() {
+    try {
+        FileWrapper writer("output_exception.txt");
+        writer.write("First line.");
+        writer.write("Second line.");
+        // Simulate an exception
+        if (true) {
+            throw std::runtime_error("Simulated error during processing.");
+        }
+        writer.write("This line might not be written.");
+    } catch (const std::runtime_error&amp; e) {
+        std::cerr &lt;&lt; "Exception caught in processFile: " &lt;&lt; e.what() &lt;&lt; std::endl;
+    }
+    // The FileWrapper object 'writer' will be destroyed when it goes out of scope,
+    // automatically closing the file, even if an exception occurred.
+}
+
+int main() {
+    processFile();
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('raiiExceptionCode')">Copy Code</button></pre>
+    <div class="output">
+        File 'output_exception.txt' opened.<br>
+        Exception caught in processFile: Simulated error during processing.<br>
+        File 'output_exception.txt' closed.
+    </div>
+
+    <h2>Custom Exceptions</h2>
+    <p>You can define your own exception classes by inheriting from the standard <code>std::exception</code> class or one of its derived classes (like <code>std::runtime_error</code>, <code>std::logic_error</code>, etc.). This allows you to provide more specific information about the errors that can occur in your program.</p>
+    <pre><code id="customExceptionCode">#include &lt;iostream&gt;
+#include &lt;exception&gt;
+#include &lt;string&gt;
+
+class MyCustomError : public std::runtime_error {
+public:
+    MyCustomError(const std::string&amp; message) : std::runtime_error(message) {}
+};
+
+void doSomething(int value) {
+    if (value &lt; 0) {
+        throw MyCustomError("Value cannot be negative: " + std::to_string(value));
+    }
+    std::cout &lt;&lt; "Processing value: " &lt;&lt; value &lt;&lt; std::endl;
+}
+
+int main() {
+    try {
+        doSomething(10);
+        doSomething(-5);
+    } catch (const MyCustomError&amp; error) {
+        std::cerr &lt;&lt; "Caught custom error: " &lt;&lt; error.what() &lt;&lt; std::endl;
+    } catch (const std::runtime_error&amp; error) {
+        std::cerr &lt;&lt; "Caught a runtime error: " &lt;&lt; error.what() &lt;&lt; std::endl;
+    } catch (const std::exception&amp; error) {
+        std::cerr &lt;&lt; "Caught a standard exception: " &lt;&lt; error.what() &lt;&lt; std::endl;
+    } catch (...) {
+        std::cerr &lt;&lt; "Caught an unknown exception." &lt;&lt; std::endl;
+    }
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('customExceptionCode')">Copy Code</button></pre>
+    <div class="output">
+        Processing value: 10<br>
+        Caught custom error: Value cannot be negative: -5
+    </div>
+
+    <p>Effective exception handling is essential for writing robust and reliable C++ programs. By using <code>try</code>, <code>catch</code>, and <code>throw</code>, ensuring exception safety, and defining custom exceptions, you can manage errors gracefully and maintain program stability.</p>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const code = codeElement.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
+    </script>
+
+                       
+                        
+
+
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Features-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Advanced-Concepts-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

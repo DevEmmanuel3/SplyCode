@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Object Oriented Programming(OOP) of C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="A comprehensive guide to Object-Oriented Programming (OOP) in C++, covering classes, objects, constructors, destructors, inheritance, polymorphism, static members, and friend relationships with detailed explanations and code examples.">
+    <meta name="keywords" content="C++, OOP, Object-Oriented Programming, classes, objects, constructors, destructors, inheritance, polymorphism, static members, friend functions, friend classes">
+
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Memory-Management-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Object Oriented Programming(OOP) in C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+    <style>
+       
+        h2, h3, h4, h5 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            position: relative;
+        }
+        code {
+            font-family: monospace;
+            display: block;
+        }
+        .output {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #ddd;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+        .explanation {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .inheritance-types ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Object-Oriented Programming (OOP)</h2>
+    <p class="explanation">OOP is a programming paradigm based on the concept of "objects," which can contain data (in the form of fields or attributes) and code (in the form of procedures or methods). Key principles of OOP include encapsulation, inheritance, and polymorphism.</p>
+
+    <h3>Classes & Objects</h3>
+
+    <h4>Classes:</h4>
+    <p class="explanation">A class is a blueprint or a template for creating objects. It defines the data (member variables or attributes) that an object will hold and the actions (member functions or methods) that an object can perform.</p>
+
+    <h4>Objects:</h4>
+    <p class="explanation">An object is an instance of a class. It's a concrete entity that exists in memory and has the properties and behaviors defined by its class.</p>
+
+    <h4>Member Variables/Functions:</h4>
+    <ul class="explanation">
+        <li><strong>Member Variables (Attributes or Fields):</strong> These are the data components of a class that hold the state of an object.</li>
+        <li><strong>Member Functions (Methods):</strong> These are the functions defined within a class that operate on the object's data or perform actions related to the object.</li>
+    </ul>
+
+    <h4>Access Specifiers:</h4>
+    <p class="explanation">Access specifiers control the visibility and accessibility of class members from outside the class. C++ provides three main access specifiers:</p>
+    <ul class="explanation">
+        <li><code>public</code>: Members declared as public are accessible from any part of the program.</li>
+        <li><code>private</code>: Members declared as private are only accessible from within the same class. They are hidden from the outside world, providing data encapsulation.</li>
+        <li><code>protected</code>: Members declared as protected are accessible from within the same class and from its derived classes (in the context of inheritance).</li>
+    </ul>
+
+    <h4>C++ Example:</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Dog {
+public:
+  // Public member variables
+  std::string name;
+  int age;
+
+  // Public member function
+  void bark() {
+    std::cout &lt;&lt; "Woof!" &lt;&lt; std::endl;
+  }
+
+  void displayInfo() const { // 'const' indicates this function doesn't modify the object's state
+    std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; ", Age: " &lt;&lt; age &lt;&lt; std::endl;
+  }
+
+private:
+  // Private member variable (only accessible within the Dog class)
+  std::string breed;
+
+protected:
+  // Protected member variable (accessible within Dog and its derived classes)
+  bool isVaccinated;
+
+public:
+  // Public member function to set the breed (allows controlled access to private member)
+  void setBreed(const std::string& b) {
+    breed = b;
+  }
+
+  // Public member function to get the breed
+  std::string getBreed() const {
+    return breed;
+  }
+
+  // Public member function to set vaccination status
+  void setVaccinated(bool vaccinated) {
+    isVaccinated = vaccinated;
+  }
+
+  // Public member function to check vaccination status
+  bool isVaccinatedStatus() const {
+    return isVaccinated;
+  }
+};
+
+int main() {
+  // Creating objects (instances) of the Dog class
+  Dog myDog;
+  Dog yourDog;
+
+  // Accessing public member variables and functions
+  myDog.name = "Buddy";
+  myDog.age = 3;
+  myDog.bark();
+  myDog.displayInfo();
+  myDog.setBreed("Golden Retriever");
+  std::cout &lt;&lt; "Breed of myDog: " &lt;&lt; myDog.getBreed() &lt;&lt; std::endl;
+  myDog.setVaccinated(true);
+  std::cout &lt;&lt; "Is myDog vaccinated? " &lt;&lt; std::boolalpha &lt;&lt; myDog.isVaccinatedStatus() &lt;&lt; std::endl;
+
+  yourDog.name = "Lucy";
+  yourDog.age = 5;
+  yourDog.bark();
+  yourDog.displayInfo();
+  yourDog.setBreed("Poodle");
+  std::cout &lt;&lt; "Breed of yourDog: " &lt;&lt; yourDog.getBreed() &lt;&lt; std::endl;
+  yourDog.setVaccinated(false);
+  std::cout &lt;&lt; "Is yourDog vaccinated? " &lt;&lt; std::boolalpha &lt;&lt; yourDog.isVaccinatedStatus() &lt;&lt; std::endl;
+
+  // Trying to access private member directly (will cause a compilation error if uncommented)
+  // myDog.breed = "Labrador"; // Error: 'Dog::breed' is private
+
+  return 0;
+}
+        </code>
+        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </pre>
+    <div class="output">
+        <code>
+Woof!
+Name: Buddy, Age: 3
+Breed of myDog: Golden Retriever
+Is myDog vaccinated? true
+Woof!
+Name: Lucy, Age: 5
+Breed of yourDog: Poodle
+Is yourDog vaccinated? false
+        </code>
+    </div>
+    <p class="explanation"><strong>Explanation:</strong> The <code>Dog</code> class defines the blueprint for dog objects, including their name, age, breed, and vaccination status, as well as the ability to bark and display information.</p>
+    <ul class="explanation">
+        <li><code>name</code> and <code>age</code> are <code>public</code>, so they can be accessed directly from outside the class.</li>
+        <li><code>bark()</code> and <code>displayInfo()</code> are <code>public</code> member functions that operate on the object's data.</li>
+        <li><code>breed</code> is <code>private</code>, ensuring that its modification is controlled through the <code>setBreed()</code> function, demonstrating encapsulation.</li>
+        <li><code>isVaccinated</code> is <code>protected</code>, making it accessible to derived classes (though we don't have any in this example).</li>
+    </ul>
+    <p class="explanation">In <code>main()</code>, <code>myDog</code> and <code>yourDog</code> are objects (instances) of the <code>Dog</code> class. We interact with them using the public interface provided by the class. Attempting to access the private member <code>breed</code> directly would result in a compilation error.</p>
+
+  <br>  <div id="ad-container2" ></div>                <br>
+    <h3>Constructors & Destructors</h3>
+
+    <h4>Constructors:</h4>
+    <p class="explanation">A constructor is a special member function of a class that is automatically called when an object of that class is created. Its primary purpose is to initialize the object's member variables. Constructors have the same name as the class and do not have a return type (not even <code>void</code>).</p>
+    <ul class="explanation">
+        <li><strong>Default Constructor:</strong> A constructor that takes no arguments. If you don't define any constructors in your class, the compiler will provide a default constructor (which does nothing). However, if you define any constructor, the compiler will not provide a default one, and you'll need to define it explicitly if you want to be able to create objects without arguments.</li>
+        <li><strong>Parameterized Constructor:</strong> A constructor that takes one or more arguments, allowing you to initialize the object's member variables with specific values at the time of creation.</li>
+        <li><strong>Copy Constructor:</strong> A special constructor that is called when a new object is created as a copy of an existing object (e.g., during initialization or when passing objects by value). If you don't define a copy constructor, the compiler provides a default one that performs a member-wise copy. However, for objects containing pointers to dynamically allocated memory, you often need to define a custom copy constructor to perform a deep copy (copying the pointed-to data) rather than a shallow copy (copying just the pointer).</li>
+        <li><strong>Initializer Lists:</strong> A more efficient and sometimes necessary way to initialize member variables in a constructor. They are specified after the constructor's parameter list and before the opening brace of the constructor body, using a colon <code>:</code> followed by a comma-separated list of member variables and their initial values in parentheses.</li>
+    </ul>
+
+    <h4>Destructors:</h4>
+    <p class="explanation">A destructor is another special member function that is automatically called when an object is destroyed (e.g., when it goes out of scope or when <code>delete</code> is called on a dynamically allocated object). Its primary purpose is to perform cleanup operations, such as releasing dynamically allocated memory or closing files. Destructors have the same name as the class, preceded by a tilde (<code>~</code>), and they do not take any arguments or have a return type.</p>
+
+    <h4>C++ Example:</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Rectangle {
+public:
+  int width;
+  int height;
+
+  // Default Constructor
+  Rectangle() : width(0), height(0) {
+    std::cout &lt;&lt; "Default Constructor called for Rectangle" &lt;&lt; std::endl;
+  }
+
+  // Parameterized Constructor
+  Rectangle(int w, int h) : width(w), height(h) {
+    std::cout &lt;&lt; "Parameterized Constructor called for Rectangle (" &lt;&lt; w &lt;&lt; ", " &lt;&lt; h &lt;&lt; ")" &lt;&lt; std::endl;
+  }
+
+  // Copy Constructor
+  Rectangle(const Rectangle& other) : width(other.width), height(other.height) {
+    std::cout &lt;&lt; "Copy Constructor called for Rectangle (" &lt;&lt; width &lt;&lt; ", " &lt;&lt; height &lt;&lt; ")" &lt;&lt; std::endl;
+  }
+
+  // Destructor
+  ~Rectangle() {
+    std::cout &lt;&lt; "Destructor called for Rectangle (" &lt;&lt; width &lt;&lt; ", " &lt;&lt; height &lt;&lt; ")" &lt;&lt; std::endl;
+  }
+
+  int area() const {
+    return width * height;
+  }
+};
+
+int main() {
+  Rectangle rect1;             // Calls the default constructor
+  Rectangle rect2(5, 10);      // Calls the parameterized constructor
+  Rectangle rect3 = rect2;     // Calls the copy constructor
+  Rectangle rect4(rect1);      // Also calls the copy constructor
+
+  std::cout &lt;&lt; "Area of rect1: " &lt;&lt; rect1.area() &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Area of rect2: " &lt;&lt; rect2.area() &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Area of rect3: " &lt;&lt; rect3.area() &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Area of rect4: " &lt;&lt; rect4.area() &lt;&lt; std::endl;
+
+  return 0; // Destructors for rect4, rect3, rect2, and rect1 will be called automatically here
+}
+        </code>
+        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </pre>
+    <div class="output">
+        <code>
+Default Constructor called for Rectangle
+Parameterized Constructor called for Rectangle (5, 10)
+Copy Constructor called for Rectangle (5, 10)
+Copy Constructor called for Rectangle (0, 0)
+Area of rect1: 0
+Area of rect2: 50
+Area of rect3: 50
+Area of rect4: 0
+Destructor called for Rectangle (0, 0)
+Destructor called for Rectangle (5, 10)
+Destructor called for Rectangle (5, 10)
+Destructor called for Rectangle (0, 0)
+        </code>
+    </div>
+    <p class="explanation"><strong>Explanation:</strong> We define a <code>Rectangle</code> class with default, parameterized, and copy constructors, as well as a destructor.</p>
+    <ul class="explanation">
+        <li>When <code>rect1</code> is created without arguments, the default constructor is called, initializing <code>width</code> and <code>height</code> to 0.</li>
+        <li>When <code>rect2</code> is created with arguments 5 and 10, the parameterized constructor is called, initializing <code>width</code> to 5 and <code>height</code> to 10.</li>
+        <li>When <code>rect3</code> is created by assigning <code>rect2</code>, the copy constructor is called, creating a new <code>Rectangle</code> with the same <code>width</code> and <code>height</code> as <code>rect2</code>.</li>
+        <li>Similarly, <code>rect4</code> is also created using the copy constructor with <code>rect1</code> as the source.</li>
+        <li>The destructors are called automatically when the <code>Rectangle</code> objects go out of scope at the end of the <code>main</code> function, in the reverse order of their creation.</li>
+    </ul>
+
+    <h3>Inheritance</h3>
+    <p class="explanation">Inheritance is a mechanism that allows a new class (derived or child class) to inherit properties (member variables and functions) from an existing class (base or parent class). This promotes code reuse and the creation of hierarchical relationships between classes.</p>
+
+    <h4>Base vs. Derived Classes:</h4>
+    <ul class="explanation">
+        <li><strong>Base Class (Parent Class):</strong> The class whose properties are inherited.</li>
+        <li><strong>Derived Class (Child Class):</strong> The class that inherits properties from the base class. It can also have its own additional members or override the inherited members.</li>
+    </ul>
+
+    <h4>Inheritance Types (Access Specifiers for Inheritance):</h4>
+    <p class="explanation">When a derived class inherits from a base class, the <code>public</code>, <code>protected</code>, and <code>private</code> access specifiers in the base class affect the accessibility of the inherited members in the derived class:</p>
+    <div class="inheritance-types">
+        <ul>
+            <li><strong><code>public</code> Inheritance:</strong>
+                <ul>
+                    <li><code>public</code> members of the base class become <code>public</code> members of the derived class.</li>
+                    <li><code>protected</code> members of the base class become <code>protected</code> members of the derived class.</li>
+                    <li><code>private</code> members of the base class are inherited but remain inaccessible to the derived class.</li>
+                </ul>
+            </li>
+            <li><strong><code>protected</code> Inheritance:</strong>
+                <ul>
+                    <li><code>public</code> and <code>protected</code> members of the base class become <code>protected</code> members of the derived class.</li>
+                    <li><code>private</code> members of the base class are inherited but remain inaccessible.</li>
+                </ul>
+            </li>
+            <li><strong><code>private</code> Inheritance:</strong>
+                <ul>
+                    <li><code>public</code> and <code>protected</code> members of the base class become <code>private</code> members of the derived class.</li>
+                    <li><code>private</code> members of the base class are inherited but remain inaccessible.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h4>Virtual Base Classes:</h4>
+    <p class="explanation">In multiple inheritance (where a class inherits from more than one base class), it's possible to have a situation where a derived class ends up with multiple copies of a common ancestor's members. Virtual base classes are used to solve this "diamond problem" by ensuring that only one instance of the common ancestor's members is inherited. This is achieved by using the <code>virtual</code> keyword when declaring the inheritance.</p>
+
+    <h4>C++ Example:</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// Base class
+class Animal {
+public:
+  Animal(const std::string& n) : name(n) {
+    std::cout &lt;&lt; "Animal constructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+  virtual ~Animal() { // Virtual destructor
+    std::cout &lt;&lt; "Animal destructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+
+  void eat() const {
+    std::cout &lt;&lt; name &lt;&lt; " is eating." &lt;&lt; std::endl;
+  }
+
+protected:
+  std::string name;
+};
+
+// Derived class (public inheritance)
+class Dog : public Animal {
+public:
+  Dog(const std::string& n, const std::string& b) : Animal(n), breed(b) {
+    std::cout &lt;&lt; "Dog constructor called for " &lt;&lt; name &lt;&lt; " (Breed: " &lt;&lt; breed &lt;&lt; ")" &lt;&lt; std::endl;
+  }
+  ~Dog() override { // 'override' keyword (C++11) indicates we are overriding a virtual function
+    std::cout &lt;&lt; "Dog destructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+
+  void bark() const {
+    std::cout &lt;&lt; name &lt;&lt; " (a " &lt;&lt; breed &lt;&lt; ") says Woof!" &lt;&lt; std::endl;
+  }
+
+  void displayBreed() const {
+    std::cout &lt;&lt; name &lt;&lt; "'s breed is " &lt;&lt; breed &lt;&lt; std::endl;
+  }
+
+private:
+  std::string breed;
+};
+
+// Another derived class (public inheritance)
+class Cat : public Animal {
+public:
+  Cat(const std::string& n, const std::string& c) : Animal(n), color(c) {
+    std::cout &lt;&lt; "Cat constructor called for " &lt;&lt; name &lt;&lt; " (Color: " &lt;&lt; color &lt;&lt; ")" &lt;&lt; std::endl;
+  }
+  ~Cat() override {
+    std::cout &lt;&lt; "Cat destructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+
+  void meow() const {
+    std::cout &lt;&lt; name &lt;&lt; " (a " &lt;&lt; color &lt;&lt; " cat) says Meow!" &lt;&lt; std::endl;
+  }
+
+  void displayColor() const {
+    std::cout &lt;&lt; name &lt;&lt; "'s color is " &lt;&lt; color &lt;&lt; std::endl;
+  }
+
+private:
+  std::string color;
+};
+
+int main() {
+  Dog myDog("Buddy", "Golden Retriever");
+  myDog.eat();
+  myDog.bark();
+  myDog.displayBreed();
+
+  Cat myCat("Whiskers", "Gray");
+  myCat.eat();
+  myCat.meow();
+  myCat.displayColor();
+
+  // Polymorphism example (using base class pointers)
+  Animal* animalPtr1 = &myDog;
+  Animal* animalPtr2 = &myCat;
+
+  std::cout &lt;&lt; "\nPolymorphism through base class pointers:" &lt;&lt; std::endl;
+  animalPtr1->eat(); // Calls Animal::eat()
+  animalPtr2->eat(); // Calls Animal::eat()
+
+  // Note: animalPtr1->bark(); would cause a compile error because 'bark' is not a member of Animal
+
+  return 0; // Destructors will be called automatically
+}
+        </code>
+        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </pre>
+    <div class="output">
+        <code>
+Animal constructor called for Buddy
+Dog constructor called for Buddy (Breed: Golden Retriever)
+Buddy is eating.
+Buddy (a Golden Retriever) says Woof!
+Buddy's breed is Golden Retriever
+Animal constructor called for Whiskers
+Cat constructor called for Whiskers (Color: Gray)
+Whiskers is eating.
+Whiskers (a Gray cat) says Meow!
+Whiskers's color is Gray
+
+Polymorphism through base class pointers:
+Buddy is eating.
+Whiskers is eating.
+Animal destructor called for Whiskers
+Cat destructor called for Whiskers
+Animal destructor called for Buddy
+Dog destructor called for Buddy
+        </code>
+    </div>
+    <p class="explanation"><strong>Explanation:</strong></p>
+    <ul class="explanation">
+        <li><code>Animal</code> is the base class with a constructor, a virtual destructor (important for proper cleanup when using polymorphism), an <code>eat()</code> function, and a protected member <code>name</code>.</li>
+        <li><code>Dog</code> and <code>Cat</code> are derived classes that inherit from <code>Animal</code> using <code>public</code> inheritance. They have their own constructors (calling the base class constructor using the initializer list), destructors (overriding the base class virtual destructor), and additional member functions (<code>bark()</code>, <code>displayBreed()</code>, <code>meow()</code>, <code>displayColor()</code>).</li>
+        <li>In <code>main()</code>, we create objects of <code>Dog</code> and <code>Cat</code> and demonstrate how they can use the inherited <code>eat()</code> function and their own specific functions.</li>
+        <li>The polymorphism example shows how base class pointers can point to derived class objects. When <code>animalPtr1->eat()</code> and <code>animalPtr2->eat()</code> are called, the <code>Animal::eat()</code> function is executed because <code>eat()</code> is not declared as <code>virtual</code> in the base class in this simplified example (we'll see virtual functions in the Polymorphism section). However, the destructors are called correctly due to the <code>virtual</code> keyword in the base class destructor.</li>
+    </ul>
+    <br>  <div id="ad-container3" ></div>                <br>
+
+    <h3>Polymorphism</h3>
+    <p class="explanation">Polymorphism (meaning "many forms") allows objects of different classes to be treated as objects of a common base class type. This enables you to write more flexible and extensible code. C++ supports polymorphism through virtual functions and function overriding.</p>
+
+    <h4>Virtual Functions:</h4>
+    <p class="explanation">A virtual function is a member function declared in the base class using the <code>virtual</code> keyword. The purpose of a virtual function is to allow derived classes to provide their own implementation (override) of the function. When a virtual function is called through a base class pointer or reference that is actually pointing to a derived class object, the derived class's implementation of the function is executed (this is called runtime polymorphism or dynamic dispatch).</p>
+
+    <h4>Override (<code>override</code>):</h4>
+    <p class="explanation">The <code>override</code> keyword (introduced in C++11) can be used in a derived class when you intend to override a virtual function from the base class. It's not strictly necessary for overriding to work, but it provides an extra layer of safety by allowing the compiler to check if you are actually overriding a base class virtual function. If the signature doesn't match, the compiler will issue an error.</p>
+
+    <h4>Final (<code>final</code>):</h4>
+    <p class="explanation">The <code>final</code> keyword can be used in two ways:</p>
+    <ul class="explanation">
+        <li><strong>With a virtual function:</strong> It prevents derived classes from overriding that virtual function further down the inheritance hierarchy.</li>
+        <li><strong>With a class:</strong> It prevents the class from being inherited from.</li>
+    </ul>
+
+    <h4>Abstract Classes:</h4>
+    <p class="explanation">An abstract class is a class that contains at least one pure virtual function. A pure virtual function is declared in the base class with the syntax <code>= 0</code>. Abstract classes cannot be instantiated (you cannot create objects of an abstract class directly). Their purpose is to define an interface that derived classes must implement. Any derived class that inherits from an abstract class must provide definitions for all of the pure virtual functions; otherwise, the derived class will also be abstract.</p>
+
+    <h4>C++ Example:</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// Abstract base class
+class Shape {
+public:
+  Shape(const std::string& n) : name(n) {
+    std::cout &lt;&lt; "Shape constructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+  virtual ~Shape() {
+    std::cout &lt;&lt; "Shape destructor called for " &lt;&lt; name &lt;&lt; std::endl;
+  }
+
+  virtual double area() const = 0; // Pure virtual function
+
+  virtual void display() const {
+    std::cout &lt;&lt; "Shape: " &lt;&lt; name &lt;&lt; ", Area: " &lt;&lt; area() &lt;&lt; std::endl;
+  }
+
+protected:
+  std::string name;
+};
+
+// Concrete derived class
+class Circle : public Shape {
+public:
+  Circle(double r) : Shape("Circle"), radius(r) {
+    std::cout &lt;&lt; "Circle constructor called with radius " &lt;&lt; radius &lt;&lt; std::endl;
+  }
+  ~Circle() override {
+    std::cout &lt;&lt; "Circle destructor called" &lt;&lt; std::endl;
+  }
+
+  double area() const override {
+    return 3.14159 * radius * radius;
+  }
+
+  void display() const override {
+    std::cout &lt;&lt; "Circle: Radius = " &lt;&lt; radius &lt;&lt; ", Area = " &lt;&lt; area() &lt;&lt; std::endl;
+  }
+
+private:
+  double radius;
+};
+
+// Another concrete derived class
+class Rectangle : public Shape {
+public:
+  Rectangle(double w, double h) : Shape("Rectangle"), width(w), height(h) {
+    std::cout &lt;&lt; "Rectangle constructor called with width " &lt;&lt; width &lt;&lt; " and height " &lt;&lt; height &lt;&lt; std::endl;
+  }
+  ~Rectangle() override {
+    std::cout &lt;&lt; "Rectangle destructor called" &lt;&lt; std::endl;
+  }
+
+  double area() const override {
+    return width * height;
+  }
+
+  void display() const override {
+    std::cout &lt;&lt; "Rectangle: Width = " &lt;&lt; width &lt;&lt; ", Height = " &lt;&lt; height &lt;&lt; ", Area = " &lt;&lt; area() &lt;&lt; std::endl;
+  }
+
+private:
+  double width;
+  double height;
+};
+
+int main() {
+  // Shape s; // Error: Cannot create an object of an abstract class
+
+  Circle c(5.0);
+  Rectangle r(4.0, 6.0);
+
+  c.display();
+  r.display();
+
+  std::cout &lt;&lt; "\nPolymorphism through base class pointers:" &lt;&lt; std::endl;
+  Shape* shapePtr1 = &c;
+  Shape* shapePtr2 = &r;
+
+  shapePtr1->display(); // Calls Circle::display()
+  shapePtr2->display(); // Calls Rectangle::display()
+
+  std::cout &lt;&lt; "\nAreas through base class pointers:" &lt;&lt; std::endl;
+  std::cout &lt;&lt; "Area of shapePtr1 (Circle): " &lt;&lt; shapePtr1->area() &lt;&lt; std::endl; // Calls Circle::area()
+  std::cout &lt;&lt; "Area of shapePtr2 (Rectangle): " &lt;&lt; shapePtr2->area() &lt;&lt; std::endl; // Calls Rectangle::area()
+
+  return 0; // Destructors will be called automatically
+}
+        </code>
+        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </pre>
+    <div class="output">
+        <code>
+Shape constructor called for Circle
+Circle constructor called with radius 5
+Shape constructor called for Rectangle
+Rectangle constructor called with width 4 and height 6
+Circle: Radius = 5, Area = 78.5398
+Rectangle: Width = 4, Height = 6, Area = 24
+
+Polymorphism through base class pointers:
+Circle: Radius = 5, Area = 78.5398
+Rectangle: Width = 4, Height = 6, Area = 24
+
+Areas through base class pointers:
+Area of shapePtr1 (Circle): 78.5398
+Area of shapePtr2 (Rectangle): 24
+Shape destructor called for Rectangle
+Rectangle destructor called
+Shape destructor called for Circle
+Circle destructor called
+        </code>
+    </div>
+    <p class="explanation"><strong>Explanation:</strong></p>
+    <ul class="explanation">
+        <li><code>Shape</code> is an abstract base class because it has a pure virtual function <code>area() = 0</code>. You cannot create objects of <code>Shape</code>.</li>
+        <li><code>Circle</code> and <code>Rectangle</code> are concrete derived classes that inherit from <code>Shape</code> and provide their own implementations (<code>override</code>) of the <code>area()</code> and <code>display()</code> virtual functions using the <code>override</code> keyword.</li>
+        <li>In <code>main()</code>, we create objects of <code>Circle</code> and <code>Rectangle</code>.</li>
+        <li>We then demonstrate polymorphism by using base class pointers (<code>Shape*</code>) to point to <code>Circle</code> and <code>Rectangle</code> objects. When we call the <code>display()</code> and <code>area()</code> functions through these base class pointers, the correct derived class implementations are executed at runtime. This is the power of dynamic dispatch.</li>
+        <li>The virtual destructor in the <code>Shape</code> class ensures that when we delete a derived class object through a base class pointer, the derived class's destructor is also called, preventing memory leaks.</li>
+    </ul>
+
+    <h3>Static Members</h3>
+    <p class="explanation">Static members (variables and functions) belong to the class itself rather than to any specific object of the class. There is only one copy of a static member shared by all objects of the class.</p>
+    <ul class="explanation">
+        <li><strong>Static Variables:</strong> These are class-level variables. They are initialized outside the class definition (usually in the source file).</li>
+        <li><strong>Static Functions:</strong> These are class-level functions. They can access only static member variables of the class (and any global variables or other static local variables). They do not have a <code>this</code> pointer because they are not associated with any particular object. Static functions are often used for utility purposes related to the class or to manage static data.</li>
+    </ul>
+
+    <h4>C++ Example:</h4>
+    <pre>
+        <code>
+#include &lt;iostream&gt;
+
+class Counter {
+public:
+  Counter() {
+    count++;
+  }
+  ~Counter() {
+    count--;
+  }
+
+  static int getCount() {
+    return count;
+  }
+
+private:
+  static int count; // Static member variable
+};
+
+// Initialize the static member variable outside the class definition
+int Counter::count = 0;
+
+int main() {
+  std::cout &lt;&lt; "Initial count: " &lt;&lt; Counter::getCount() &lt;&lt; std::endl;
+
+  Counter c1;
+  std::cout &lt;&lt; "Count after c1 creation: " &lt;&lt; Counter::getCount() &lt;&lt; std::endl;
+
+  Counter c2;
+  std::cout &lt;&lt; "Count after c2 creation: " &lt;&lt; Counter::getCount() &lt;&lt; std::endl;
+
+  {
+    Counter c3;
+    std::cout &lt;&lt; "Count inside block: " &lt;&lt; Counter::getCount() &lt;&lt; std::endl;
+  } // c3 destructor is called here
+
+  std::cout &lt;&lt; "Count after block ends: " &lt;&lt; Counter::getCount() &lt;&lt; std::endl;
+
+  return 0; // c2 and c1 destructors are called here
+}
+        </code>
+        <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+    </pre>
+    <div class="output">
+        <code>
+Initial count: 0
+Count after c1 creation: 1
+Count after c2 creation: 2
+Count inside block: 3
+Count after block ends: 2
+        </code>
+    </div>
+    <p class="explanation"><strong>Explanation:</strong></p>
+    <ul class="explanation">
+        <li><code>count</code> is a static private member variable of the <code>Counter</code> class. It is initialized to 0 outside the class definition.</li>
+        <li>Each time a <code>Counter</code> object is created, the constructor increments the static <code>count</code>. Each time a <code>Counter</code> object is destroyed, the destructor decrements <code>count</code>.</li>
+        <li><code>getCount()</code> is a static public member function that returns the current value of <code>count</code>. You can call it using the class name (<code>Counter::getCount()</code>) without needing to create an object of the <code>Counter</code> class.</li>
+        <li>The output shows how the single static <code>count</code> variable is shared and updated across all instances of the <code>Counter</code> class.</li>
+    </ul>
+
+    <h3>Friend Functions/Classes</h3>
+    <p class="explanation">The <code>friend</code> keyword allows a non-member function or another class to access the private and protected members of a class. This can be useful in specific scenarios where you need closer cooperation between different parts of your code while still maintaining some level of encapsulation.</p>
+    <ul class="explanation">
+        <li><strong>Friend Function:</strong> A regular (non-member) function that is declared as a <code>friend</code> inside a class. It can                   
+            then access the private and protected members of objects of that class. Friend functions are not called using the object and the dot operator (like member functions).</li>
+            <li><strong>Friend Class:</strong> A class that is declared as a <code>friend</code> inside another class. All member functions of the friend class can then access the private and protected members of objects of the class that declared it as a friend. Friendships are not mutual or transitive. If class A is a friend of class B, it doesn't mean class B is a friend of class A, and if class A is a friend of B, and B is a friend of C, it doesn't mean A is a friend of C.</li>
+        </ul>
+    
+        <h4>C++ Example:</h4>
+        <pre>
+            <code>
+    #include &lt;iostream&gt;
+    
+    class Box {
+    private:
+      double width;
+    
+    public:
+      Box(double w) : width(w) {}
+    
+      // Friend function declaration
+      friend void printWidth(const Box& b);
+    };
+    
+    // Definition of the friend function (not a member of Box)
+    void printWidth(const Box& b) {
+      // This function can access the private member 'width' of Box objects
+      std::cout &lt;&lt; "Width of the box: " &lt;&lt; b.width &lt;&lt; std::endl;
+    }
+    
+    class AnotherClass {
+    public:
+      void modifyBox(Box& b, double newWidth) {
+        // Cannot access b.width directly because AnotherClass is not a friend (yet)
+        // b.width = newWidth; // Error: 'Box::width' is private
+      }
+    };
+    
+    class FriendClass {
+    public:
+      void modifyBox(Box& b, double newWidth) {
+        // Can access b.width because FriendClass is declared as a friend of Box
+        b.width = newWidth;
+        std::cout &lt;&lt; "FriendClass modified box width to: " &lt;&lt; b.width &lt;&lt; std::endl;
+      }
+    };
+    
+    class BoxWithFriendClass {
+    private:
+      double height;
+    
+      // Declare FriendClass as a friend
+      friend class FriendClass;
+    
+    public:
+      BoxWithFriendClass(double h) : height(h) {}
+    
+      void displayHeight() const {
+        std::cout &lt;&lt; "Height of the box: " &lt;&lt; height &lt;&lt; std::endl;
+      }
+    };
+    
+    int main() {
+      Box myBox(15.0);
+      printWidth(myBox);
+    
+      FriendClass fc;
+      BoxWithFriendClass boxWithFriend(20.0);
+      boxWithFriend.displayHeight();
+      fc.modifyBox(boxWithFriend, 25.0);
+      boxWithFriend.displayHeight();
+    
+      return 0;
+    }
+            </code>
+            <button class="copy-button" onclick="copyCode(this)">Copy Code</button>
+        </pre>
+        <div class="output">
+            <code>
+    Width of the box: 15
+    Height of the box: 20
+    FriendClass modified box width to: 25
+    Height of the box: 25
+            </code>
+        </div>
+        <p class="explanation"><strong>Explanation:</strong></p>
+        <ul class="explanation">
+            <li>In the <code>Box</code> class, <code>printWidth</code> is declared as a <code>friend</code> function. This allows <code>printWidth</code> to access the private member <code>width</code> of <code>Box</code> objects. <code>printWidth</code> is a regular function, not a member of <code>Box</code>, so it's called directly with a <code>Box</code> object as an argument.</li>
+            <li>The <code>AnotherClass</code> cannot directly access the private <code>width</code> of a <code>Box</code> object because it is not declared as a friend.</li>
+            <li>In the <code>BoxWithFriendClass</code>, <code>FriendClass</code> is declared as a <code>friend</code>. This means that all member functions of <code>FriendClass</code> can access the private members (like <code>height</code>) of <code>BoxWithFriendClass</code> objects. The <code>modifyBox</code> function in <code>FriendClass</code> demonstrates this by directly modifying the <code>height</code>.</li>
+        </ul>
+        <p class="explanation">Friendships should be used judiciously as they can weaken the encapsulation of a class. They are typically employed when there is a close logical relationship between classes or functions that warrants this level of access.</p>
+    
+        <p class="explanation">This detailed explanation covers the fundamental concepts of Object-Oriented Programming in C++. Understanding and applying these principles will enable you to design and implement more complex, modular, and maintainable software systems. Remember to practice these concepts with various examples to solidify your grasp.</p>
+    
+        
+
+    <h1>Encapsulation and Inheritance in C++</h1>
+
+    <p>Encapsulation and inheritance are two fundamental pillars of Object-Oriented Programming (OOP) in C++. They help in organizing code, promoting reusability, and managing complexity.</p>
+
+    <h2>Encapsulation</h2>
+    <p>Encapsulation is the mechanism of bundling data (attributes) and the methods (functions) that operate on that data into a single unit called a class. It also involves controlling the access to the internal details of an object, often through access modifiers.</p>
+
+    <h3>Benefits of Encapsulation</h3>
+    <ul>
+        <li><strong>Data Hiding:</strong> Protects the internal state of an object by restricting direct access from outside the class.</li>
+        <li><strong>Modularity:</strong> Makes the code more organized and easier to understand.</li>
+        <li><strong>Flexibility:</strong> Allows you to change the internal implementation of a class without affecting the code that uses it (as long as the public interface remains the same).</li>
+        <li><strong>Code Reusability:</strong> Well-encapsulated classes can be reused in different parts of the program or in other programs.</li>
+    </ul>
+
+    <h3>Access Modifiers</h3>
+    <p>C++ provides access modifiers to control the visibility of class members:</p>
+    <ul>
+        <li><code>public</code>: Members are accessible from anywhere.</li>
+        <li><code>private</code>: Members are accessible only from within the same class.</li>
+        <li><code>protected</code>: Members are accessible from within the same class and its derived classes.</li>
+    </ul>
+
+    <h3>Example of Encapsulation</h3>
+    <pre><code id="encapsulationCode">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class BankAccount {
+private:
+    std::string accountNumber;
+    double balance;
+
+public:
+    // Constructor to initialize the account
+    BankAccount(std::string accNum, double initialBalance) : accountNumber(accNum), balance(initialBalance) {}
+
+    // Public methods to interact with the account
+    std::string getAccountNumber() const {
+        return accountNumber;
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+
+    void deposit(double amount) {
+        if (amount &gt; 0) {
+            balance += amount;
+            std::cout &lt;&lt; "Deposit of $" &lt;&lt; amount &lt;&lt; " successful. New balance: $" &lt;&lt; balance &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "Invalid deposit amount." &lt;&lt; std::endl;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount &gt; 0 && balance &gt;= amount) {
+            balance -= amount;
+            std::cout &lt;&lt; "Withdrawal of $" &lt;&lt; amount &lt;&lt; " successful. New balance: $" &lt;&lt; balance &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "Insufficient balance or invalid withdrawal amount." &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    BankAccount account1("123456", 1000.0);
+    std::cout &lt;&lt; "Account Number: " &lt;&lt; account1.getAccountNumber() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Current Balance: $" &lt;&lt; account1.getBalance() &lt;&lt; std::endl;
+
+    account1.deposit(500.0);
+    account1.withdraw(200.0);
+    account1.withdraw(2000.0); // Attempt to withdraw more than balance
+
+    // account1.balance = -500; // Error! 'balance' is private and cannot be accessed directly
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('encapsulationCode')">Copy Code</button></pre>
+    <div class="output">
+        Account Number: 123456<br>
+        Current Balance: $1000<br>
+        Deposit of $500 successful. New balance: $1500<br>
+        Withdrawal of $200 successful. New balance: $1300<br>
+        Insufficient balance or invalid withdrawal amount.
+    </div>
+    <p>In this example, the <code>BankAccount</code> class encapsulates the <code>accountNumber</code> and <code>balance</code> (private data members) along with the methods (<code>deposit</code>, <code>withdraw</code>, <code>getBalance</code>, <code>getAccountNumber</code> - public member functions) that operate on this data. The private members cannot be accessed directly from outside the class, ensuring the integrity of the account's state.</p>
+
+    <h2>Inheritance</h2>
+    <p>Inheritance is a mechanism in OOP where a new class (derived class or subclass) inherits properties and behaviors (data members and member functions) from an existing class (base class or superclass). This promotes code reusability and the creation of hierarchical relationships between classes.</p>
+
+    <h3>Key Concepts of Inheritance</h3>
+    <ul>
+        <li><strong>Base Class (Superclass):</strong> The class whose properties are inherited.</li>
+        <li><strong>Derived Class (Subclass):</strong> The class that inherits from the base class. It can add new members or override the inherited ones.</li>
+        <li><strong><code>public</code>, <code>protected</code>, and <code>private</code> Inheritance:</strong> Control the access level of inherited members in the derived class.
+            <ul>
+                <li><code>public</code> inheritance: Public members of the base class remain public in the derived class, and protected members remain protected.</li>
+                <li><code>protected</code> inheritance: Public and protected members of the base class become protected in the derived class.</li>
+                <li><code>private</code> inheritance: Public and protected members of the base class become private in the derived class.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Example of Inheritance</h3>
+    <pre><code id="inheritanceCode">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// Base class: Shape
+class Shape {
+public:
+    Shape(std::string color) : color_(color) {}
+    std::string getColor() const { return color_; }
+    virtual double area() const { return 0.0; } // Virtual function for potential overriding
+    virtual void display() const {
+        std::cout &lt;&lt; "Color: " &lt;&lt; color_ &lt;&lt; ", Area: " &lt;&lt; area() &lt;&lt; std::endl;
+    }
+
+protected:
+    std::string color_;
+};
+
+// Derived class: Circle
+class Circle : public Shape {
+private:
+    double radius_;
+
+public:
+    Circle(std::string color, double radius) : Shape(color), radius_(radius) {}
+    double area() const override { return 3.14159 * radius_ * radius_; }
+    void display() const override {
+        std::cout &lt;&lt; "Circle - Color: " &lt;&lt; color_ &lt;&lt; ", Radius: " &lt;&lt; radius_ &lt;&lt; ", Area: " &lt;&lt; area() &lt;&lt; std::endl;
+    }
+};
+
+// Derived class: Rectangle
+class Rectangle : public Shape {
+private:
+    double width_;
+    double height_;
+
+public:
+    Rectangle(std::string color, double width, double height) : Shape(color), width_(width), height_(height) {}
+    double area() const override { return width_ * height_; }
+    void display() const override {
+        std::cout &lt;&lt; "Rectangle - Color: " &lt;&lt; color_ &lt;&lt; ", Width: " &lt;&lt; width_ &lt;&lt; ", Height: " &lt;&lt; height_ &lt;&lt; ", Area: " &lt;&lt; area() &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Circle circle("Red", 5.0);
+    Rectangle rectangle("Blue", 4.0, 6.0);
+
+    circle.display();
+    rectangle.display();
+
+    std::cout &lt;&lt; "Circle Area: " &lt;&lt; circle.area() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Rectangle Area: " &lt;&lt; rectangle.area() &lt;&lt; std::endl;
+
+    return 0;
+}
+</code><button class="copy-button" onclick="copyCode('inheritanceCode')">Copy Code</button></pre>
+    <div class="output">
+        Circle - Color: Red, Radius: 5, Area: 78.5398<br>
+        Rectangle - Color: Blue, Width: 4, Height: 6, Area: 24<br>
+        Circle Area: 78.5398<br>
+        Rectangle Area: 24
+    </div>
+    <p>In this example:</p>
+    <ul>
+        <li><code>Shape</code> is the base class with a <code>color_</code> attribute and virtual functions <code>area()</code> and <code>display()</code>.</li>
+        <li><code>Circle</code> and <code>Rectangle</code> are derived classes that inherit from <code>Shape</code> using <code>public</code> inheritance. They inherit the <code>color_</code> attribute and the <code>getColor()</code> method.</li>
+        <li>Both <code>Circle</code> and <code>Rectangle</code> override the <code>area()</code> and <code>display()</code> methods to provide specific implementations for their shapes.</li>
+    </ul>
+    <p>Inheritance allows us to reuse the common properties and behaviors of the <code>Shape</code> class in the <code>Circle</code> and <code>Rectangle</code> classes, while also allowing them to have their own unique characteristics and implementations.</p>
+
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const code = codeElement.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy code: ', err);
+            });
+        }
+    </script>
+
+        <script>
+            function copyCode(button) {
+                const pre = button.parentNode;
+                const code = pre.querySelector('code');
+                const range = document.createRange();
+                range.selectNode(code);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                alert('Code copied!');
+            }
+        </script>
+                  
+
+
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Functions-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Memory-Management-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

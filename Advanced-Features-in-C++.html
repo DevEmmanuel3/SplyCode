@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Advanced Features in C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Explanation and examples of advanced C++ features including templates, the Standard Template Library (STL), move semantics, and lambda expressions.">
+    <meta name="keywords" content="C++, advanced features, templates, function templates, class templates, template specialization, STL, Standard Template Library, containers, vector, list, map, unordered_map, set, algorithms, sort, searching, lambda predicates, iterators, move semantics, rvalue references, std::move, move constructors, move assignment, lambda expressions, capture clauses">
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Memory-Management-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Exception-Handling-in-C++.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Advanced Features in  C++ </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                       
+                            <style>
+                                
+                                h2, h3 {
+                                    color: #333;
+                                }
+                                pre {
+                                    background-color: #f4f4f4;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    overflow-x: auto;
+                                    position: relative;
+                                }
+                                code {
+                                    font-family: monospace;
+                                }
+                                .output {
+                                    background-color: #e9e9e9;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    margin-top: 5px;
+                                    margin-bottom: 15px;
+                                    font-family: monospace;
+                                }
+                                .copy-button {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    border: none;
+                                    padding: 5px 10px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    border-radius: 3px;
+                                }
+                                .copy-button:hover {
+                                    background-color: #45a049;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <h1>Advanced C++ Features</h1>
+                        
+                            <p>C++ offers several advanced features that enhance code flexibility, efficiency, and expressiveness. Let's explore templates, the Standard Template Library (STL), move semantics, and lambda expressions.</p>
+                        
+                            <h2>Templates</h2>
+                            <p>Templates are a powerful feature in C++ that allows you to write generic functions and classes that can work with different data types without having to rewrite the code for each type.</p>
+                        
+                            <h3>Function Templates</h3>
+                            <p>Function templates define a family of functions. You can use them to create functions that perform the same operation on different types of data.</p>
+                            <pre><code id="functionTemplateCode">#include &lt;iostream&gt;
+                        
+                        template &lt;typename T&gt;
+                        T max(T a, T b) {
+                            return (a &gt; b) ? a : b;
+                        }
+                        
+                        int main() {
+                            std::cout &lt;&lt; "Max of 5 and 10: " &lt;&lt; max(5, 10) &lt;&lt; std::endl;
+                            std::cout &lt;&lt; "Max of 5.2 and 3.7: " &lt;&lt; max(5.2, 3.7) &lt;&lt; std::endl;
+                            std::cout &lt;&lt; "Max of 'a' and 'c': " &lt;&lt; max('a', 'c') &lt;&lt; std::endl;
+                            std::cout &lt;&lt; "Max of strings 'hello' and 'world': " &lt;&lt; max(std::string("hello"), std::string("world")) &lt;&lt; std::endl;
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('functionTemplateCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Max of 5 and 10: 10<br>
+                                Max of 5.2 and 3.7: 5.2<br>
+                                Max of 'a' and 'c': c<br>
+                                Max of strings 'hello' and 'world': world
+                            </div>
+                        
+                            <h3>Class Templates</h3>
+                            <p>Class templates define a family of classes. They are useful for creating generic classes like containers that can hold elements of any type.</p>
+                            <pre><code id="classTemplateCode">#include &lt;iostream&gt;
+                        #include &lt;vector&gt;
+                        
+                        template &lt;typename T&gt;
+                        class MyVector {
+                        private:
+                            std::vector&lt;T&gt; data;
+                        public:
+                            void push_back(const T&amp; value) {
+                                data.push_back(value);
+                            }
+                            T get(size_t index) const {
+                                if (index &lt; data.size()) {
+                                    return data[index];
+                                }
+                                throw std::out_of_range("Index out of bounds");
+                            }
+                            size_t size() const {
+                                return data.size();
+                            }
+                        };
+                        
+                        int main() {
+                            MyVector&lt;int&gt; intVector;
+                            intVector.push_back(10);
+                            intVector.push_back(20);
+                            std::cout &lt;&lt; "Integer vector size: " &lt;&lt; intVector.size() &lt;&lt; ", Element at 0: " &lt;&lt; intVector.get(0) &lt;&lt; std::endl;
+                        
+                            MyVector&lt;std::string&gt; stringVector;
+                            stringVector.push_back("apple");
+                            stringVector.push_back("banana");
+                            std::cout &lt;&lt; "String vector size: " &lt;&lt; stringVector.size() &lt;&lt; ", Element at 1: " &lt;&lt; stringVector.get(1) &lt;&lt; std::endl;
+                        
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('classTemplateCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Integer vector size: 2, Element at 0: 10<br>
+                                String vector size: 2, Element at 1: banana
+                            </div>
+                        
+                            <h3>Template Specialization</h3>
+                            <p>Template specialization allows you to provide a specific implementation of a template for a particular data type. This is useful when the generic implementation doesn't work well or isn't efficient for a certain type.</p>
+                            <pre><code id="templateSpecializationCode">#include &lt;iostream&gt;
+                        #include &lt;string&gt;
+                        
+                        template &lt;typename T&gt;
+                        struct Printer {
+                            void print(const T&amp; value) {
+                                std::cout &lt;&lt; "Generic print: " &lt;&lt; value &lt;&lt; std::endl;
+                            }
+                        };
+                        
+                        // Specialization for std::string
+                        template &lt;&gt;
+                        struct Printer&lt;std::string&gt; {
+                            void print(const std::string&amp; value) {
+                                std::cout &lt;&lt; "String print: \"" &lt;&lt; value &lt;&lt; "\"" &lt;&lt; std::endl;
+                            }
+                        };
+                        
+                        int main() {
+                            Printer&lt;int&gt; intPrinter;
+                            intPrinter.print(123);
+                        
+                            Printer&lt;std::string&gt; stringPrinter;
+                            stringPrinter.print("hello");
+                        
+                            Printer&lt;double&gt; doublePrinter;
+                            doublePrinter.print(3.14);
+                        
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('templateSpecializationCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Generic print: 123<br>
+                                String print: "hello"<br>
+                                Generic print: 3.14
+                            </div>
+                        
+                            <h2>STL (Standard Template Library)</h2>
+                            <p>The STL is a powerful set of template classes and functions that provide common programming data structures and algorithms. It consists of containers, algorithms, and iterators.</p>
+                        
+                            <h3>Containers</h3>
+                            <p>Containers are template classes that store collections of objects.</p>
+                            <ul>
+                                <li><code>vector</code>: A dynamic array that can grow or shrink as needed.</li>
+                                <li><code>list</code>: A doubly-linked list that supports efficient insertion and deletion.</li>
+                                <li><code>map</code>: An associative container that stores key-value pairs, sorted by key.</li>
+                                <li><code>unordered_map</code>: An associative container that stores key-value pairs, allowing fast average-case lookup based on hash values of the keys.</li>
+                                <li><code>set</code>: A container that stores unique elements, sorted by value.</li>
+                                <li><code>unordered_set</code>: A container that stores unique elements, allowing fast average-case lookup based on hash values of the elements.</li>
+                                </ul>
+                            <pre><code id="stlContainersCode">#include &lt;iostream&gt;
+                        #include &lt;vector&gt;
+                        #include &lt;list&gt;
+                        #include &lt;map&gt;
+                        #include &lt;unordered_map&gt;
+                        #include &lt;set&gt;
+                        #include &lt;unordered_set&gt;
+                        
+                        int main() {
+                            std::vector&lt;int&gt; vec = {1, 2, 3};
+                            std::cout &lt;&lt; "Vector: "; for (int x : vec) std::cout &lt;&lt; x &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::list&lt;int&gt; lst = {3, 2, 1};
+                            std::cout &lt;&lt; "List: "; for (int x : lst) std::cout &lt;&lt; x &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::map&lt;std::string, int&gt; mp = {{"apple", 1}, {"banana", 2}};
+                            std::cout &lt;&lt; "Map: "; for (const auto&amp; pair : mp) std::cout &lt;&lt; pair.first &lt;&lt; ":" &lt;&lt; pair.second &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::unordered_map&lt;std::string, int&gt; ump = {{"apple", 1}, {"banana", 2}};
+                            std::cout &lt;&lt; "Unordered Map: "; for (const auto&amp; pair : ump) std::cout &lt;&lt; pair.first &lt;&lt; ":" &lt;&lt; pair.second &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::set&lt;int&gt; s = {3, 1, 2};
+                            std::cout &lt;&lt; "Set: "; for (int x : s) std::cout &lt;&lt; x &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::unordered_set&lt;int&gt; us = {3, 1, 2};
+                            std::cout &lt;&lt; "Unordered Set: "; for (int x : us) std::cout &lt;&lt; x &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('stlContainersCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Vector: 1 2 3 <br>
+                                List: 3 2 1 <br>
+                                Map: apple:1 banana:2 <br>
+                                Unordered Map: banana:2 apple:1 <br>
+                                Set: 1 2 3 <br>
+                                Unordered Set: 2 1 3 <br>
+                            </div>
+                       <br>     <div id="ad-container2" ></div> <br>                
+
+                            <h3>Algorithms</h3>
+                            <p>The STL provides a rich set of generic algorithms that operate on ranges of elements defined by iterators. These algorithms can perform operations like sorting, searching, transforming, and more.</p>
+                            <pre><code id="stlAlgorithmsCode">#include &lt;iostream&gt;
+                        #include &lt;vector&gt;
+                        #include &lt;algorithm&gt;
+                        #include &lt;functional&gt; // For std::greater
+                        
+                        int main() {
+                            std::vector&lt;int&gt; numbers = {5, 1, 4, 2, 8};
+                        
+                            std::sort(numbers.begin(), numbers.end());
+                            std::cout &lt;&lt; "Sorted (ascending): "; for (int n : numbers) std::cout &lt;&lt; n &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            std::sort(numbers.begin(), numbers.end(), std::greater&lt;int&gt;());
+                            std::cout &lt;&lt; "Sorted (descending): "; for (int n : numbers) std::cout &lt;&lt; n &lt;&lt; " "; std::cout &lt;&lt; std::endl;
+                        
+                            auto it = std::find(numbers.begin(), numbers.end(), 4);
+                            if (it != numbers.end()) {
+                                std::cout &lt;&lt; "Found 4 at index: " &lt;&lt; std::distance(numbers.begin(), it) &lt;&lt; std::endl;
+                            }
+                        
+                            // Lambda predicate to find even numbers
+                            auto even_it = std::find_if(numbers.begin(), numbers.end(), [](int n){ return n % 2 == 0; });
+                            if (even_it != numbers.end()) {
+                                std::cout &lt;&lt; "Found first even number: " &lt;&lt; *even_it &lt;&lt; std::endl;
+                            }
+                        
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('stlAlgorithmsCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Sorted (ascending): 1 2 4 5 8 <br>
+                                Sorted (descending): 8 5 4 2 1 <br>
+                                Found 4 at index: 2<br>
+                                Found first even number: 8
+                            </div>
+                        
+                            <h3>Iterators</h3>
+                            <p>Iterators are objects that provide a way to access the elements of a container sequentially. They act like pointers but are generalized to work with different container types.</p>
+                            <ul>
+                                <li>Input iterators: Can be used to read elements from a sequence.</li>
+                                <li>Output iterators: Can be used to write elements to a sequence.</li>
+                                <li>Forward iterators: Combine the functionality of input and output iterators and can traverse a sequence multiple times in the same direction.</li>
+                                <li>Bidirectional iterators: Can move both forward and backward through a sequence.</li>
+                                <li>Random-access iterators: Provide all the capabilities of bidirectional iterators and also allow direct access to any element using pointer arithmetic.</li>
+                            </ul>
+                            <pre><code id="stlIteratorsCode">#include &lt;iostream&gt;
+                        #include &lt;vector&gt;
+                        
+                        int main() {
+                            std::vector&lt;int&gt; numbers = {10, 20, 30, 40};
+                        
+                            // Using an iterator to traverse the vector
+                            std::cout &lt;&lt; "Elements using iterator: ";
+                            for (std::vector&lt;int&gt;::iterator it = numbers.begin(); it != numbers.end(); ++it) {
+                                std::cout &lt;&lt; *it &lt;&lt; " ";
+                            }
+                            std::cout &lt;&lt; std::endl;
+                        
+                            // Using a const iterator for read-only access
+                            std::cout &lt;&lt; "Elements using const iterator: ";
+                            for (std::vector&lt;int&gt;::const_iterator cit = numbers.cbegin(); cit != numbers.cend(); ++cit) {
+                                std::cout &lt;&lt; *cit &lt;&lt; " ";
+                            }
+                            std::cout &lt;&lt; std::endl;
+                        
+                            // Using range-based for loop (which uses iterators internally)
+                            std::cout &lt;&lt; "Elements using range-based for loop: ";
+                            for (int num : numbers) {
+                                std::cout &lt;&lt; num &lt;&lt; " ";
+                            }
+                            std::cout &lt;&lt; std::endl;
+                        
+                            return 0;
+                        }
+                        </code><button class="copy-button" onclick="copyCode('stlIteratorsCode')">Copy Code</button></pre>
+                            <div class="output">
+                                Elements using iterator: 10 20 30 40 <br>
+                                Elements using const iterator: 10 20 30 40 <br>
+                                Elements using range-based for loop: 10 20 30 40 <br>
+                            </div>
+                        
+                            <h2>Move Semantics (C++11+)</h2>
+                            <p>Move semantics is a feature introduced in C++11 that allows the transfer of ownership of resources (like dynamically allocated memory) from one object to another, avoiding unnecessary copying and improving performance, especially for objects
+                                that hold significant amounts of data.</p>
+
+                                <h3>Rvalue References (<code>&&</code>)</h3>
+                                <p>Rvalue references are a new type of reference that can bind to rvalues (temporary objects or values that are about to expire). This allows move constructors and move assignment operators to "steal" the resources of rvalue objects.</p>
+                            
+                                <h3><code>std::move</code></h3>
+                                <p><code>std::move</code> is a utility function that converts an lvalue (a named object) into an rvalue reference. It doesn't actually move anything; it just allows the object to be treated as an rvalue so that move operations can be applied.</p>
+                            
+                                <h3>Move Constructors and Move Assignment Operators</h3>
+                                <p>Move constructors and move assignment operators are special member functions that define how an object of a class should be created or assigned from an rvalue reference. Instead of copying the data, they typically transfer the ownership of the underlying resources.</p>
+                                <pre><code id="moveSemanticsCode">#include &lt;iostream&gt;
+                            #include &lt;vector&gt;
+                            #include &lt;string&gt;
+                            
+                            class MyString {
+                            private:
+                                char* data;
+                                size_t length;
+                            
+                            public:
+                                // Constructor
+                                MyString(const char* str = "") : length(std::strlen(str)) {
+                                    data = new char[length + 1];
+                                    std::strcpy(data, str);
+                                    std::cout &lt;&lt; "Constructor called for: \"" &lt;&lt; data &lt;&lt; "\"" &lt;&lt; std::endl;
+                                }
+                            
+                                // Copy constructor
+                                MyString(const MyString&amp; other) : length(other.length) {
+                                    data = new char[length + 1];
+                                    std::strcpy(data, other.data);
+                                    std::cout &lt;&lt; "Copy constructor called for: \"" &lt;&lt; data &lt;&lt; "\"" &lt;&lt; std::endl;
+                                }
+                            
+                                // Move constructor
+                                MyString(MyString&amp;&amp; other) noexcept : data(other.data), length(other.length) {
+                                    other.data = nullptr;
+                                    other.length = 0;
+                                    std::cout &lt;&lt; "Move constructor called for: \"" &lt;&lt; data &lt;&lt; "\"" &lt;&lt; std::endl;
+                                }
+                            
+                                // Copy assignment operator
+                                MyString&amp; operator=(const MyString&amp; other) {
+                                    std::cout &lt;&lt; "Copy assignment called for: \"" &lt;&lt; other.data &lt;&lt; "\"" &lt;&lt; std::endl;
+                                    if (this != &amp;other) {
+                                        delete[] data;
+                                        length = other.length;
+                                        data = new char[length + 1];
+                                        std::strcpy(data, other.data);
+                                    }
+                                    return *this;
+                                }
+                            
+                                // Move assignment operator
+                                MyString&amp; operator=(MyString&amp;&amp; other) noexcept {
+                                    std::cout &lt;&lt; "Move assignment called for: \"" &lt;&lt; other.data &lt;&lt; "\"" &lt;&lt; std::endl;
+                                    if (this != &amp;other) {
+                                        delete[] data;
+                                        data = other.data;
+                                        length = other.length;
+                                        other.data = nullptr;
+                                        other.length = 0;
+                                    }
+                                    return *this;
+                                }
+                            
+                                // Destructor
+                                ~MyString() {
+                                    std::cout &lt;&lt; "Destructor called for: \"" &lt;&lt; (data ? data : "nullptr") &lt;&lt; "\"" &lt;&lt; std::endl;
+                                    delete[] data;
+                                }
+                            
+                                const char* c_str() const {
+                                    return data;
+                                }
+                                size_t size() const {
+                                    return length;
+                                }
+                            };
+                            
+                            MyString getString() {
+                                MyString temp("Hello from function");
+                                return temp; // Returns by value, move constructor will be used if available
+                            }
+                            
+                            int main() {
+                                MyString s1 = "Initial string";
+                                MyString s2 = s1; // Copy constructor
+                                MyString s3 = getString(); // Move constructor
+                            
+                                std::cout &lt;&lt; "s1: " &lt;&lt; s1.c_str() &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "s2: " &lt;&lt; s2.c_str() &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "s3: " &lt;&lt; s3.c_str() &lt;&lt; ", size: " &lt;&lt; s3.size() &lt;&lt; std::endl;
+                            
+                                MyString s4 = "Another string";
+                                s4 = s1; // Copy assignment
+                                MyString s5 = "Yet another";
+                                s5 = getString(); // Move assignment
+                            
+                                std::cout &lt;&lt; "s4: " &lt;&lt; s4.c_str() &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "s5: " &lt;&lt; s5.c_str() &lt;&lt; std::endl;
+                            
+                                MyString s6 = std::move(s1); // Explicitly move from s1
+                                std::cout &lt;&lt; "s6: " &lt;&lt; s6.c_str() &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "s1 after move: " &lt;&lt; (s1.c_str() ? s1.c_str() : "nullptr") &lt;&lt; std::endl;
+                            
+                                return 0;
+                            }
+                            </code><button class="copy-button" onclick="copyCode('moveSemanticsCode')">Copy Code</button></pre>
+                            <br>     <div id="ad-container3" ></div> <br>                
+
+                            <div class="output">
+                                    Constructor called for: "Initial string"<br>
+                                    Copy constructor called for: "Initial string"<br>
+                                    Constructor called for: "Hello from function"<br>
+                                    Move constructor called for: "Hello from function"<br>
+                                    Destructor called for: "Hello from function"<br>
+                                    s1: Initial string<br>
+                                    s2: Initial string<br>
+                                    s3: Hello from function, size: 19<br>
+                                    Constructor called for: "Another string"<br>
+                                    Copy assignment called for: "Initial string"<br>
+                                    Destructor called for: "Another string"<br>
+                                    Constructor called for: "Yet another"<br>
+                                    Constructor called for: "Hello from function"<br>
+                                    Move assignment called for: "Hello from function"<br>
+                                    Destructor called for: "Hello from function"<br>
+                                    Destructor called for: "Yet another"<br>
+                                    s4: Initial string<br>
+                                    s5: Hello from function<br>
+                                    Move constructor called for: "Initial string"<br>
+                                    Destructor called for: "Initial string"<br>
+                                    s6: Initial string<br>
+                                    s1 after move: nullptr<br>
+                                    Destructor called for: "Initial string"<br>
+                                    Destructor called for: "Initial string"<br>
+                                    Destructor called for: "Hello from function"<br>
+                                    Destructor called for: "Initial string"<br>
+                                </div>
+                            
+                                <h2>Lambda Expressions (C++11+)</h2>
+                                <p>Lambda expressions (also known as lambda functions) provide a concise way to define anonymous function objects (functors) directly in the code where they are used. They are often used with STL algorithms.</p>
+                            
+                                <h3>Syntax</h3>
+                                <p>The basic syntax of a lambda expression is:</p>
+                                <pre><code>[capture-clause] (parameter-list) -&gt; return-type {
+                                // function body
+                            }</code></pre>
+                                <ul>
+                                    <li><code>capture-clause</code>: Specifies which variables from the surrounding scope are accessible inside the lambda and how (by value or by reference).</li>
+                                    <li><code>parameter-list</code>: A comma-separated list of parameters (like in a regular function).</li>
+                                    <li><code>return-type</code>: The return type of the lambda (can often be omitted, as it can be deduced by the compiler).</li>
+                                    <li><code>function body</code>: The code to be executed when the lambda is called.</li>
+                                </ul>
+                            
+                                <h3>Capture Clauses</h3>
+                                <ul>
+                                    <li><code>[]</code>: Captures nothing from the surrounding scope.</li>
+                                    <li><code>[=]</code>: Captures all automatic variables from the surrounding scope by value.</li>
+                                    <li><code>[&]</code>: Captures all automatic variables from the surrounding scope by reference.</li>
+                                    <li><code>[var]</code>: Captures <code>var</code> by value.</li>
+                                    <li><code>[&var]</code>: Captures <code>var</code> by reference.</li>
+                                    <li><code>[=, &var]</code>: Captures all automatic variables by value, but captures <code>var</code> by reference.</li>
+                                    <li><code>[&, var]</code>: Captures all automatic variables by reference, but captures <code>var</code> by value.</li>
+                                    <li><code>[this]</code>: Captures the <code>this</code> pointer by value (available in member functions).</li>
+                                </ul>
+                            
+                                <h3>Example of Lambda Expressions</h3>
+                                <pre><code id="lambdaExpressionsCode">#include &lt;iostream&gt;
+                            #include &lt;vector&gt;
+                            #include &lt;algorithm&gt;
+                            
+                            int main() {
+                                std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};
+                                int factor = 2;
+                            
+                                // Lambda that multiplies each number by factor (capture by value)
+                                std::cout &lt;&lt; "Multiplied by factor (by value): ";
+                                std::for_each(numbers.begin(), numbers.end(), [=](int&amp; n){
+                                    n *= factor;
+                                    std::cout &lt;&lt; n &lt;&lt; " ";
+                                });
+                                std::cout &lt;&lt; std::endl;
+                            
+                                // Reset numbers
+                                numbers = {1, 2, 3, 4, 5};
+                                factor = 2;
+                            
+                                // Lambda that multiplies each number by factor (capture by reference)
+                                std::cout &lt;&lt; "Multiplied by factor (by reference): ";
+                                std::for_each(numbers.begin(), numbers.end(), [&amp;](int&amp; n){
+                                    n *= factor;
+                                    std::cout &lt;&lt; n &lt;&lt; " ";
+                                });
+                                std::cout &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "Factor after lambda (by reference): " &lt;&lt; factor &lt;&lt; std::endl;
+                            
+                                // Lambda to check if a number is even
+                                auto is_even = [](int n){ return n % 2 == 0; };
+                                std::cout &lt;&lt; "Is 4 even? " &lt;&lt; std::boolalpha &lt;&lt; is_even(4) &lt;&lt; std::endl;
+                                std::cout &lt;&lt; "Is 3 even? " &lt;&lt; std::boolalpha &lt;&lt; is_even(3) &lt;&lt; std::endl;
+                            
+                                return 0;
+                            }
+                            </code><button class="copy-button" onclick="copyCode('lambdaExpressionsCode')">Copy Code</button></pre>
+                                <div class="output">
+                                    Multiplied by factor (by value): 2 4 6 8 10 <br>
+                                    Multiplied by factor (by reference): 2 4 6 8 10 <br>
+                                    Factor after lambda (by reference): 4<br>
+                                    Is 4 even? true<br>
+                                    Is 3 even? false
+                                </div>
+                            
+                                <p>These advanced features of C++ provide powerful tools for writing efficient, generic, and expressive code.</p>
+                            
+                                <script>
+                                    function copyCode(elementId) {
+                                        const codeElement = document.getElementById(elementId);
+                                        const code = codeElement.textContent;
+                                        navigator.clipboard.writeText(code).then(() => {
+                                            alert('Code copied to clipboard!');
+                                        }).catch(err => {
+                                            console.error('Failed to copy code: ', err);
+                                        });
+                                    }
+                                </script>
+                            
+
+
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Memory-Management-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Exception-Handling-in-C++.html"> Next page</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

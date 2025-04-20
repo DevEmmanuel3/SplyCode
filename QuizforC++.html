@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Quiz for C++| Sply Code</title>
+    <meta charset="utf-8">
+    <meta name="description" content="A beginner-friendly C++ quiz with multiple-choice questions to test fundamental concepts.">
+    <meta name="keywords" content="C++, quiz, beginner, programming, fundamentals, learning, practice">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="author" content="Emmanuel Alhassan">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+    <div id="ad-container1" ></div>                
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Debugging-&-Best-Practices-in-C++.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="TryPracticalQuestionsforC++.html"> Next</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="C++fullcourse.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">C++ Full Course</h1> <br>
+                    <h1 class="mb-4">Quiz </h1>
+                    <div style="text-align: left;" class="container1">
+                       
+                        
+                            <style>
+                                
+                                
+                                .question {
+                                    margin-bottom: 15px;
+                                    font-weight: bold;
+                                }
+                                .options label {
+                                    display: block;
+                                    margin-bottom: 8px;
+                                    cursor: pointer;
+                                }
+                                .options input[type="radio"] {
+                                    margin-right: 8px;
+                                }
+                                button {
+                                    background-color: #007bff;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 15px;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                }
+                                button:hover {
+                                    background-color: #0056b3;
+                                }
+                                #results {
+                                    margin-top: 20px;
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                }
+                                .correct {
+                                    color: green;
+                                }
+                                .incorrect {
+                                    color: red;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="quiz-container">
+                                <h1>C++ Beginner Quiz</h1>
+                                <div id="quiz">
+                                    </div>
+                                <button onclick="submitQuiz()">Submit Quiz</button>
+                                <div id="results"></div>
+                            </div>
+                        
+                            <script>
+                                const quizData = [
+                                    {
+                                        question: "What is the extension of a C++ source code file?",
+                                        options: [".cpp", ".h", ".obj", ".exe"],
+                                        correctAnswer: ".cpp"
+                                    },
+                                    {
+                                        question: "Which keyword is used to declare a variable?",
+                                        options: ["int", "variable", "declare", "var"],
+                                        correctAnswer: "int"
+                                    },
+                                    {
+                                        question: "What does cout stand for?",
+                                        options: ["Character output", "Console output", "Common output", "Command output"],
+                                        correctAnswer: "Console output"
+                                    },
+                                    {
+                                        question: "Which of the following is a valid integer data type?",
+                                        options: ["float", "double", "char", "int"],
+                                        correctAnswer: "int"
+                                    },
+                                    {
+                                        question: "What is the purpose of the '#' symbol at the beginning of a line in C++?",
+                                        options: ["Comment", "Preprocessor directive", "String literal", "Function definition"],
+                                        correctAnswer: "Preprocessor directive"
+                                    },
+                                    {
+                                        question: "Which operator is used for assignment in C++?",
+                                        options: ["==", "=", "+=", "->"],
+                                        correctAnswer: "="
+                                    },
+                                    {
+                                        question: "What does cin stand for?",
+                                        options: ["Character input", "Console input", "Common input", "Command input"],
+                                        correctAnswer: "Console input"
+                                    },
+                                    {
+                                        question: "Which of the following is a loop construct in C++?",
+                                        options: ["if", "else", "switch", "for"],
+                                        correctAnswer: "for"
+                                    },
+                                    {
+                                        question: "What is the role of the main() function in C++?",
+                                        options: ["Starting point of the program", "Ending point of the program", "Library function", "Class definition"],
+                                        correctAnswer: "Starting point of the program"
+                                    },
+                                    {
+                                        question: "Which keyword is used to define a function?",
+                                        options: ["class", "struct", "void", "main"],
+                                        correctAnswer: "void"
+                                    },
+                                    {
+                                        question: "What is a comment in C++ used for?",
+                                        options: ["To execute code", "To print output", "To explain code", "To declare variables"],
+                                        correctAnswer: "To explain code"
+                                    },
+                                    {
+                                        question: "Which of the following is a relational operator?",
+                                        options: ["=", "+", "*", "=="],
+                                        correctAnswer: "=="
+                                    },
+                                    {
+                                        question: "What is the purpose of the 'break' statement in a loop or switch statement?",
+                                        options: ["To start the loop", "To skip the next iteration", "To exit the loop or switch", "To define a variable"],
+                                        correctAnswer: "To exit the loop or switch"
+                                    },
+                                    {
+                                        question: "Which of the following is a logical operator?",
+                                        options: ["+", "-", "*", "&&"],
+                                        correctAnswer: "&&"
+                                    },
+                                    {
+                                        question: "What is the output of cout << 5 + 3 * 2;?",
+                                        options: ["16", "11", "10", "8"],
+                                        correctAnswer: "11"
+                                    },
+                                    {
+                                        question: "What is a string literal enclosed in?",
+                                        options: ["Single quotes", "Double quotes", "Angle brackets", "Parentheses"],
+                                        correctAnswer: "Double quotes"
+                                    },
+                                    {
+                                        question: "Which header file is typically included for input/output operations?",
+                                        options: ["stdio.h", "iostream", "string", "vector"],
+                                        correctAnswer: "iostream"
+                                    },
+                                    {
+                                        question: "What is the data type for true/false values in C++?",
+                                        options: ["int", "char", "bool", "string"],
+                                        correctAnswer: "bool"
+                                    },
+                                    {
+                                        question: "What is the purpose of the 'return 0;' statement in the main() function?",
+                                        options: ["To indicate successful execution", "To return a value to the operating system", "Both of the above", "To print 0 to the console"],
+                                        correctAnswer: "Both of the above"
+                                    },
+                                    {
+                                        question: "Which of the following is a valid way to declare an array of 5 integers?",
+                                        options: ["int arr;", "array[5] int;", "int arr[5];", "int[5] arr;"],
+                                        correctAnswer: "int arr[5];"
+                                    },
+                                    {
+                                        question: "What is a function prototype?",
+                                        options: ["The body of the function", "The return type and name of the function", "The declaration of the function without the body", "A call to the function"],
+                                        correctAnswer: "The declaration of the function without the body"
+                                    },
+                                    {
+                                        question: "What does pass by value mean?",
+                                        options: ["The original variable is modified", "A copy of the variable is passed to the function", "A pointer to the variable is passed", "No value is passed"],
+                                        correctAnswer: "A copy of the variable is passed to the function"
+                                    },
+                                    {
+                                        question: "What is a pointer?",
+                                        options: ["A variable that stores a value", "A variable that stores the address of another variable", "A function that returns an address", "A data type for memory addresses"],
+                                        correctAnswer: "A variable that stores the address of another variable"
+                                    },
+                                    {
+                                        question: "Which operator is used to get the address of a variable?",
+                                        options: ["*", "&", "->", "."],
+                                        correctAnswer: "&"
+                                    },
+                                    {
+                                        question: "What is the purpose of the 'new' keyword?",
+                                        options: ["To declare a new variable", "To allocate memory dynamically", "To create a new function", "To include a header file"],
+                                        correctAnswer: "To allocate memory dynamically"
+                                    },
+                                    {
+                                        question: "What is the purpose of the 'delete' keyword?",
+                                        options: ["To remove a variable", "To deallocate dynamically allocated memory", "To delete a function", "To exclude a header file"],
+                                        correctAnswer: "To deallocate dynamically allocated memory"
+                                    },
+                                    {
+                                        question: "What is a structure in C++?",
+                                        options: ["A collection of variables of the same data type", "A blueprint for creating objects", "A user-defined data type that can hold variables of different data types", "A type of loop"],
+                                        correctAnswer: "A user-defined data type that can hold variables of different data types"
+                                    },
+                                    {
+                                        question: "What is a class in C++?",
+                                        options: ["A collection of variables of the same data type", "A user-defined data type that can hold variables of different data types", "A blueprint for creating objects that can contain data and functions", "A type of conditional statement"],
+                                        correctAnswer: "A blueprint for creating objects that can contain data and functions"
+                                    },
+                                    {
+                                        question: "What is an object in C++?",
+                                        options: ["A class definition", "A function definition", "An instance of a class", "A data type"],
+                                        correctAnswer: "An instance of a class"
+                                    },
+                                    {
+                                        question: "What is the purpose of the 'public' access specifier in a class?",
+                                        options: ["Members are accessible only within the class", "Members are accessible only within derived classes", "Members are accessible from anywhere outside the class", "Members are not accessible"],
+                                        correctAnswer: "Members are accessible from anywhere outside the class"
+                                    }
+                                ];
+                        
+                                const quizContainer = document.getElementById('quiz');
+                                const resultsContainer = document.getElementById('results');
+                                const submitButton = document.querySelector('button');
+                        
+                                function displayQuiz() {
+                                    const output = [];
+                                    quizData.forEach((question, index) => {
+                                        const options = [];
+                                        for (const letter in question.options) {
+                                            options.push(
+                                                `<label>
+                                                    <input type="radio" name="question${index}" value="${question.options[letter]}">
+                                                    ${question.options[letter]}
+                                                </label>`
+                                            );
+                                        }
+                                        output.push(
+                                            `<div class="question">
+                                                ${index + 1}. ${question.question}
+                                                <div class="options">
+                                                    ${options.join('')}
+                                                </div>
+                                            </div>`
+                                        );
+                                    });
+                                    quizContainer.innerHTML = output.join('');
+                                }
+                        
+                                function submitQuiz() {
+                                    const answerContainers = quizContainer.querySelectorAll('.question');
+                                    let numCorrect = 0;
+                                    quizData.forEach((question, index) => {
+                                        const answerContainer = answerContainers[index];
+                                        const selector = `input[name=question${index}]:checked`;
+                                        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+                        
+                                        if (userAnswer === question.correctAnswer) {
+                                            numCorrect++;
+                                            answerContainer.classList.add('correct');
+                                            answerContainer.classList.remove('incorrect');
+                                        } else {
+                                            answerContainer.classList.add('incorrect');
+                                            answerContainer.classList.remove('correct');
+                                        }
+                                    });
+                                    resultsContainer.innerHTML = `You scored ${numCorrect} out of ${quizData.length}`;
+                                }
+                        
+                                displayQuiz();
+                            </script>
+                        
+
+
+
+
+                        
+    
+
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Debugging-&-Best-Practices-in-C++.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="TryPracticalQuestionsforC++.html"> Finish</a>
+    </div>    
+<br>    <div id="ad-container4" ></div>                <br><!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
