@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Foundations of Language Models and Prompting| Sply Code</title>
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the inner workings of Large Language Models (LLMs) and learn how they understand and process prompts. Master the anatomy of a prompt and discover techniques for writing clear, effective prompts.">
+    <meta name="keywords" content="LLM, large language models, prompt engineering, prompt anatomy, tokenization, embeddings, contextual understanding, effective prompts">
+  <meta name="author" content="Alhassan Emmanuel">
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <!-- Search Bar -->
+        <div id="searchResults"></div>
+    </nav>
+    <div id="ad-container1" ></div> 
+
+    <!-- Navbar End -->
+
+
+    <br>
+    <div style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Introduction-to-Prompt-Engineering.html">Go Back </a>  <br> <br>
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Techniques-to-Create-Better-Prompts.html"> Next page</a>
+          </div>
+          <div id="christ"> </div>
+
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div style="width: 100%;" class="col-lg-6">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Prompt-Engineering-full-course.html">Go Back Course Outline </a>  <br> <br>
+
+                    <h1 style="font-size:xx-large;" class="display-1">Prompt Engineering Full Course</h1> <br>
+                    <h1 class="mb-4">Foundations of Language Models and Prompting </h1>
+                    <div style="text-align: left;" class="container1">
+                        
+                        
+                        
+                            
+                            <div class="container">
+                        
+                                <h2>How Language Models Understand Prompts</h2>
+                                <p>
+                                    Large Language Models (LLMs) don't "understand" language in the same way humans do. They process text through a series of mathematical transformations, identifying patterns and relationships within the data they were trained on. Here's a breakdown of how they process prompts:
+                                </p>
+                                <ul>
+                                    <li><strong>Tokenization and embedding:</strong>
+                                        <ul>
+                                            <li><strong>Tokenization:</strong> The input prompt is broken down into smaller units called "tokens."  A token can be a word, a part of a word, or even a punctuation mark.  For example, the sentence "The quick brown fox" might be tokenized into ["The", "quick", "brown", "fox"].</li>
+                                            <li><strong>Embedding:</strong> Each token is then converted into a numerical representation called an "embedding."  Embeddings are vectors (lists of numbers) that capture the semantic meaning of the token.  Tokens with similar meanings have similar embeddings.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Contextual understanding:</strong>  LLMs use the embeddings to understand the context of the prompt.  They analyze the relationships between the tokens to determine the overall meaning and intent.  This involves complex calculations and attention mechanisms, allowing the model to weigh the importance of different words in the prompt.</li>
+                                    <li><strong>The "black box" and interpretability:</strong> While we can describe the general process, the exact workings of LLMs are often considered a "black box."  It's difficult to pinpoint precisely why a model generates a specific output for a given prompt.  Interpretability is an ongoing area of research, trying to understand how LLMs arrive at their conclusions.  However, for prompt engineering, we focus on the controllable input and observed output.</li>
+                                </ul>
+                        
+                                <h2>Anatomy of a Prompt</h2>
+                                <p>
+                                    A prompt isn't just a simple question; it's a structured input that provides the LLM with the information it needs to generate a desired response.  Here are the key components that make up a well-formed prompt:
+                                </p>
+                                <ul>
+                                    <li><strong>Instructions, context, examples, and delimiters:</strong>
+                                         <ul>
+                                            <li><strong>Instructions</strong>:  Clear and direct commands that tell the LLM what to do (e.g., "Summarize this article," "Translate this sentence").</li>
+                                            <li><strong>Context</strong>:  Background information that helps the LLM understand the task and the desired output (e.g., "You are a helpful customer service agent").</li>
+                                            <li><strong>Examples</strong>:  Demonstrate the desired output format or style (especially important for few-shot prompting).</li>
+                                             <li><strong>Delimiters</strong>: Special characters or formatting that help the LLM distinguish between different parts of the prompt (e.g., using triple quotes """ to separate context from instructions).</li>
+                                         </ul>
+                                    </li>
+                               <br>     <div id="ad-container2" ></div> <br>
+                                    <li><strong>Persona, role-play, and framing:</strong>
+                                        <ul>
+                                            <li><strong>Persona/Role-play</strong>:  Instructing the LLM to adopt a specific persona or role (e.g., "Act as a historical expert," "You are a software developer").</li>
+                                            <li><strong>Framing</strong>:  Presenting the prompt in a way that influences the LLM's response (e.g., framing a question as a problem to be solved).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Constraints, desired output format:</strong>  Specifying limitations or guidelines for the LLM's output.</li>
+                                </ul>
+                        
+                                <h2>Data Pre-Processing for Better Prompts</h2>
+                                <p>
+                                     While the prompt itself is the primary input, sometimes you might need to process external data before incorporating it into the prompt.  This ensures the LLM receives the cleanest and most relevant information.
+                                </p>
+                                <ul>
+                                    <li><strong>Cleaning and formatting input data:</strong>  Removing irrelevant information, correcting errors, and standardizing the format of external data before including it in the prompt.  For example, if you're using data from a spreadsheet, you might need to convert it to a consistent format.</li>
+                                    <li><strong>Data augmentation for prompts:</strong>  Creating variations of the input data to make the prompt more robust or to provide the LLM with more examples.</li>
+                                    <li><strong>Handling noise and inconsistencies:</strong>  Dealing with errors, inconsistencies, or ambiguities in the input data to prevent the LLM from being misled.</li>
+                                </ul>
+                                <br>     <div id="ad-container3" ></div> <br>
+
+                                <h2>Writing Clear and Effective Prompts</h2>
+                                <p>
+                                    The key to successful prompt engineering is writing prompts that are easy for the LLM to understand and follow. Here are some principles for crafting effective prompts:
+                                </p>
+                                <ul>
+                                    <li><strong>Clarity, conciseness, and specificity:</strong>  The prompt should be unambiguous, to the point, and focused on the desired outcome.  Avoid vague or open-ended questions.</li>
+                                    <li><strong>Positive vs. negative framing:</strong>  Phrasing the prompt in terms of what the LLM *should* do, rather than what it *shouldn't* do, often leads to better results.</li>
+                                    <li><strong>Iterative refinement:</strong>  Prompt engineering is an iterative process.  It often involves experimenting with different phrasings, formats, and examples to optimize the LLM's output.
+                                </ul>
+                            </div>
+                        
+                        
+                        
+                
+                      
+                       
+                        
+                       
+
+
+                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="Introduction-to-Prompt-Engineering.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="Techniques-to-Create-Better-Prompts.html"> Next page</a>
+    </div>    
+   <br> <div id="ad-container4" ></div> <br>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+<script src="ads.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

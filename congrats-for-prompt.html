@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Sply Code</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    
+    
+   
+    <!-- Favicon -->
+    <link href="img/faaa.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(2, 70, 172);
+            font-weight:bolder;
+            font-size: 18px;
+        }
+        pre{
+            text-align: left;
+            white-space: pre-line;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Sply Code</h2>
+        </a>
+        
+        <div class="search-container">
+            <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>  
+          </div>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="contact.html" class="nav-item nav-link ">Contact</a>
+                <a href="AboutUs.html" class="nav-item nav-link">About Us</a>
+                <a href="donation.html" class="nav-item nav-link ">Donate</a>
+                <a href="books.html" class="nav-item nav-link ">Books</a>
+
+                
+                </div>
+            </div>
+        </div>
+        <input style="margin-bottom: 10px;" type="text" class="search-input" id="searchInput" placeholder="Search...">
+       <!-- Search Bar -->
+       <div id="searchResults"></div>
+    </nav>
+    <!-- Navbar End -->
+                        
+                     
+
+  <style>
+            
+            @keyframes gradientBG {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+        
+            .button {
+              padding: 15px 40px;
+              font-size: 2rem;
+              color: white;
+              background: #ff6f61;
+              border: none;
+              border-radius: 50px;
+              cursor: pointer;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.3s ease, background 0.3s;
+            }
+        
+            .button:hover {
+              transform: rotate(360deg) scale(1.2);
+              background: #ff4757;
+            }
+        
+            #fireworksCanvas,
+            #confettiCanvas,
+            #balloonCanvas {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+            }
+        
+            #messages {
+              position: absolute;
+              top: 10%;
+              left: 50%;
+              transform: translateX(-50%);
+              font-size: 2rem;
+              color: white;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+              display: none;
+              z-index: 2;
+            }
+          </style>
+        </head>
+        <body>
+          <button style="background-color: white; border-color: white; border: transparent;"   id="funButton"></button>
+          <div id="messages">🎉 You're a Star! 🎉</div>
+          <canvas id="confettiCanvas"></canvas>
+          <canvas id="fireworksCanvas"></canvas>
+          <canvas id="balloonCanvas"></canvas>
+        
+          <script>
+            // Canvas setup
+            const confettiCanvas = document.getElementById('confettiCanvas');
+            const fireworksCanvas = document.getElementById('fireworksCanvas');
+            const balloonCanvas = document.getElementById('balloonCanvas');
+            const confettiCtx = confettiCanvas.getContext('2d');
+            const fireworksCtx = fireworksCanvas.getContext('2d');
+            const balloonCtx = balloonCanvas.getContext('2d');
+            confettiCanvas.width = fireworksCanvas.width = balloonCanvas.width = window.innerWidth;
+            confettiCanvas.height = fireworksCanvas.height = balloonCanvas.height = window.innerHeight;
+        
+            // Random Messages
+            const messages = document.getElementById('messages');
+            const funButton = document.getElementById('funButton');
+            function showMessage() {
+              const messagesArray = [
+                "🎉 You're a Star! 🎉",
+                "✨ Party Time! ✨",
+                "💃 Let's Dance! 🕺",
+                "🎈 Balloons Everywhere! 🎈",
+                "🌟 Shine Bright! 🌟",
+              ];
+              const randomMessage = messagesArray[Math.floor(Math.random() * messagesArray.length)];
+              messages.textContent = randomMessage;
+              messages.style.display = 'block';
+              setTimeout(() => (messages.style.display = 'none'), 2000);
+            }
+        
+            // Confetti Animation
+            let confetti = [];
+            function createConfetti() {
+              confetti = [];
+              for (let i = 0; i < 200; i++) {
+                confetti.push({
+                  x: Math.random() * confettiCanvas.width,
+                  y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                  r: Math.random() * 6 + 2,
+                  color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+                  tilt: Math.random() * 10 - 5,
+                  speed: Math.random() * 2 + 1,
+                });
+              }
+            }
+        
+            function drawConfetti() {
+              confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+              confetti.forEach((c) => {
+                confettiCtx.beginPath();
+                confettiCtx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+                confettiCtx.fillStyle = c.color;
+                confettiCtx.fill();
+                c.y += c.speed;
+                c.tilt += Math.random() * 0.1 - 0.05;
+        
+                if (c.y > confettiCanvas.height) c.y = -c.r;
+              });
+            }
+        
+            // Fireworks Animation
+            let fireworks = [];
+            function createFirework(x, y) {
+              for (let i = 0; i < 50; i++) {
+                fireworks.push({
+                  x: x,
+                  y: y,
+                  r: Math.random() * 5 + 1,
+                  color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+                  vx: Math.random() * 4 - 2,
+                  vy: Math.random() * 4 - 2,
+                });
+              }
+            }
+        
+            function drawFireworks() {
+              fireworksCtx.clearRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+              fireworks.forEach((f, i) => {
+                fireworksCtx.beginPath();
+                fireworksCtx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                fireworksCtx.fillStyle = f.color;
+                fireworksCtx.fill();
+                f.x += f.vx;
+                f.y += f.vy;
+                f.r -= 0.05;
+                if (f.r <= 0) fireworks.splice(i, 1);
+              });
+            }
+        
+            // Balloons Animation
+            let balloons = [];
+            function createBalloons() {
+              for (let i = 0; i < 10; i++) {
+                balloons.push({
+                  x: Math.random() * balloonCanvas.width,
+                  y: balloonCanvas.height + Math.random() * 100,
+                  r: Math.random() * 20 + 10,
+                  color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+                  vy: Math.random() * 2 + 1,
+                });
+              }
+            }
+        
+            function drawBalloons() {
+              balloonCtx.clearRect(0, 0, balloonCanvas.width, balloonCanvas.height);
+              balloons.forEach((b, i) => {
+                balloonCtx.beginPath();
+                balloonCtx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                balloonCtx.fillStyle = b.color;
+                balloonCtx.fill();
+                b.y -= b.vy;
+                if (b.y + b.r < 0) balloons.splice(i, 1);
+              });
+            }
+        
+            // Event Listeners
+            funButton.addEventListener('click', () => {
+              createConfetti();
+              createBalloons();
+              showMessage();
+            });
+        
+            fireworksCanvas.addEventListener('click', (e) => {
+              createFirework(e.clientX, e.clientY);
+            });
+        
+            // Animations
+            function animate() {
+              drawConfetti();
+              drawFireworks();
+              drawBalloons();
+              requestAnimationFrame(animate);
+            }
+        
+            createConfetti();
+            animate();
+          </script>
+        </body>
+        </html>
+        
+    
+
+<!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h1 class="display-1">Congratulation</h1>
+                    <h1 class="mb-4">You have completed Prompt Engineering Full Course</h1>
+
+
+
+
+
+
+                    <br> <br>
+
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="courses.html">Start New Course</a> 
+
+                </div>                        
+                        
+                        
+                           
+                        
+                        
+                       
+                    </div>                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 404 End -->
+    <div style="display: flex; justify-content: space-between;">           
+        <a class="btn btn-primary rounded-pill py-3 px-5" href="quizforprompt.html">Go Back </a>  <br> <br>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="courses.html"> Next page</a>
+    </div>    
+    <div id="christ"> </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="AboutUs.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="TermsAndCondition.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="btn btn-link" href="faq.html">FAQ</a>
+                    <a class="btn btn-link" href="help.html">Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+233507320355</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>splycode@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@sply.code?_t=ZM-8tT44WYvc0M&_r=1"><i class="fab fa-tiktok fa-1x"></i>  </a>
+                        <a class="btn btn-outline-light btn-social" href="https://whatsapp.com/channel/0029VazUImT8F2pNVUi8ri1f"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/splycode"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@SplyCode"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/alhassan-emmanuel-389b9a26a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <a href="donation.html" style="margin-left: 10px; font-weight: bold; padding: 10px; width: 50%;" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">DONATE</a>
+   
+                
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">SplyCode</a>, All Right Reserved. <script>document.write(new Date().getFullYear());</script>
+
+                        
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="cookies.html">Cookies</a>
+                            <a href="help.html">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <div id="cookieConsent">
+        <p>We use cookies to improve your experience on our site. By continuing to use our website, you agree to our <a style="color: aqua;" href="cookies.html">Cookie policy</a> .</p>
+        <div>
+            <button id="acceptCookies">Accept</button>
+            <button id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
