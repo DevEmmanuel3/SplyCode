@@ -164,10 +164,6 @@ if (localStorage.getItem('cookieConsent') === 'accepted') {
     hideCookieConsent();
 }
 
-// advertising
-document.getElementById('christ').innerHTML += '<div style="margin: 15px;">' +
-    '' +
-'</div>';
 
 const searchIcon = document.querySelector('.search-icon');
   const searchInput = document.getElementById('searchInput');
