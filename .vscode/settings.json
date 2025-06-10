@@ -1,0 +1,5 @@
+{
+    "files.exclude": {
+        "**/pt22.jpeg": true
+    }
+}
