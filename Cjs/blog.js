@@ -36,7 +36,7 @@ if (document.getElementById("blogPosts")) {
       a.innerHTML = `
 
 
-                        <div class="col-lg-6" style="width:80%; justify-content: center; margin:10px;  word-break:break-word; overflow-wrap:break-word;">
+                        <div class="mx-auto"  style="width:80%; justify-content: center; margin:10px;  word-break:break-word; overflow-wrap:break-word;">
                         <div class="position-relative mb-3">
                             <img class="img-fluid w-100" src="${post.image}" style="object-fit: cover;" alt="${post.title}" >
 <div class="overlay position-relative bg-light" style="max-width: 100%; overflow: hidden;">
