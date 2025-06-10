@@ -1,7 +1,7 @@
 // Central post data
 const posts = [
-  { title: "Postkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk ", content: "This is the content of post 1.", image: "img/html.jfif", link: "post.html" },
-  { title: "Post 2", content: "This is the content of post 2.", image: "img/html.jfif", link: "post2.html" },
+  { title: "Top 10 Python Projects for Beginners in 2025 ", content: "Read More...............", image: "im/7-Python-Project-Ideas-for-Beginners.png", link: "Top-10-Python-Projects-for-Beginners-in-2025.html" },
+  { title: "How to Build a Responsive Website Using HTML, CSS, and JavaScript", content: "Read More.....................", image: "im/res.jpeg", link: "How-to-Build-a-Responsive-Website-Using.html" },
   { title: "Post 3", content: "This is the content of post 3.", image: "img/html.jfif", link: "post3.html" },
   { title: "Post 4", content: "This is the content of post 4.", image: "img/html.jfif", link: "post4.html" },
   { title: "Post 5", content: "This is the content of post 5.", image: "img/html.jfif", link: "post5.html" },
@@ -36,7 +36,7 @@ if (document.getElementById("blogPosts")) {
       a.innerHTML = `
 
 
-                        <div class="mx-auto"  style="width:80%; justify-content: center; margin:10px; 
+                        <div class="mx-auto"  style="width:90%; justify-content: center; margin:10px; 
                         margin-left: auto;  margin-right: auto;  word-break:break-word; overflow-wrap:break-word;">
                         <div class="position-relative mb-3">
                             <img class="img-fluid w-100" src="${post.image}" style="object-fit: cover;" alt="${post.title}" >
@@ -94,11 +94,14 @@ if (document.getElementById("related-posts")) {
     a.style.marginBottom = '1rem';
 
     a.innerHTML =` 
-      <img src="${post.image}" alt="${post.title}" style="width: 100px;">
-      <div>
-        <h4>${post.title}</h4>
-        <p>${post.content.substring(0, 40)}...</p>
-      </div>`
+<div style="display: flex; align-items: center; gap: 15px; background: #f9f9f9; padding: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 500px;">
+  <img src="${post.image}" alt="${post.title}" style="width: 150px; height: 85%; border-radius: 8px; object-fit: cover;">
+  <div>
+    <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #333;">${post.title}</h4>
+    <p style="color: #5dade2; margin: 0; font-size: 14px;">${post.content.substring(0, 40)}...</p>
+  </div>
+</div>
+`
     ;
     relatedContainer.appendChild(a);
   });
