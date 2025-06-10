@@ -1,6 +1,6 @@
 // Central post data
 const posts = [
-  { title: "Post ", content: "This is the content of post 1.", image: "img/html.jfif", link: "post.html" },
+  { title: "Postkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk ", content: "This is the content of post 1.", image: "img/html.jfif", link: "post.html" },
   { title: "Post 2", content: "This is the content of post 2.", image: "img/html.jfif", link: "post2.html" },
   { title: "Post 3", content: "This is the content of post 3.", image: "img/html.jfif", link: "post3.html" },
   { title: "Post 4", content: "This is the content of post 4.", image: "img/html.jfif", link: "post4.html" },
