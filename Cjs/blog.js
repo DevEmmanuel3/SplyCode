@@ -1,5 +1,13 @@
 // Central post data
 const posts = [
+  //    { title: " ", content: "Read More....... ", image: "im/ ", link: " " },
+
+
+
+
+
+
+  { title: "Firebase vs Supabase vs MongoDB: Which is Best for Your App? ", content: "Read More....... ", image: "im/bb.jpeg", link: " Firebase-vs-Supabase-vs-MongoDB-Which-is-Best-for-Your-App.html" },
   { title: "Top 10 Python Projects for Beginners in 2025 ", content: "Read More...............", image: "im/7-Python-Project-Ideas-for-Beginners.png", link: "Top-10-Python-Projects-for-Beginners-in-2025.html" },
   { title: "How to Build a Responsive Website Using HTML, CSS, and JavaScript", content: "Read More.....................", image: "im/res.jpeg", link: "How-to-Build-a-Responsive-Website-Using.html" },
   { title: "Best JavaScript Tips & Tricks Every Developer Should Know", content: "Read More.....", image: "im/tip.jpeg", link: "Best-JavaScript-Tips-&-Tricks-Every-Developer-Should-Know.html" },
@@ -7,11 +15,11 @@ const posts = [
   { title: "How to Use APIs in JavaScript with Real Examples", content: "Read More.......", image: "im/api.png", link: "How-to-Use-APIs-in-JavaScript-with-Real-Examples.html" },
   { title: "Understanding Git & GitHub: A Beginner's Guide", content: "Read More.....", image: "im/git.png", link: "Understanding-Git-&-GitHub-A-Beginner's-Guide.html" },
   { title: "Top VS Code Extensions That Will 10x Your Productivity", content: "Read More.......", image: "im/vs.png", link: "Top-VS-Code-Extensions-That-Will-10x-Your-Productivity.html" },
-  { title: "Post 8", content: "This is the content of post 8.", image: "img/html.jfif", link: "post8.html" },
-  { title: "Post 9", content: "This is the content of post 9.", image: "img/html.jfif", link: "post9.html" },
-  { title: "Post 10", content: "This is the content of post 10.", image: "img/html.jfif", link: "post10.html" },
-  { title: "Post 11", content: "This is the content of post 11.", image: "img/html.jfif", link: "post11.html" },
-  { title: "Post 12", content: "This is the content of post 12.", image: "img/html.jfif", link: "post12.html" }
+  { title: "Flutter vs React Native: Which is Better for Cross-Platform Apps?", content: "Read More......", image: "im/re.png", link: "Flutter-vs-React-Native-Which-is-Better-for-Cross-Platform-Apps.html" },
+  { title: "How to Build Your First Android App Using Flutter", content: "Read More.........", image: "im/flu.jpeg", link: "How-to-Build-Your-First-Android-App-Using-Flutter.html" },
+  { title: "Top 5 Mistakes to Avoid When Developing Mobile Apps", content: "Read More......", image: "im/to.jpeg", link: "Top 5-Mistakes-to-Avoid-When-Developing-Mobile-Apps.html" },
+  { title: "Best Free Web Hosting Providers in 2025 (With Pros and Cons)", content: "Read More.......", image: "im/fre.png", link: "Best-Free-Web-Hosting-Providers-in-2025-(With-Pros-and-Cons).html" },
+  { title: "How to Deploy a Website on GitHub Pages for Free", content: "Read More........", image: "im/gi.jpeg", link: "How-to-Deploy-a-Website-on-GitHub-Pages-for-Free.html" }
 ];
 
 // Homepage rendering
@@ -20,7 +28,7 @@ if (document.getElementById("blogPosts")) {
   const loadMoreBtn = document.getElementById("loadMoreBtn");
   const searchInput = document.getElementById("searchInput");
 
-  let postsPerPage = 10;
+  let postsPerPage = 15;
   let currentLimit = postsPerPage;
 
   function renderPosts(filter = "") {
@@ -82,7 +90,7 @@ if (document.getElementById("related-posts")) {
 
   // Remove current post from related list (optional)
   const currentPage = window.location.pathname.split('/').pop();
-  const related = posts.filter(post => post.link !== currentPage).slice(0, 4);
+  const related = posts.filter(post => post.link !== currentPage).slice(0, 5);
 
   related.forEach(post => {
     const a = document.createElement('a');
