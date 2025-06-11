@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-  <title>How to Build a Responsive Website Using HTML, CSS, and JavaScript</title>
+  <title>How to Use APIs in JavaScript with Real Examples</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description" content="Learn how to build a responsive website using HTML, CSS, and JavaScript in 2025. This guide covers project setup, HTML structure, CSS styling, and JavaScript interactivity.">
-    <meta name="keywords" content="Responsive website, HTML, CSS, JavaScript, Web development, 2025 web design">
+    <meta content="Learn how to use APIs in JavaScript with practical examples. Fetch data, send requests, and integrate third-party services seamlessly." name="description">
+    <meta content="JavaScript, API, Fetch API, Async/Await, Web Development" name="keywords">
+
     <meta name="author" content="Sply Code">
     <link href="img/faaa.jpg" rel="icon">
 
@@ -101,11 +102,13 @@
                     </div>
 
                     <div>
-  <h1 style="text-align: center;">How to Build a Responsive Website Using HTML, CSS, and JavaScript</h1>
-                        <img src="im/res.jpeg" width="100%" alt="Top 10 Python Projects for Beginners in 2025" class="img-fluid mb-4">
+  <h1 style="text-align: center;">
+How to Use APIs in JavaScript with Real Examples
+  </h1>
+                        <img src="im/api.png" width="100%" alt="Top 10 Python Projects for Beginners in 2025" class="img-fluid mb-4">
             <div style="font-family: sans-serif; font-weight: 500; font-size:16px ;">             
  <div class="post-meta">
-                        <p>By <a href="#">Sply Code</a> | <span>January 5, 2025</span></p>
+                        <p>By <a href="#">Sply Code</a> | <span>May 6, 2025</span></p>
 
 
 <style>
@@ -151,127 +154,137 @@
 
 <br>
 
-  <h3 style="text-align: center;">How to Build a Responsive Website Using HTML, CSS, and JavaScript
+  <h3 style="text-align: center;">
+How to Use APIs in JavaScript with Real Examples
 </h3>
 
-                        
-  <article>
 
-    <p>In today's mobile-first world, having a responsive website is no longer optional—it's essential. A responsive website adjusts its layout and content based on the screen size and device, providing an optimal user experience whether you're on a phone, tablet, or desktop. In this article, we'll walk you through how to build a basic responsive website using HTML, CSS, and JavaScript in 2025.</p>
 
-    <h2>1. Setting Up Your Project Structure</h2>
-    <p>Start with a simple project structure:</p>
-    <pre style="text-align: left;">
-project-folder/
-|-- index.html
-|-- style.css
-|-- script.js
-    </pre>
-    <p>This keeps your HTML, CSS, and JavaScript organized.</p>
 
-    <h2>2. Create the HTML Layout</h2>
-    <p>Start with a semantic structure:</p>
-    <pre style="text-align: left;"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Responsive Website&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;My Responsive Site&lt;/h1&gt;
-        &lt;nav&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-        &lt;section class="intro"&gt;
-            &lt;h2&gt;Welcome&lt;/h2&gt;
-            &lt;p&gt;This is a simple responsive website layout.&lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-    &lt;footer&gt;
-        &lt;p&gt;&amp;copy; 2025 My Site&lt;/p&gt;
-    &lt;/footer&gt;
-    &lt;script src="script.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-    </code></pre>
 
-    <h2>3. Add Responsive CSS</h2>
-    <pre><code>/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  <p>
+    In today’s web development world, using APIs (Application Programming Interfaces) is essential. APIs allow your 
+    JavaScript apps to communicate with external services and databases, enabling powerful functionality like 
+    fetching data, sending forms, and integrating third-party tools. In this guide, we’ll walk you through how to 
+    use APIs in JavaScript with clear and practical examples.
+  </p>
+
+  <hr>
+
+  <h2><strong>What is an API?</strong></h2>
+  <p>
+    An API is a set of rules that allows one piece of software to interact with another. In JavaScript, we often use 
+    web APIs to send or receive data over the internet, usually in JSON format.
+  </p>
+
+  <hr>
+
+  <h2><strong>1. Using the Fetch API</strong></h2>
+  <p>The <code>fetch()</code> method is the modern way to make HTTP requests in JavaScript.</p>
+
+  <h4><strong>Example: Fetching Data from an API</strong></h4>
+  <pre><code>
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+  </code></pre>
+
+  <p>This example retrieves data from a sample API and logs it to the console.</p>
+
+  <hr>
+
+  <h2><strong>2. Using Async/Await with Fetch</strong></h2>
+  <p>Async/await makes working with APIs cleaner and more readable.</p>
+
+  <h4><strong>Example:</strong></h4>
+  <pre><code>
+async function getData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-}
+getData();
+  </code></pre>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
+  <hr>
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
+  <h2><strong>3. Sending Data with POST Requests</strong></h2>
+  <p>APIs are not just for getting data—you can send data too.</p>
 
-main {
-    padding: 1rem;
-}
+  <h4><strong>Example: Sending Data</strong></h4>
+  <pre><code>
+fetch('https://api.example.com/submit', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ name: 'Emmanuel', age: 25 })
+})
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch(error => console.error('Error:', error));
+  </code></pre>
 
-/* Responsive layout */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-}
-    </code></pre>
+  <hr>
 
-    <h2>4. Enhance with JavaScript (Optional)</h2>
-    <p>Add interactivity, such as a toggle menu for mobile view:</p>
-    <pre style="text-align: left;"><code >// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('nav ul');
-    const toggle = document.createElement('button');
-    toggle.textContent = 'Menu';
-    document.querySelector('nav').prepend(toggle);
+  <h2><strong>4. Working with Public APIs</strong></h2>
+  <p>You can use many free APIs to build apps.</p>
 
-    toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
+  <h4><strong>Example: Random User API</strong></h4>
+  <pre><code>
+fetch('https://randomuser.me/api/')
+  .then(response => response.json())
+  .then(data => {
+    const user = data.results[0];
+    console.log(`Name: ${user.name.first} ${user.name.last}`);
+  });
+  </code></pre>
+
+  <hr>
+
+  <h2><strong>5. Display API Data in the Browser</strong></h2>
+  <p>You can show fetched data directly on your webpage.</p>
+
+  <h4><strong>Example: Show User Info</strong></h4>
+  <pre><code>
+&lt;div id="user"&gt;&lt;/div&gt;
+&lt;script&gt;
+  fetch('https://randomuser.me/api/')
+    .then(response => response.json())
+    .then(data => {
+      const user = data.results[0];
+      document.getElementById('user').innerHTML = `
+        &lt;p&gt;Name: ${user.name.first} ${user.name.last}&lt;/p&gt;
+        &lt;img src="${user.picture.medium}" /&gt;
+      `;
     });
-});
-    </code></pre>
-    <p>Add styles for <code>.open</code> in CSS if needed.</p>
+&lt;/script&gt;
+  </code></pre>
 
-    <h2>5. Test and Optimize</h2>
-    <ul>
-      <li>Use Chrome DevTools or Firefox Developer Tools to test responsiveness.</li>
-      <li>Make sure the layout works on all screen sizes.</li>
-      <li>Minify CSS and JS for faster load times.</li>
-    </ul>
+  <hr>
 
-    <h2>Final Thoughts</h2>
-    <p>Responsive design improves user experience and SEO. With HTML for structure, CSS for styling, and JavaScript for interactivity, you can build a responsive website that looks great and performs well on any device. Keep practicing by adding images, forms, and additional sections.</p>
+  <h2><strong>Final Thoughts</strong></h2>
+  <p>
+    APIs are a crucial skill in modern JavaScript development. From displaying dynamic content to building 
+    full-featured apps, knowing how to use APIs properly will make you a better and more versatile developer. 
+    Practice with different APIs and try building your own mini-projects to gain hands-on experience.
+  </p>
 
-    <p><strong>Need more?</strong> Subscribe to our blog for tutorials, tips, and modern web development tricks in 2025!</p>
-  </article>
+  <p>
+    For more tutorials and real-world examples, stay tuned to our blog!
+  </p>
+
+
+
+  
 
 </div>             
-
 <div id="news"></div>
 
 
