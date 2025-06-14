@@ -35,7 +35,7 @@
 <meta name="google-site-verification" content="g-qa3gBe-40X-6x-p8avaRAhYoLetq7BRRvSZDHTZMQ" />
 </head>
 
-<body>
+<div>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -129,8 +129,36 @@
         </div>
     </div>
     <!-- Carousel End -->
-      <!-- Footer Start -->
+<div class="container" style="text-align: center;">
+
   <!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <h1>The Best Online Learning Platform</h1>
+  <p>
+    Unlock your full potential with SplyCode Learn! Our platform provides top-tier, fully free tech courses—no registration required.
+    From web development and SEO to Python and AI prompt engineering, learn at your own pace with practical examples.
+  </p>
+</section>
+
+<section id="why-us" class="info-section">
+  <h2>Why Choose SplyCode?</h2>
+  <ul style="text-decoration: none; list-style: none;">
+    <li>Free access with no login or registration</li>
+    <li>Self-paced courses with real-world examples</li>
+    <li>Regular content updates based on tech trends</li>
+    <li>Supportive, beginner-friendly platform</li>
+  </ul>
+</section>
+
+<section id="how-it-works" class="info-section">
+  <h2>How It Works</h2>
+  <p>
+    Getting started is easy! <br>  1)   Browse our course catalog, <br>2) Select a course like HTML or SEO, <br>  3) Click 'Start Learning' <br> 
+     4) Engage with interactive examples.
+  </p>
+</section>
+<br> <br>
+<section id="courses" class="course-section">
   <section class="bg-blue-100 text-center py-16 px-4">
     <h2 class="text-3xl font-bold mb-4">Free Tech Learning Platform</h2>
     <p class="text-lg mb-6">Start learning HTML,CSS,JS, SEO, or Marketing ,Python  and more – without creating an account.</p>
@@ -140,7 +168,7 @@
   <!-- Courses Section -->
   <section id="courses" class="py-16 px-4">
     <div class="container mx-auto">
-      <h3 class="text-2xl font-semibold mb-8 text-center">Popular Courses</h3>
+      <h1 class="text-2xl font-semibold mb-8 text-center">Popular Courses</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div class="border p-4 shadow hover:shadow-lg">
           <h4 class="font-bold mb-2">HTML & CSS Basics</h4>
@@ -162,11 +190,25 @@
       </div>
     </div>
   </section>
-<br>
+</section>
+<br> <br>
+
+<section id="about" class="about-section">
+  <h2>About SplyCode Learn</h2>
+  <p>
+    SplyCode Learn is dedicated to democratizing tech education by offering free, quality learning experiences online.
+    Whether you're a student, a career switcher, or a curious beginner, our resources are here to help you grow without limits.
+  </p>
+</section>
+
+<section id="contact" class="contact-section">
+  <!-- Your existing contact form or links -->
+</section>
+
+</div>
   <!-- About Section -->
   <section id="about" class="bg-gray-100 py-16 px-4">
     <div class="container mx-auto text-center">
-      <h3 class="text-2xl font-semibold mb-4">About SplyCode Learn</h3>
       <p class="max-w-2xl mx-auto">
         SplyCode Learn is a free online platform dedicated to helping students and self-learners access quality tech education. 
         Whether you're interested in frontend development, SEO, or Marketing ,Python and more, we provide beginner-friendly resources you can download and use anytime.
@@ -193,6 +235,57 @@
         
         
 <br>
+
+  <style>
+    
+    header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .course {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .course img {
+      width: 180px;
+      height: auto;
+      object-fit: cover;
+    }
+    .course-content {
+      padding: 15px;
+    }
+    .course h3 {
+      margin: 0;
+      color: #333;
+    }
+    .course p {
+      color: #666;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    @media (max-width: 768px) {
+      .course {
+        flex-direction: column;
+      }
+      .course img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+
     <!-- Footer End -->
    <!-- Categories Start -->
    <div class="container-xxl py-5 category">
@@ -201,103 +294,97 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
             <h1 class="mb-5">Courses Categories</h1>
         </div>
-        <div class="row g-3">
-            <div class="col-lg-7 col-md-6">
-                <div class="row g-3">
-                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                        <a class="position-relative d-block overflow-hidden" href="htmlfullcourse.html">
-                            <img style="width:100%;" class="img-fluid" src="img/html.jfif" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Html5</h5>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="cssfullcourse.html">
-                            <img  style="width:100%;" class="img-fluid" src="img/css.jfif" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">CSS </h5>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                    <br>    <div id="ad-container2" ></div> <br>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                        <a class="position-relative d-block overflow-hidden" href="javascriptfullcourse.html">
-                            <img  style="width:100%;" class="img-fluid" src="img/javascript.png" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">JavaScript</h5>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 250px;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="Python-full-course.html">
-                    <img style="width: 100%;" class="img-fluid position-absolute w-100 h-100" src="img/py22.jpeg" alt="" style="object-fit: cover;">
-                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">Python</h5>
-                        <small class="text-primary">Full Course</small>
-                    </div>
-                </a>
-            </div>
-        </div>
         
+  <div class="container">
+    <a href="htmlfullcourse.html">
+    <div class="course">
+      <img src="img/html.jfif" alt="HTML Course">
+      <div class="course-content">
+        <h3>HTML for Beginners</h3>
+        <p>Learn the basics of building websites with HTML. This course covers tags, elements, structure, and practical examples to get you started with front-end development.</p>
+      </div>
     </div>
-</div>
-<div  class="container-xxl py-5 category">
-    <div class="container">
-        <div class="row g-3">
-            <div class="col-lg-7 col-md-6">
-                <div class="row g-3">
-                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                        <a class="position-relative d-block overflow-hidden" href="C++fullcourse.html">
-                            <img style="width:65%; margin-left: 50px;" class="img-fluid" src="img/c++1.png"  alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">C++</h5>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="seofullcourse.html">
-                            <img  style="width:100%;" class="img-fluid" src="img/seo.jpeg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">SEO</h5>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                 <br>   <div id="ad-container3" ></div>  <br>
+</a>
 
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                        <a class="position-relative d-block overflow-hidden" href="Prompt-Engineering-full-course.html">
-                            <img  style="width:100%; " class="img-fluid" src="img/p11.jpeg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h6 class="m-0">Prompt <br>Engineering</h6>
-                                <small class="text-primary">Full Course</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 250px;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img style="width:100%;" class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">Online Marketing</h5>
-                        <small class="text-primary">Full Course</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
+    <a href="cssfullcourse.html">
+    <div class="course">
+      <img src="img/css.jfif" alt="CSS Course">
+      <div class="course-content">
+        <h3>CSS Fundamentals</h3>
+        <p>Style your websites like a pro. Discover how to use CSS for layout, fonts, colors, responsiveness, and animations to create modern, attractive websites.</p>
+      </div>
     </div>
-</div>
+</a>
 
+         <a href="javascriptfullcourse.html">
 
+    <div class="course">
+      <img src="img/javascript.png" alt="JavaScript Course">
+      <div class="course-content">
+        <h3>JavaScript Essentials</h3>
+        <p>Understand how to make websites interactive using JavaScript. You'll learn about variables, functions, events, DOM manipulation, and real-world use cases.</p>
+      </div>
+    </div>
+</a>
+    <a href="pythonfullcourse.html">
+    <div class="course">
+      <img src="img/py22.jpeg" alt="Python Course">
+      <div class="course-content">
+        <h3>Python Programming</h3>
+        <p>This beginner-friendly course introduces Python syntax, variables, loops, conditionals, and file handling with practical projects to build your skills.</p>
+      </div>
+    </div>
+</a>
+    <a href="seofullcourse.html">
+
+    <div class="course">
+      <img src="img/seo.jpeg" alt="SEO Course">
+      <div class="course-content">
+        <h3>SEO Basics</h3>
+        <p>Learn how to improve website visibility on Google. This course includes keyword research, meta tags, link building, and on-page optimization for better search rankings.</p>
+      </div>
+    </div>
+</a>
+    <a href="">
+
+    <div class="course">
+      <img src="img/cat-4.jpg" alt="JavaScript Course">
+      <div class="course-content">
+        <h3>Online Marketing</h3>
+        <p>
+Discover how to grow your business or personal brand using digital marketing. This course covers social media strategy, SEO, content marketing, and ad campaigns to help you reach more people and drive real engagement online.
+</p>
+      </div>
+    </div>
+</a>
+
+    <a href="c++fullcourse.html">
+
+    <div class="course">
+      <img src="img/c++1.png" alt="Python Course">
+      <div class="course-content">
+        <h3>C++ Fundamentals</h3>
+        <p>
+Learn C++, a powerful and fast programming language used in game development, system software, and performance-critical applications. This course covers the basics of syntax, functions, loops, and object-oriented programming to help you build a strong coding foundation.
+</p>
+      </div>
+    </div>
+</a>
+    <a href="Prompt-Engineering-full-course.html">
+
+    <div class="course">
+      <img src="img/p11.jpeg" alt="SEO Course">
+      <div class="course-content">
+        <h3> Prompt Engineering</h3>
+        <p>
+Unlock the full potential of AI tools like ChatGPT and Claude by learning prompt engineering. This course teaches you how to craft effective prompts to generate better responses, automate tasks, and boost productivity  no coding required.
+</p>
+      </div>
+    </div>
+</a>
+  </div>
+
+    
     </div>
 </div>
 
